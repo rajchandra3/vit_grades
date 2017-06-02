@@ -428,9 +428,9 @@
             var gpa=parseInt($('#gpa').val());
             var sem=parseInt($('#sem').val());
             var f=((cgpa*(sem-1))+gpa)/sem;
-            if(isNaN(cgpa)){
+            if(isNaN(f)){
                 alert("Insufficient data!");
-                cgpa="0.000";
+                f="Unavailable";
             }
             document.getElementById('cgpa-msg').innerHTML="Your CGPA is : "+f.toFixed(2);
             document.getElementById('gbtn').className="hide";
