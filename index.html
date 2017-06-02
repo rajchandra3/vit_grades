@@ -323,17 +323,29 @@
             <p id="grades" style="font-family: courier new;">Click when you have filled the details. </p>
             <br><br>
                 <button class="gbtn btn btn-info" id="gbtn" >Get GPA</button>
-                <button class="button btn btn-success  animated hide" type="reset" id="reset" onClick="window.location.reload()">Reset</button><br><br>
+                <button class="button btn btn-success animated hide" type="reset" id="reset" onClick="window.location.reload()">Reset</button><br><br>
                 <button class="btn btn-warning hide" id="cbtn">Calculate CGPA</button>
           <section class="cgpa-box hide" id="cgpa-box"><br><center>
-            <form  class="input-control">
-                <input type="text" id='sem' class="form-control" placeholder="Number semesters so far?">
-                <input type="text" id='cgpa' class="form-control" placeholder="Overall CGPA so far?">
-                <input type="text" id='gpa' class="form-control" placeholder="GPA this semester?">
+            <form  class="input-group">
+                <select name="semesters" id="sem">
+                    <optgroup>
+                        <option value="0">Number of Semesters so far?</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </optgroup>
+                </select>
+                <input type="text" id='cgpa' class="form-control" maxlength="4" placeholder="Overall CGPA so far?">
+                <input type="text" id='gpa' class="form-control" maxlength="4" placeholder="GPA this semester?">
             </form><br>
             <button class="btn btn-primary" id="submit">Done</button></center>
           </section>
-                <p class="cgpa-msg hide" id="cgpa-msg" style="font-family: 'Acme', sans-serif;"></p>
+                <p class="cgpa-msg hide" id="cgpa-msg" style="font-family: 'Acme', sans-serif;" disabled="disabled"></p>
           </div>
         </div>
     </div>
@@ -342,6 +354,7 @@
           <div class="card-block card-block-outline-info" >
             <footer class="footer">
             <p style="font-family: 'Acme', sans-serif;">Handcrafted by <strong>Raj Chandra : </strong><a href="https://www.facebook.com/raj.chandra.963"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
+            <p style="font-family: 'Acme', sans-serif;">Thanks for data <strong>Prajwal Agarwal : </strong><a href="https://www.facebook.com/FWRM.Prajwal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
             </footer>
           </div>
         </div>
@@ -375,7 +388,35 @@
             document.getElementById('cgpa-box').classList.remove("hide");
             document.getElementById('cbtn').className="hide";
             $('#gbtn').attr('disabled','disabled');
-
+            $('form > input').on('keyup',function(){
+            var empty=false;
+            $('form > input').each(function(){
+                if($(this).val() == '')
+                    empty=true;
+            if(empty)
+                $('#submit').attr('disabled','disabled');
+            else
+                $('#submit').removeAttr('disabled');
+            });
+        });
+            $('.form-control').on('keyup',function(){
+                var input=document.getElementById(this.id).value;
+                if(!input==''){
+                var re=/^\d+\.?\d{0,2}$/;
+                    if (!(re.test(input))){
+                        alert("Please enter a valid data.");
+                        $(this).val('');
+                    }
+                }
+                if((input>10 || input<0) && this.id==='gpa'){
+                    alert('Your GPA should be between 0 and 10 !');
+                    $(this).val('');
+                }
+                else if((input>10 || input<0) && this.id==='cgpa'){
+                    alert('Your CGPA should be between 0 and 10 !');
+                    $(this).val('');
+                }
+            });
         });
         $('#submit').click(function(){
             document.getElementById('cgpa-msg').classList.remove("hide");
