@@ -3,7 +3,7 @@
 <head>
     <title>VIT | CGPA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="https://www.iaccept.in/img/clients/skillrack_slider.jpg">
+    <link rel="icon" type="image/png" href="">
     <link rel="stylesheet" type="text/css" href="animate.css">
     <script type="text/javascript" src="jquery.min.js"></script>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -58,10 +58,11 @@
          <header> Get CGPA</header>
     </div>
     <div class="container" style="margin-bottom: 2%;">
-        <div class="card card-outline-success mb-3 text-center" style="border:1px #76EE00 solid; border-radius: 2%; background-color: #ffffff;">
+        <div class="card card-outline-success mb-3 text-center" style="border:1px #76EE00 solid; border-radius: 2%; background-color: #ffffff;"><br>
+        <button id="about-btn" class="btn btn-info">How to use?</button><br><br>
             <div class="card-block">
-                <blockquote>
-                  <p class="alert" id="quote">Select the grade and credits for that course. If you have 5 subjects, the first five will be filled(the order matters the least,you can even skip subjects). Hit the get grades button and get your cgpa. If you have any issues ping me on fb.</p>
+                <blockquote class="info" id="about" style="display: none;">
+                  <p >Select the grades and credits for the courses. If you have 5 subjects, the first five will be filled(the order matters the least,you can even skip subjects). Hit the get grades button and get your GPA. You can even Calculate the CGPA by pressing the Get GPA and then the Calculate CGPA button. If you have any issues ping me on fb.</p>
                   <footer id="attrib">Team</footer>
                 </blockquote>
             </div>
@@ -73,10 +74,10 @@
               <div class="card-block card-block-outline-info" >
                 <h1 class="card-title zoomIn animated"><strong>Your details</strong></h1>
                 <label>Subject 1 :</label>
-                <select name="Grades" id="g1">
+                <select name="Grades" id="g1" >
                     <optgroup>
-                        <option value="0" >Select grades</option>
-                        <option value="10" >S</option>
+                        <option value="0" >Grades</option>
+                        <option value="10">S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
                         <option value="7">C</option>
@@ -88,7 +89,7 @@
                 </select>
                 <select name="credits" id="c1">
                     <optgroup>
-                        <option value="0" id="c0">Select Credits</option>
+                        <option value="0" id="c0">Credits</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -99,7 +100,7 @@
                 <label>Subject 2 :</label>
                 <select name="Grades" id="g2">
                     <optgroup>
-                        <option value="0" >Select grades</option>
+                        <option value="0" >Grades</option>
                         <option value="10" >S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -112,7 +113,7 @@
                 </select>
                 <select name="credits" id="c2">
                     <optgroup>
-                        <option value="0" id="c0">Select Credits</option>
+                        <option value="0" id="c0">Credits</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -123,7 +124,7 @@
                 <label>Subject 3 :</label>
                 <select name="Grades" id="g3">
                     <optgroup>
-                        <option value="0" >Select grades</option>
+                        <option value="0" >Grades</option>
                         <option value="10" >S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -136,7 +137,7 @@
                 </select>
                 <select name="credits" id="c3">
                     <optgroup>
-                        <option value="0" id="c0">Select Credits</option>
+                        <option value="0" id="c0">Credits</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -147,7 +148,7 @@
                 <label>Subject 4 :</label>
                 <select name="Grades" id="g4">
                     <optgroup>
-                        <option value="0" >Select grades</option>
+                        <option value="0" >Grades</option>
                         <option value="10" >S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -160,7 +161,7 @@
                 </select>
                 <select name="credits" id="c4">
                     <optgroup>
-                        <option value="0" id="c0">Select Credits</option>
+                        <option value="0" id="c0">Credits</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -171,7 +172,7 @@
                 <label>Subject 5 :</label>
                 <select name="Grades" id="g5">
                    <optgroup>
-                        <option value="0" >Select grades</option>
+                        <option value="0" >Grades</option>
                         <option value="10" >S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -184,7 +185,7 @@
                 </select>
                 <select name="credits" id="c5">
                     <optgroup>
-                        <option value="0" id="c0">Select Credits</option>
+                        <option value="0" id="c0">Credits</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -195,7 +196,7 @@
                 <label>Subject 6 :</label>
                 <select name="Grades" id="g6">
                     <optgroup>
-                        <option value="0" >Select grades</option>
+                        <option value="0" >Grades</option>
                         <option value="10" >S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -208,7 +209,7 @@
                 </select>
                 <select name="credits" id="c6">
                     <optgroup>
-                        <option value="0" id="c0">Select Credits</option>
+                        <option value="0" id="c0">Credits</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -219,7 +220,7 @@
                 <label>Subject 7 :</label>
                 <select name="Grades" id="g7">
                     <optgroup>
-                        <option value="0" >Select grades</option>
+                        <option value="0" >Grades</option>
                         <option value="10" >S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -232,7 +233,7 @@
                 </select>
                 <select name="credits" id="c7">
                     <optgroup>
-                        <option value="0" id="c0">Select Credits</option>
+                        <option value="0" id="c0">Credits</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -243,7 +244,7 @@
                 <label>Subject 8 :</label>
                 <select name="Grades" id="g8">
                     <optgroup>
-                        <option value="0" >Select grades</option>
+                        <option value="0" >Grades</option>
                         <option value="10" >S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -256,7 +257,7 @@
                 </select>
                 <select name="credits" id="c8">
                     <optgroup>
-                        <option value="0" id="c0">Select Credits</option>
+                        <option value="0" id="c0">Credits</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -267,7 +268,7 @@
                 <label>Subject 9 :</label>
                 <select name="Grades" id="g9">
                     <optgroup>
-                        <option value="0" >Select grades</option>
+                        <option value="0" >Grades</option>
                         <option value="10" >S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -280,7 +281,7 @@
                 </select>
                 <select name="credits" id="c9">
                     <optgroup>
-                        <option value="0" id="c0">Select Credits</option>
+                        <option value="0" id="c0">Credits</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -291,7 +292,7 @@
                 <label>Subject10 :</label>
                 <select name="Grades" id="g10">
                     <optgroup>
-                        <option value="0" >Select grades</option>
+                        <option value="0" >Grades</option>
                         <option value="10" >S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -304,7 +305,7 @@
                 </select>
                 <select name="credits" id="c10">
                     <optgroup>
-                        <option value="0" id="c0">Select Credits</option>
+                        <option value="0" id="c0">Credits</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -319,9 +320,20 @@
     <div class="col-sm-11 col-md-11 col-lg-11 card-container">
         <div class="card card-outline-primary mb-3 ">
           <div class="card-block card-block-outline-info" >
-            <p id="grades" style="font-family: courier new;">Click when you have filled the details. </p><br><br>
-            <button class="gbtn btn btn-info" id="gbtn" >Get Grades</button>
-            <button class="button btn btn-success  animated hide" type="reset" id="reset" onClick="window.location.reload()">Reset</button><br><br>
+            <p id="grades" style="font-family: courier new;">Click when you have filled the details. </p>
+            <br><br>
+                <button class="gbtn btn btn-info" id="gbtn" >Get GPA</button>
+                <button class="button btn btn-success  animated hide" type="reset" id="reset" onClick="window.location.reload()">Reset</button><br><br>
+                <button class="btn btn-warning hide" id="cbtn">Calculate CGPA</button>
+          <section class="cgpa-box hide" id="cgpa-box"><br><center>
+            <form  class="input-control">
+                <input type="text" id='sem' class="form-control" placeholder="Number semesters so far?">
+                <input type="text" id='cgpa' class="form-control" placeholder="Overall CGPA so far?">
+                <input type="text" id='gpa' class="form-control" placeholder="GPA this semester?">
+            </form><br>
+            <button class="btn btn-primary" id="submit">Done</button></center>
+          </section>
+                <p class="cgpa-msg hide" id="cgpa-msg" style="font-family: 'Acme', sans-serif;"></p>
           </div>
         </div>
     </div>
@@ -337,11 +349,14 @@
 
 </div>
     <script>
+        $('#about-btn').on('click',function(){
+            $('#about').fadeToggle('slow');
+        })
         $('#gbtn').on('click',function(){
-            var g1=0,g2=0,g3=0,g4=0,g5=0,g6=0,g7=0,g8=0,g9=0,g10=0,c1=0,c2=0,c3=0,c4=0,c5=0,c6=0,c7=0,c8=0,c9=0,c10=0,sum=0,cgpa=0;
+            var g1=0,g2=0,g3=0,g4=0,g5=0,g6=0,g7=0,g8=0,g9=0,g10=0,c1=0,c2=0,c3=0,c4=0,c5=0,c6=0,c7=0,c8=0,c9=0,c10=0,sum=0,gpa=0;
             g1=parseInt($('#g1').val()),g2=parseInt($('#g2').val()),g3=parseInt($('#g3').val()),g4=parseInt($('#g4').val()),g5=parseInt($('#g5').val()),g6=parseInt($('#g6').val()),g7=parseInt($('#g7').val()),g8=parseInt($('#g8').val()),g9=parseInt($('#g9').val()),g10=parseInt($('#g10').val()),c1=parseInt($('#c1').val()),c2=parseInt($('#c2').val()),c3=parseInt($('#c3').val()),c4=parseInt($('#c4').val()),c5=parseInt($('#c5').val()),c6=parseInt($('#c6').val()),c7=parseInt($('#c7').val()),c8=parseInt($('#c8').val()),c9=parseInt($('#c9').val()),c10=parseInt($('#c10').val());
 
-            cgpa=(c1*g1+c2*g2+c3*g3+c4*g4+c5*g5+c6*g6+c7*g7+c8*g8+c9*g9+c10*g10)/(c1+c2+c3+c4+c5+c6+c7+c8+c9+c10);
+            gpa=(c1*g1+c2*g2+c3*g3+c4*g4+c5*g5+c6*g6+c7*g7+c8*g8+c9*g9+c10*g10)/(c1+c2+c3+c4+c5+c6+c7+c8+c9+c10);
             // if (cgpa>=9) {msg='Hardwork pays !';}
             // else if (cgpa<9 && cgpa>=8) {msg='Smartwork pays !';}
             // else if (cgpa<8 && cgpa>=7) {msg='B';}
@@ -349,10 +364,30 @@
             // else if (cgpa<6 && cgpa>=5) {msg='D';}
             // else if (cgpa<5 && cgpa>=4) {msg='E';}
             // else if(cgpa<4) {msg='FAIL';}
-            $('#grades').html("<p>Your cgpa is : "+cgpa.toFixed(2)+"<br> Success is a lousy teacher. It seduces smart people into thinking they can't lose.</p>");
+            $('#grades').html("<p>Your gpa is : "+gpa.toFixed(2)+"</p>");
             document.getElementById('reset').classList.remove("hide");
+            document.getElementById('cbtn').classList.remove("hide");
             // document.getElementById("gbtn").className="gbtn hide";
             // $('.body-container').hide(1000);
+
+        });
+            $('#cbtn').click(function(){
+            document.getElementById('cgpa-box').classList.remove("hide");
+            document.getElementById('cbtn').className="hide";
+            $('#gbtn').attr('disabled','disabled');
+
+        });
+        $('#submit').click(function(){
+            document.getElementById('cgpa-msg').classList.remove("hide");
+            document.getElementById('cgpa-box').className="cgpa-box hide";
+            document.getElementById('cbtn').className="btn btn-warning hide";
+            $('#cbtn').attr('disabled','disabled');
+            var cgpa=parseInt($('#cgpa').val());
+            var gpa=parseInt($('#gpa').val());
+            var sem=parseInt($('#sem').val());
+            var f=((cgpa*(sem-1))+gpa)/sem;
+            document.getElementById('cgpa-msg').innerHTML="Your CGPA is : "+f.toFixed(2);
+            document.getElementById('gbtn').className="hide";
         });
     </script>
 </body>
