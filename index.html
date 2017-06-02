@@ -430,7 +430,7 @@
             var f=((cgpa*(sem-1))+gpa)/sem;
             if(isNaN(cgpa)){
                 alert("Insufficient data!");
-                cgpa="0";
+                cgpa="0.000";
             }
             document.getElementById('cgpa-msg').innerHTML="Your CGPA is : "+f.toFixed(2);
             document.getElementById('gbtn').className="hide";
