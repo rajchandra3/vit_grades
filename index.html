@@ -3,7 +3,7 @@
 <head>
     <title>VIT | CGPA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="">
+    <link rel="icon" type="image/png" href="http://www.fetchlogos.com/wp-content/uploads/2015/10/VIT-University-Logo.png">
     <link rel="stylesheet" type="text/css" href="animate.css">
     <script type="text/javascript" src="jquery.min.js"></script>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -339,8 +339,8 @@
                         <option value="7">7</option>
                         <option value="8">8</option>
                     </optgroup>
-                </select>
-                <input type="text" id='cgpa' class="form-control" maxlength="4" placeholder="Overall CGPA so far?">
+                </select><br>
+                <input type="text" id='cgpa' class="form-control" maxlength="4" placeholder="Overall CGPA so far?"><br>
                 <input type="text" id='gpa' class="form-control" maxlength="4" placeholder="GPA this semester?">
             </form><br>
             <button class="btn btn-primary" id="submit">Done</button></center>
@@ -377,7 +377,7 @@
             // else if (cgpa<6 && cgpa>=5) {msg='D';}
             // else if (cgpa<5 && cgpa>=4) {msg='E';}
             // else if(cgpa<4) {msg='FAIL';}
-            $('#grades').html("<p>Your gpa is : "+gpa.toFixed(2)+"</p>");
+            $('#grades').html("<p><strong>Your gpa is : "+gpa.toFixed(2)+"</strong></p>");
             document.getElementById('reset').classList.remove("hide");
             document.getElementById('cbtn').classList.remove("hide");
             // document.getElementById("gbtn").className="gbtn hide";
