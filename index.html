@@ -427,7 +427,7 @@
             var gpa=parseInt($('#gpa').val());
             var c=parseInt($('#c').val());
             var tc=parseInt($('#tc').val());
-            var f=((cgpa*(tc-c))+gpa*c)/tc;
+            var f=((cgpa*(tc))+(gpa*c))/(tc+c);
             if(isNaN(f)){
                 alert("Insufficient data!");
                 f="Unavailable";
