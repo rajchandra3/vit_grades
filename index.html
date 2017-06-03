@@ -328,9 +328,9 @@
                 <a href="https://devil-coder.github.io/CSE_Grade_Calculator/"><button class="btn btn-danger" >Get CSE Grades</button></a><br>
           <section class="cgpa-box hide" id="cgpa-box"><br><center>
             <form  class="input-group">
+                <input type="text" id='tc' class="form-control" maxlength="3" placeholder="Credits till last Sem?"><br>
+                <input type="text" id='cgpa' class="form-control" maxlength="4" placeholder="CGPA till last Sem?"><br>
                 <input type="text" id='c' class="form-control" maxlength="2" placeholder="Credits in this Sem?"><br>
-                <input type="text" id='tc' class="form-control" maxlength="3" placeholder="Overall credits till last Sem?"><br>
-                <input type="text" id='cgpa' class="form-control" maxlength="4" placeholder="Overall CGPA till last Sem?"><br>
                 <input type="text" id='gpa' class="form-control" maxlength="4" placeholder="GPA this semester?">
             </form><br>
             <button class="btn btn-primary" id="submit">Done</button></center>
@@ -428,7 +428,7 @@
             var gpa=parseInt($('#gpa').val());
             var c=parseInt($('#c').val());
             var tc=parseInt($('#tc').val());
-            var f=((cgpa*(tc))+(gpa*c))/(tc+c);
+            var f=((cgpa*tc)+(gpa*c))/(tc+c);
             if(isNaN(f)){
                 alert("Insufficient data!");
                 f="Unavailable";
