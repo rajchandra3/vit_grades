@@ -424,11 +424,12 @@
             document.getElementById('cgpa-box').className="cgpa-box hide";
             document.getElementById('cbtn').className="btn btn-warning hide";
             $('#cbtn').attr('disabled','disabled');
-            var cgpa=parseInt($('#cgpa').val());
-            var gpa=parseInt($('#gpa').val());
-            var c=parseInt($('#c').val());
-            var tc=parseInt($('#tc').val());
-            var f=((cgpa*tc)+(gpa*c))/(tc+c);
+            var cgpa=parseFloat($('#cgpa').val());
+            var gpa=parseFloat($('#gpa').val());
+            var c=parseFloat($('#c').val());
+            var tc=parseFloat($('#tc').val());
+            console.log(cgpa,tc,gpa,c);
+            var f=(((cgpa*tc)+(gpa*c))/(tc+c));
             if(isNaN(f)){
                 alert("Insufficient data!");
                 f="Unavailable";
@@ -439,3 +440,4 @@
     </script>
 </body>
 </html>
+
