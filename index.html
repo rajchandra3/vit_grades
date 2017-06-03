@@ -324,7 +324,7 @@
             <br><br>
                 <button class="gbtn btn btn-info" id="gbtn" >Get GPA</button>
                 <button class="button btn btn-success animated hide" type="reset" id="reset" onClick="window.location.reload()">Reset</button><br><br>
-                <button class="btn btn-warning hide" id="cbtn">Calculate CGPA</button>
+                <button class="btn btn-warning" id="cbtn">Calculate CGPA</button>
                 <a href="https://devil-coder.github.io/CSE_Grade_Calculator/"><button class="btn btn-danger" >Get CSE Grades</button></a><br>
           <section class="cgpa-box hide" id="cgpa-box"><br><center>
             <form  class="input-group">
@@ -377,20 +377,21 @@
             // $('.body-container').hide(1000);
         });
             $('#cbtn').click(function(){
-            document.getElementById('cgpa-box').classList.remove("hide");
-            document.getElementById('cbtn').className="hide";
-            $('#gbtn').attr('disabled','disabled');
-            $('form > input').on('keyup',function(){
-            var empty=false;
-            $('form > input').each(function(){
-                if($(this).val() == '')
-                    empty=true;
-            if(empty)
-                $('#submit').attr('disabled','disabled');
-            else
-                $('#submit').removeAttr('disabled');
+                document.getElementById('reset').classList.remove("hide");
+                document.getElementById('cgpa-box').classList.remove("hide");
+                document.getElementById('cbtn').className="hide";
+                $('#gbtn').attr('disabled','disabled');
+                $('form > input').on('keyup',function(){
+                var empty=false;
+                $('form > input').each(function(){
+                    if($(this).val() == '')
+                        empty=true;
+                if(empty)
+                    $('#submit').attr('disabled','disabled');
+                else
+                    $('#submit').removeAttr('disabled');
+                });
             });
-        });
             $('.form-control').on('keyup',function(){
                 var input=document.getElementById(this.id).value;
                 if(!input==''){
