@@ -79,7 +79,7 @@
                   <img src="images/press-done.jpeg" alt="..." height="250" width="200"> <br><hr>
                   You can get your CSE 1002 grades by pressing the 'Get CSE grade' button. <br>
                   <img src="images/cse-grades.jpeg" alt="..." height="300" width="200"> <br><hr></p>
-                  <footer id="attrib">Team</footer>
+                  <footer id="attrib">Team<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/White_X_in_red_background.svg/2000px-White_X_in_red_background.svg.png" alt="X" id="close-btn" style=" float: right;" height="2%" width="2%"></footer>
                 </blockquote>
             </div>
           </div>
@@ -376,6 +376,11 @@
     <script>
         $('#about-btn').on('click',function(){
             $('#about').fadeToggle('slow');
+        });
+        $('#close-btn').on('click',function(){
+            $('#about').css({
+                "display":" none"
+            });
         });
 
         $('#team-view').on('click',function(){
