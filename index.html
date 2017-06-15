@@ -52,15 +52,6 @@
 </script>
 </head>
 <body style="padding: 0% 0% 1% 0%; background-color: #F5F5F5">
-<!-- for like btn -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 <!-- for comments -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -358,7 +349,6 @@
             <br><br>
                 <button class="gbtn btn btn-info" id="gbtn" >Get GPA</button>
                 <button class="button btn btn-success animated hide" type="reset" id="reset" onClick="window.location.reload()">Reset</button><br><br>
-                <div class="fb-like" data-href="https://devil-coder.github.io/vit_grades/" data-width="100px" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                 <button class="btn btn-warning" id="cbtn">Calculate CGPA</button>
                 <a href="https://devil-coder.github.io/CSE_Grade_Calculator/"><button class="btn btn-danger" >Get CSE Grades</button></a><br>
           <section class="cgpa-box hide" id="cgpa-box"><br><center>
