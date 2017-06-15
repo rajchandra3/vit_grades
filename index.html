@@ -52,6 +52,16 @@
 </script>
 </head>
 <body style="padding: 0% 0% 1% 0%; background-color: #F5F5F5">
+<!-- for like btn -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- for comments -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -358,6 +368,7 @@
                 <input type="text" id='gpa' class="form-control" maxlength="4" placeholder="GPA this semester?">
             </form><br>
             <button class="btn btn-primary" id="submit">Done</button></center>
+            <div class="fb-like" data-href="https://devil-coder.github.io/vit_grades/" data-width="100px" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
           </section>
                 <p class="cgpa-msg hide" id="cgpa-msg" style="font-family: 'Acme', sans-serif;" disabled="disabled"></p>
           </div>
@@ -378,8 +389,8 @@
             </footer>
           </div>
         </div>
-        <div class="fb-comments"></div>
     </div>
+
 </div>
     <script>
         $('#about-btn').on('click',function(){
