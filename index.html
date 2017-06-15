@@ -52,6 +52,15 @@
 </script>
 </head>
 <body style="padding: 0% 0% 1% 0%; background-color: #F5F5F5">
+<!-- for likes -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <!-- for comments -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -380,7 +389,7 @@
           </div>
         </div>
     </div>
-
+<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevil-coder.github.io%2Fvit_grades%2F&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="100px" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 </div>
     <script>
         $('#about-btn').on('click',function(){
