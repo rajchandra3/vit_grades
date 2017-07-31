@@ -384,7 +384,8 @@
                 <input type="text" id='c' class="form-control" maxlength="2" placeholder="Credits in this Sem?"><br>
                 <input type="text" id='gpa' class="form-control" maxlength="4" placeholder="GPA this semester?">
             </form><br>
-            <button class="btn btn-primary" id="submit">Done</button></center>
+            <button class="btn btn-primary" id="submit">Done</button>
+            <button class="btn btn-warning" id="close">Close</button></center>
           </section>
                 <p class="cgpa-msg hide" id="cgpa-msg" style="font-family: 'Acme', sans-serif;" disabled="disabled"></p>
           </div>
@@ -441,7 +442,7 @@
                 document.getElementById('reset').classList.remove("hide");
                 document.getElementById('cgpa-box').classList.remove("hide");
                 document.getElementById('cbtn').className="hide";
-                $('#gbtn').attr('disabled','disabled');
+                // $('#gbtn').attr('disabled','disabled');
                 $('form > input').on('keyup',function(){
                 var empty=false;
                 $('form > input').each(function(){
@@ -471,20 +472,18 @@
                     $(this).val('');
                 }
                 else if((input>27 || input<0) && this.id==='c'){
-                    alert('Your Credits should be between 0 and 27 !');
+                    alert('Your Credits should be between 16 and 27 !');
                     $(this).val('');
                 }
                 else if((input>200 || input<0) && this.id==='tc'){
-                    alert('Your CGPA should be between 0 and 200 !');
+                    alert('Your Credits should be between 0 and 200 !');
                     $(this).val('');
                 }
             });
         });
         $('#submit').click(function(){
             document.getElementById('cgpa-msg').classList.remove("hide");
-            document.getElementById('cgpa-box').className="cgpa-box hide";
             document.getElementById('cbtn').className="btn btn-warning hide";
-            $('#cbtn').attr('disabled','disabled');
             var cgpa=parseFloat($('#cgpa').val());
             var gpa=parseFloat($('#gpa').val());
             var c=parseFloat($('#c').val());
@@ -496,7 +495,12 @@
                 f="Unavailable";
             }
             document.getElementById('cgpa-msg').innerHTML="<br>Your CGPA is  "+f.toFixed(2);
-            document.getElementById('gbtn').className="hide";
+        });
+        $('#close').click(function(){
+            document.getElementById('cgpa-box').className="cgpa-box hide";
+            // $('#cbtn').attr('disabled','disabled'); //This disables the Get CGPA btn after close is pressed for all the time.
+            // document.getElementById('gbtn').className="hide"; //adds hide to get GPA btn which is not required.
+            document.getElementById('cgpa-msg').className="hide";
         });
     </script>
 </body>
