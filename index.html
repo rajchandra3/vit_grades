@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="animate.css">
     <script type="text/javascript" src="jquery.min.js"></script>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <!-- This is for smartlook -->
     <script type="text/javascript">
     window.smartlook||(function(d) {
@@ -25,7 +25,6 @@
             width: 100%;
             background-color: #36648B;
             color: white;
-            font-family: Bookman Header;
             font-weight: bold;
             font-size: x-large;
             text-align: center;
@@ -33,7 +32,7 @@
         h1{
             color: #000000;
             width: 100%;
-            font-family: 'Acme', sans-serif;
+            font-family: 'Raleway', sans-serif;
             font-weight: bold;
             font-size: large;
             text-align: center;
@@ -60,7 +59,7 @@
 
 </script>
 </head>
-<body style="padding: 0% 0% 1% 0%; background-color: #F5F5F5">
+<body style="padding: 0% 0% 1% 0%; background-color: #F5F5F5; font-family: 'Raleway', sans-serif;">
 <!-- for likes -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -95,7 +94,7 @@
         <div class="card card-outline-success mb-3 text-center" style="border:1px #76EE00 solid; border-radius: 2%; background-color: #ffffff;"><br>
             <button id="about-btn" class="btn btn-info">How to use?</button><br><br>
             <div class="card-block">
-                <blockquote class="info" id="about" style="display: none; font-family: Bookman Header;">
+                <blockquote class="info" id="about" style="display: none;">
                 <p>VIT CGPA Calculator is a great tool that will help you calculate the CGPA for the present semester. Moreover VIT CGPA calculator also gives you the power to predict the CGPA for the coming Semesters. VIT CGPA Calcuator has been helping hundreds of students predict their CGPA. Hope it helps you :)</p>
                   <p ><br>
                   To begin with select the credits and the grades of the courses for which the results are out in the section 'Your details'.<br>
@@ -119,11 +118,32 @@
             </div>
           </div>
         </div>
+    </div>
     <div class="col-12-lg body-container">
         <div class="col-sm-11 col-md-11 col-lg-11 card-container">
             <div class="card card-outline-primary mb-3 ">
               <div class="card-block card-block-outline-info" >
-                <h1 class="card-title zoomIn animated"><strong>Your details</strong></h1>
+                <h1 class="card-title zoomIn animated"><strong>Calculate CGPA of nth Semester[NEW]</strong></h1>
+                    <div style="display: inline-flex;"><label for="gpa">Semester1: </label>&nbsp;<input type="text" name="gpa" id="gpa1" class="form-control fgpa" placeholder="GPA">&nbsp;<input type="text" class="form-control fcredits" id="fc1" placeholder="Credits"></div><br>
+                    <div style="display: inline-flex;"><label for="gpa">Semester2:</label>&nbsp;<input type="text" name="gpa" id="gpa2" class="form-control fgpa" placeholder="GPA">&nbsp;<input type="text" class="form-control fcredits" id="fc2" placeholder="Credits"></div><br>
+                    <div style="display: inline-flex;"><label for="gpa">Semester3:</label>&nbsp;<input type="text" name="gpa" id="gpa3" class="form-control fgpa" placeholder="GPA">&nbsp;<input type="text" class="form-control fcredits" id="fc3" placeholder="Credits"></div><br>
+                    <div style="display: inline-flex;"><label for="gpa">Semester4:</label>&nbsp;<input type="text" name="gpa" id="gpa4" class="form-control fgpa" placeholder="GPA">&nbsp;<input type="text" class="form-control fcredits" id="fc4" placeholder="Credits"></div><br>
+                    <div style="display: inline-flex;"><label for="gpa">Semester5:</label>&nbsp;<input type="text" name="gpa" id="gpa5" class="form-control fgpa" placeholder="GPA">&nbsp;<input type="text" class="form-control fcredits" id="fc5" placeholder="Credits"></div><br>
+                    <div style="display: inline-flex;"><label for="gpa">Semester6:</label>&nbsp;<input type="text" name="gpa" id="gpa6" class="form-control fgpa" placeholder="GPA">&nbsp;<input type="text" class="form-control fcredits" id="fc6" placeholder="Credits"></div><br>
+                    <div style="display: inline-flex;"><label for="gpa">Semester7:</label>&nbsp;<input type="text" name="gpa" id="gpa7" class="form-control fgpa" placeholder="GPA">&nbsp;<input type="text" class="form-control fcredits" id="fc7" placeholder="Credits"></div><br>
+                    <div style="display: inline-flex;"><label for="gpa">Semester8:</label>&nbsp;<input type="text" name="gpa" id="gpa8" class="form-control fgpa" placeholder="GPA">&nbsp;<input type="text" class="form-control fcredits" id="fc8" placeholder="Credits"></div><br><br>
+                    <b><p class="text-info bounceInDown animated" id="fcgpa"></p></b><br>
+                    <button class="btn btn-success" id="sem-cgpa-btn">Check CGPA</button>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12-lg body-container">
+        <div class="col-sm-11 col-md-11 col-lg-11 card-container">
+            <div class="card card-outline-primary mb-3 ">
+              <div class="card-block card-block-outline-info" >
+                <h1 class="card-title zoomIn animated"><strong>Calculate GPA</strong></h1>
                 <label>Course 1 :</label>
                 <select name="Grades" id="g1" >
                     <option value="0" >Grades</option>
@@ -327,7 +347,7 @@
               </div>
             </div>
         </div>
-        </div>
+    </div>
     <div class="col-sm-11 col-md-11 col-lg-11 card-container">
         <div class="card card-outline-primary mb-3 ">
           <div class="card-block card-block-outline-info" >
@@ -340,15 +360,15 @@
                 <a href="https://devil-coder.github.io/CSE_Grade_Calculator/"><button class="btn btn-danger" >Get CSE Grades</button></a><br>
           <section class="cgpa-box hide" id="cgpa-box"><br><center>
             <form  class="input-group">
-                <input type="text" id='tc' class="form-control" maxlength="3" placeholder="Credits till last Sem?"><br>
-                <input type="text" id='cgpa' class="form-control" maxlength="4" placeholder="CGPA till last Sem?"><br>
-                <input type="text" id='c' class="form-control" maxlength="2" placeholder="Credits in this Sem?"><br>
-                <input type="text" id='gpa' class="form-control" maxlength="4" placeholder="GPA this semester?">
+                <input type="text" id='tc' class="form-control cgpa-input" maxlength="3" placeholder="Credits till last Sem?"><br>
+                <input type="text" id='cgpa' class="form-control cgpa-input" maxlength="4" placeholder="CGPA till last Sem?"><br>
+                <input type="text" id='c' class="form-control cgpa-input" maxlength="2" placeholder="Credits in this Sem?"><br>
+                <input type="text" id='gpa' class="form-control cgpa-input" maxlength="4" placeholder="GPA this semester?">
             </form><br>
             <button class="btn btn-primary" id="submit">Done</button>
             <button class="btn btn-warning" id="close">Close</button></center>
           </section>
-                <p class="cgpa-msg hide" id="cgpa-msg" style="font-family: 'Acme', sans-serif;" disabled="disabled"></p>
+                <p class="cgpa-msg hide" id="cgpa-msg" style="font-family: 'Raleway', sans-serif;" disabled="disabled"></p>
           </div>
         </div>
     </div>
@@ -356,115 +376,21 @@
         <div class="card card-outline-primary mb-3 ">
           <div class="card-block card-block-outline-info" >
             <footer class="footer">
-            <p style="font-family: 'Acme', sans-serif;">Handcrafted by <strong>Raj Chandra : </strong><a href="https://www.facebook.com/raj.chandra.963"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
-            <button class="btn btn-success" id="team-view">The Team</button>
+            <p style="font-family: 'Raleway', sans-serif;">Handcrafted by <strong>Raj Chandra : </strong><a href="https://www.facebook.com/raj.chandra.963"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
+            <!-- <button class="btn btn-success" id="team-view">The Team</button>
             <section id="team-data"  style="display: none;">
-            <p style="font-family: 'Acme', sans-serif;">Thanks for data <strong>Prajwal Agrawal : </strong><a href="https://www.facebook.com/FWRM.Prajwal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
-            <p style="font-family: 'Acme', sans-serif;">Thanks <strong>Midhun Chakravarthy : </strong><a href="https://www.facebook.com/Midhun.chakravarthy.39"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
-            <p style="font-family: 'Acme', sans-serif;">Thanks <strong>Aman Dev : </strong><a href="https://www.facebook.com/aman.dev.718"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
-            <p style="font-family: 'Acme', sans-serif;">Thanks <strong>Chirag : </strong><a href="https://www.facebook.com/profile.php?id=100014439999295"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
-            </section>
+            <p style="font-family: 'Raleway', sans-serif;">Thanks for data <strong>Prajwal Agrawal : </strong><a href="https://www.facebook.com/FWRM.Prajwal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
+            <p style="font-family: 'Raleway', sans-serif;">Thanks <strong>Midhun Chakravarthy : </strong><a href="https://www.facebook.com/Midhun.chakravarthy.39"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
+            <p style="font-family: 'Raleway', sans-serif;">Thanks <strong>Aman Dev : </strong><a href="https://www.facebook.com/aman.dev.718"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
+            <p style="font-family: 'Raleway', sans-serif;">Thanks <strong>Chirag : </strong><a href="https://www.facebook.com/profile.php?id=100014439999295"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
+            </section> -->
             </footer>
           </div>
           <div class="fb-comments" data-href="https://devil-coder.github.io/vit_grades/" data-width="100%" data-numposts="5"></div>
         </div>
     </div>
 </div>
-    <script>
-        $('#about-btn').on('click',function(){
-            $('#about').fadeToggle('slow');
-        });
-        $('#close-btn').on('click',function(){
-            $('#about').css({
-                "display":" none"
-            });
-        });
-
-        $('#team-view').on('click',function(){
-            $('#team-data').fadeToggle('slow');
-        });
-
-        $('#gbtn').on('click',function(){
-            var g1=0,g2=0,g3=0,g4=0,g5=0,g6=0,g7=0,g8=0,g9=0,g10=0,c1=0,c2=0,c3=0,c4=0,c5=0,c6=0,c7=0,c8=0,c9=0,c10=0,sum=0,gpa=0;
-            g1=parseInt($('#g1').val()),g2=parseInt($('#g2').val()),g3=parseInt($('#g3').val()),g4=parseInt($('#g4').val()),g5=parseInt($('#g5').val()),g6=parseInt($('#g6').val()),g7=parseInt($('#g7').val()),g8=parseInt($('#g8').val()),g9=parseInt($('#g9').val()),g10=parseInt($('#g10').val()),c1=parseInt($('#c1').val()),c2=parseInt($('#c2').val()),c3=parseInt($('#c3').val()),c4=parseInt($('#c4').val()),c5=parseInt($('#c5').val()),c6=parseInt($('#c6').val()),c7=parseInt($('#c7').val()),c8=parseInt($('#c8').val()),c9=parseInt($('#c9').val()),c10=parseInt($('#c10').val());
-            gpa=(c1*g1+c2*g2+c3*g3+c4*g4+c5*g5+c6*g6+c7*g7+c8*g8+c9*g9+c10*g10)/(c1+c2+c3+c4+c5+c6+c7+c8+c9+c10);
-
-            if(isNaN(gpa)){
-                alert("Insufficient data!");
-                gpa="Unavailable";
-            }
-            $('#grades').html("<p><strong>Your GPA is  "+gpa.toFixed(2)+"</strong></p>");
-            document.getElementById('reset').classList.remove("hide");
-            document.getElementById('cbtn').classList.remove("hide");
-            // document.getElementById("gbtn").className="gbtn hide";
-            // $('.body-container').hide(1000);
-        });
-            $('#cbtn').click(function(){
-                document.getElementById('reset').classList.remove("hide");
-                document.getElementById('cgpa-box').classList.remove("hide");
-                document.getElementById('cbtn').className="hide";
-                // $('#gbtn').attr('disabled','disabled');
-                $('form > input').on('keyup',function(){
-                var empty=false;
-                $('form > input').each(function(){
-                    if($(this).val() == '')
-                        empty=true;
-                if(empty)
-                    $('#submit').attr('disabled','disabled');
-                else
-                    $('#submit').removeAttr('disabled');
-                });
-            });
-            $('.form-control').on('keyup',function(){
-                var input=document.getElementById(this.id).value;
-                if(!input==''){
-                var re=/^\d+\.?\d{0,2}$/;
-                    if (!(re.test(input))){
-                        alert("Please enter a valid data.");
-                        $(this).val('');
-                    }
-                }
-                if((input>10 || input<0) && this.id==='gpa'){
-                    alert('Your GPA should be between 0 and 10 !');
-                    $(this).val('');
-                }
-                else if((input>10 || input<0) && this.id==='cgpa'){
-                    alert('Your CGPA should be between 0 and 10 !');
-                    $(this).val('');
-                }
-                else if((input>27 || input<0) && this.id==='c'){
-                    alert('Your Credits should be between 16 and 27 !');
-                    $(this).val('');
-                }
-                else if((input>200 || input<0) && this.id==='tc'){
-                    alert('Your Credits should be between 0 and 200 !');
-                    $(this).val('');
-                }
-            });
-        });
-        $('#submit').click(function(){
-            document.getElementById('cgpa-msg').classList.remove("hide");
-            document.getElementById('cbtn').className="btn btn-warning hide";
-            var cgpa=parseFloat($('#cgpa').val());
-            var gpa=parseFloat($('#gpa').val());
-            var c=parseFloat($('#c').val());
-            var tc=parseFloat($('#tc').val());
-
-            var f=(((cgpa*tc)+(gpa*c))/(tc+c));
-            if(isNaN(f)){
-                alert("Insufficient data!");
-                f="Unavailable";
-            }
-            document.getElementById('cgpa-msg').innerHTML="<br>Your CGPA is  "+f.toFixed(2);
-        });
-        $('#close').click(function(){
-            document.getElementById('cgpa-box').className="cgpa-box hide";
-            // $('#cbtn').attr('disabled','disabled'); //This disables the Get CGPA btn after close is pressed for all the time.
-            // document.getElementById('gbtn').className="hide"; //adds hide to get GPA btn which is not required.
-            document.getElementById('cgpa-msg').className="hide";
-            document.getElementById('cbtn').classList.remove("hide");
-        });
-    </script>
+<script language="javascript" type="text/javascript" src="jsfile.js"></script>
 </body>
 </html>
 
