@@ -1,3 +1,3 @@
 # vit_grades
-to compute grades for VIT CAL students
-Hi raj i will make my first commit pls accept hehe.
+To compute grades for VIT CAL and Non CAL students.
+Also You can compute CSE grade.
