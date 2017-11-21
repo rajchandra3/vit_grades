@@ -52,10 +52,14 @@
         }
         .card-container{
             background-color: #ffffff;
-            padding : 3% 3% 3% 3%;
-            margin-right: 2%;
-            margin-left: 4%;
+            padding : 3%;
+            /*margin-right: 2%;
+            margin-left: 4%;*/
             margin-bottom: 3%;
+            border-radius: 10px;
+        }
+        .form-inline{
+            display: inline-flex;
         }
     </style>
     <script>
@@ -95,7 +99,7 @@
     </div>
 
     <div class="container" style="margin-bottom: 2%">
-        <div class="card card-outline-success mb-3 text-center" style="solid;background-color: #ffffff;"><br>
+        <div class="card-container card-outline-success mb-3 text-center" style="solid;background-color: #ffffff;"><br>
             <button id="about-btn" class="btn btn-info">How to use?</button><br><br>
             <div class="card-block">
                 <blockquote class="info" id="about" style="display: none;">
@@ -119,11 +123,11 @@
                       <img src="images/cse-grades.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>
                       <h3><b>For any number of Semester</b></h3><br>
                       <b>Begin by entering the cgpa and credits till the present semester. For example if you are in 4th semester your input should look like this </b><br>
-                      <img src="images/new_fill_basic.png" alt="vit cgpa calculator" height="200" width="200"> <br><hr>
+                      <img src="images/new_fill_basic.png" alt="vit cgpa calculator" height="100%" width="200"> <br><hr>
                       Then enter the cgpa and credits(you intend to get) for future semesters and click the check cgpa button<br>
-                      <img src="images/new_fill_rest.png" alt="vit cgpa calculator" height="300" width="200"> <br><hr>
+                      <img src="images/new_fill_rest.png" alt="vit cgpa calculator" height="100%" width="200"> <br><hr>
                       The CGPA will be displayed as shown.<br>
-                      <img src="images/new_get_cgpa.png" alt="vit cgpa calculator" height="250" width="200"> <br><hr>
+                      <img src="images/new_get_cgpa.png" alt="vit cgpa calculator" height="100%" width="200"> <br><hr>
                   </section>
                   <footer id="attrib">Team<img src="http://www.clker.com/cliparts/1/1/9/2/12065738771352376078Arnoud999_Right_or_wrong_5.svg.hi.png" alt="X" id="close-btn" style=" float: right;" height="20" width="20"></footer>
                 </blockquote>
@@ -131,269 +135,299 @@
           </div>
         </div>
     </div>
-    <div class="col-12-lg body-container">
-        <div class="col-sm-11 col-md-11 col-lg-11 card-container">
-            <div class="card card-outline-primary mb-3 ">
-              <div class="card-block card-block-outline-info" >
-                <h1 class="card-title zoomIn animated"><strong>Calculate your CGPA for any number of Semesters</strong></h1>
-                    <div style="display: inline-flex; padding-bottom:10px;"><label for="gpa">Semester 1</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa1" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc1" placeholder="Credits"></div><br>
-                    <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 2</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa2" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc2" placeholder="Credits"></div><br>
-                    <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 3</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa3" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc3" placeholder="Credits"></div><br>
-                    <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 4</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa4" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc4" placeholder="Credits"></div><br>
-                    <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 5</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa5" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc5" placeholder="Credits"></div><br>
-                    <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 6</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa6" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc6" placeholder="Credits"></div><br>
-                    <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 7</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa7" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc7" placeholder="Credits"></div><br>
-                    <div style="display: inline-flex;"><label for="gpa">Semester 8</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa8" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc8" placeholder="Credits"></div><br><br>
-                    <b><p class="text-info bounceInDown animated" id="fcgpa"></p></b><br>
-                    <button class="btn btn-success" id="sem-cgpa-btn">Check CGPA</button>
-              </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card-container">
+                <div class="card card-outline-primary mb-3 ">
+                  <div class="card-block card-block-outline-info" >
+                    <h1 class="card-title zoomIn animated"><strong>Calculate your CGPA for any number of Semesters</strong></h1>
+                        <div style="display: inline-flex; padding-bottom:10px;"><label for="gpa">Semester 1</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa1" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc1" placeholder="Credits"></div><br>
+                        <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 2</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa2" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc2" placeholder="Credits"></div><br>
+                        <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 3</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa3" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc3" placeholder="Credits"></div><br>
+                        <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 4</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa4" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc4" placeholder="Credits"></div><br>
+                        <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 5</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa5" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc5" placeholder="Credits"></div><br>
+                        <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 6</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa6" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc6" placeholder="Credits"></div><br>
+                        <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 7</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa7" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc7" placeholder="Credits"></div>
+                        <div style="display: inline-flex;"><label for="gpa">Semester 8</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa8" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc8" placeholder="Credits"></div><br><br>
+                        <b><p class="text-info bounceInDown animated" id="fcgpa"></p></b><br>
+                        <button class="btn btn-success" id="sem-cgpa-btn">Check CGPA</button>
+                  </div>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="col-12-lg body-container">
-        <div class="col-sm-11 col-md-11 col-lg-11 card-container">
-            <div class="card card-outline-primary mb-3 ">
-              <div class="card-block card-block-outline-info" >
-                <h1 class="card-title zoomIn animated" style="font-size:30px;"><strong>Calculate GPA</strong></h1>
-                <label>Course 1 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                <select name="Grades" id="g1" >
-                    <option value="0" >Grade</option>
-                    <option value="10">S</option>
-                    <option value="9">A</option>
-                    <option value="8">B</option>
-                    <option value="7">C</option>
-                    <option value="6">D</option>
-                    <option value="5">E</option>
-                    <option value="0">F</option>
-                    <option value="0">N</option>
-                </select>
-                <select name="credits" id="c1">
-                    <option value="0" id="c0">Credits</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select><br>
-                <label>Course 2 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                <select name="grades" id="g2">
-                    <option value="0" >Grade</option>
-                    <option value="10">S</option>
-                    <option value="9">A</option>
-                    <option value="8">B</option>
-                    <option value="7">C</option>
-                    <option value="6">D</option>
-                    <option value="5">E</option>
-                    <option value="0">F</option>
-                    <option value="0">N</option>
-                </select>
-                <select name="credits" id="c2">
-                    <option value="0" id="c0">Credits</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select><br>
-                <label>Course 3 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                <select name="grades" id="g3">
-                    <option value="0" >Grade</option>
-                    <option value="10" >S</option>
-                    <option value="9">A</option>
-                    <option value="8">B</option>
-                    <option value="7">C</option>
-                    <option value="6">D</option>
-                    <option value="5">E</option>
-                    <option value="0">F</option>
-                    <option value="0">N</option>
-                </select>
-                <select name="credits" id="c3">
-                    <option value="0" id="c0">Credits</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select><br>
-                <label>Course 4 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                <select name="Grades" id="g4">
-                    <option value="0" >Grade</option>
-                    <option value="10">S</option>
-                    <option value="9">A</option>
-                    <option value="8">B</option>
-                    <option value="7">C</option>
-                    <option value="6">D</option>
-                    <option value="5">E</option>
-                    <option value="0">F</option>
-                    <option value="0">N</option>
-                </select>
-                <select name="credits" id="c4">
-                    <option value="0" id="c0">Credits</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select><br>
-                <label>Course 5 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                <select name="Grades" id="g5">
-                    <option value="0" >Grade</option>
-                    <option value="10">S</option>
-                    <option value="9">A</option>
-                    <option value="8">B</option>
-                    <option value="7">C</option>
-                    <option value="6">D</option>
-                    <option value="5">E</option>
-                    <option value="0">F</option>
-                    <option value="0">N</option>
-                </select>
-                <select name="credits" id="c5">
-                    <option value="0" id="c0">Credits</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select><br>
-                <label>Course 6 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                <select name="Grades" id="g6">
-                    <option value="0" >Grade</option>
-                    <option value="10">S</option>
-                    <option value="9">A</option>
-                    <option value="8">B</option>
-                    <option value="7">C</option>
-                    <option value="6">D</option>
-                    <option value="5">E</option>
-                    <option value="0">F</option>
-                    <option value="0">N</option>
-                </select>
-                <select name="credits" id="c6">
-                    <option value="0" id="c0">Credits</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select><br>
-                <label>Course 7 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                <select name="Grades" id="g7">
-                    <option value="0" >Grade</option>
-                    <option value="10">S</option>
-                    <option value="9">A</option>
-                    <option value="8">B</option>
-                    <option value="7">C</option>
-                    <option value="6">D</option>
-                    <option value="5">E</option>
-                    <option value="0">F</option>
-                    <option value="0">N</option>
-                </select>
-                <select name="credits" id="c7">
-                    <option value="0" id="c0">Credits</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select><br>
-                <label>Course 8 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                <select name="Grades" id="g8">
-                    <option value="0" >Grade</option>
-                    <option value="10">S</option>
-                    <option value="9">A</option>
-                    <option value="8">B</option>
-                    <option value="7">C</option>
-                    <option value="6">D</option>
-                    <option value="5">E</option>
-                    <option value="0">F</option>
-                    <option value="0">N</option>
-                </select>
-                <select name="credits" id="c8">
-                    <option value="0" id="c0">Credits</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select><br>
-                <label>Course 9 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                <select name="Grade" id="g9">
-                    <option value="0" >Grade</option>
-                    <option value="10">S</option>
-                    <option value="9">A</option>
-                    <option value="8">B</option>
-                    <option value="7">C</option>
-                    <option value="6">D</option>
-                    <option value="5">E</option>
-                    <option value="0">F</option>
-                    <option value="0">N</option>
-                </select>
-                <select name="credits" id="c9">
-                    <option value="0" id="c0">Credits</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select><br>
-                <label>Course 10 </label>&nbsp;&nbsp;
-                <select name="Grades" id="g10">
-                    <option value="0" >Grade</option>
-                    <option value="10">S</option>
-                    <option value="9">A</option>
-                    <option value="8">B</option>
-                    <option value="7">C</option>
-                    <option value="6">D</option>
-                    <option value="5">E</option>
-                    <option value="0">F</option>
-                    <option value="0">N</option>
-                </select>
-                <select name="credits" id="c10">
-                    <option value="0" id="c0">Credits</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-              </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card-container">
+                <div class="card card-outline-primary mb-3 ">
+                  <div class="card-block card-block-outline-info" >
+                    <h1 class="card-title zoomIn animated" style="font-size:30px;"><strong>Calculate GPA</strong></h1>
+                    <div class="form-inline">
+                        <label>Course 1 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <select class="form-control" name="Grades" id="g1" >
+                            <option value="0" >Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+                        </select>
+                        <select class="form-control" name="credits" id="c1">
+                            <option value="0" id="c0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-inline">
+                        <label>Course 2 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <select class="form-control" name="grades" id="g2">
+                            <option value="0" >Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+                        </select>
+                        <select class="form-control" name="credits" id="c2">
+                            <option value="0" id="c0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-inline">
+                        <label>Course 3 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <select class="form-control" name="grades" id="g3">
+                            <option value="0" >Grade</option>
+                            <option value="10" >S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+                        </select>
+                        <select class="form-control" name="credits" id="c3">
+                            <option value="0" id="c0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-inline">
+                        <label>Course 4 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <select class="form-control" name="Grades" id="g4">
+                            <option value="0" >Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+                        </select>
+                        <select class="form-control" class="form-control" name="credits" id="c4">
+                            <option value="0" id="c0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-inline">
+                        <label>Course 5 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <select class="form-control" name="Grades" id="g5">
+                            <option value="0" >Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+                        </select>
+                        <select class="form-control" name="credits" id="c5">
+                            <option value="0" id="c0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-inline">
+                        <label>Course 6 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <select class="form-control" name="Grades" id="g6">
+                            <option value="0" >Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+                        </select>
+                        <select class="form-control" name="credits" id="c6">
+                            <option value="0" id="c0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select><br>
+                    </div>
+                    <div class="form-inline">
+                        <label>Course 7 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <select class="form-control" name="Grades" id="g7">
+                            <option value="0" >Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+                        </select>
+                        <select class="form-control" name="credits" id="c7">
+                            <option value="0" id="c0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option> class="form-control"
+                        </select>
+                    </div>
+                    <div class="form-inline">
+                        <label>Course 8 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <select class="form-control" name="Grades" id="g8">
+                            <option value="0" >Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+                        </select>
+                        <select class="form-control" name="credits" id="c8">
+                            <option value="0" id="c0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-inline">
+                        <label>Course 9 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <select class="form-control" name="Grade" id="g9">
+                            <option value="0" >Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+                        </select>
+                        <select class="form-control" name="credits" id="c9">
+                            <option value="0" id="c0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-inline">
+                        <label>Course 10 </label>&nbsp;&nbsp;
+                        <select class="form-control" name="Grades" id="g10">
+                            <option value="0" >Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+                        </select>
+                        <select class="form-control" name="credits" id="c10">
+                            <option value="0" id="c0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <section>
+                    </div>
+                        <p id="grades" class="text-info" style="padding:1%; font-size : bolder;"></p><br>
+                        <button class="gbtn btn btn-info" id="gbtn" >Get GPA</button>
+                        <button class="button btn btn-success animated hide" type="reset" id="reset" onClick="window.location.reload()">Reset</button><br><br>
+                    </section>
+                  </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-sm-11 col-md-11 col-lg-11 card-container">
-        <div class="card card-outline-primary mb-3 ">
-          <div class="card-block card-block-outline-info" >
-            <p id="grades" style="font-size : bolder;">Click below when you have filled the details!</p><br>
-                <button class="gbtn btn btn-info" id="gbtn" >Get GPA</button>
-                <button class="button btn btn-success animated hide" type="reset" id="reset" onClick="window.location.reload()">Reset</button><br><br>
-                <button class="btn btn-warning" id="cbtn">Calculate CGPA</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://devil-coder.github.io/CSE-grade-calculator/"><button class="btn btn-danger" id="nbtn">Get CSE Grades</button></a><br><br><br>
-  <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevil-coder.github.io%2Fvit_grades%2F&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="400px" height="80px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br>
-          <section class="cgpa-box hide" id="cgpa-box"><br><center>
-            <form  class="input-group">
-                <input type="text" id='tc' class="form-control cgpa-input" maxlength="3" placeholder="Credits till last Sem?"><br>
-                <input type="text" id='cgpa' class="form-control cgpa-input" maxlength="4" placeholder="CGPA till last Sem?"><br>
-                <input type="text" id='c' class="form-control cgpa-input" maxlength="2" placeholder="Credits in this Sem?"><br>
-                <input type="text" id='gpa' class="form-control cgpa-input" maxlength="4" placeholder="GPA this semester?">
-            </form><br>
-            <button class="btn btn-primary" id="submit">Done</button>
-            <button class="btn btn-warning" id="close">Close</button></center>
-          </section>
-                <p class="cgpa-msg hide" id="cgpa-msg" style="font-family: 'Raleway', sans-serif;" disabled="disabled"></p>
-          </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card-container">
+                <div class="card card-outline-primary mb-6">
+                  <div class="card-block card-block-outline-info" >
+                    <button class="btn btn-warning" id="cbtn">Calculate CGPA</button>&nbsp;
+                    <a href="https://devil-coder.github.io/CSE-grade-calculator/"><button class="btn btn-danger" id="nbtn">Get CSE Grades</button></a><br>
+                  <section class="cgpa-box hide" id="cgpa-box"><br><center>
+                    <form  class="input-group">
+                        <input type="text" id='tc' class="form-control cgpa-input" maxlength="3" placeholder="Credits till last Sem?"><br>
+                        <input type="text" id='cgpa' class="form-control cgpa-input" maxlength="4" placeholder="CGPA till last Sem?"><br>
+                        <input type="text" id='c' class="form-control cgpa-input" maxlength="2" placeholder="Credits in this Sem?"><br>
+                        <input type="text" id='gpa' class="form-control cgpa-input" maxlength="4" placeholder="GPA this semester?">
+                    </form><br>
+                    <button class="btn btn-primary" id="submit">Done</button>
+                    <button class="btn btn-warning" id="close">Close</button></center>
+                  </section>
+                        <p class="cgpa-msg hide" id="cgpa-msg" style="font-family: 'Raleway', sans-serif;" disabled="disabled"></p>
+                  </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="col-sm-11 col-md-11 col-lg-11 card-container">
-        <div class="card card-outline-primary mb-3 ">
-          <div class="card-block card-block-outline-info" >
-            <footer class="footer">
-            <p style="font-family: 'Raleway', sans-serif;">Handcrafted by Raj Chandra<br><br><a href="https://www.facebook.com/raj.chandra.963"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
-            </footer>
-          </div>
-          <div class="fb-comments" data-href="https://devil-coder.github.io/vit_grades/" data-width="100%" data-numposts="5"></div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card-container">
+                <div class="card card-outline-primary mb-6 ">
+                  <div class="card-block card-block-outline-info" >
+                    <p class="text-danger">Let us know if this was helpful</p>
+                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevil-coder.github.io%2Fvit_grades%2F&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="400px" height="80px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                  </div>
+                  <!-- <div class="fb-comments" data-href="https://devil-coder.github.io/vit_grades/" data-width="100%" data-numposts="5"></div> -->
+                </div>
+            </div>
         </div>
     </div>
 </div>
+</div>
+<footer style="padding: 5%; background-color: #000000; color: #fff; margin: 0 0 -3% 0;">
+    &copy; 2017 Raj Chandra <a href="https://www.facebook.com/raj.chandra.963"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a>
+</footer>
 <script language="javascript" type="text/javascript" src="jsfile.js"></script>
 </body>
 </html>
