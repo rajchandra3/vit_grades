@@ -90,7 +90,7 @@
             // $('#cbtn').attr('disabled','disabled'); //This disables the Get CGPA btn after close is pressed for all the time.
             // document.getElementById('gbtn').className="hide"; //adds hide to get GPA btn which is not required.
             document.getElementById('cgpa-msg').className="hide";
-            document.getElementById('cbtn').classList.remove("hide");
+            document.getElementById('cbtn').className="btn btn-warning";
         });
         $('.form-control').on('keyup',function(){
                 var input=document.getElementById(this.id).value;
