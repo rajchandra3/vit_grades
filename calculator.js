@@ -8,9 +8,9 @@
             });
         });
 
-        $('#team-view').on('click',function(){
-            $('#team-data').fadeToggle('slow');
-        });
+        // $('#team-view').on('click',function(){
+        //     $('#team-data').fadeToggle('slow');
+        // });
 
         $('#gbtn').on('click',function(){
             var g1=0,g2=0,g3=0,g4=0,g5=0,g6=0,g7=0,g8=0,g9=0,g10=0,c1=0,c2=0,c3=0,c4=0,c5=0,c6=0,c7=0,c8=0,c9=0,c10=0,sum=0,gpa=0;
@@ -23,26 +23,26 @@
             }
             $('#grades').html("<p><strong>Your GPA is  "+gpa.toFixed(2)+"</strong></p>");
             document.getElementById('reset').classList.remove("hide");
-            document.getElementById('cbtn').classList.remove("hide");
+            // document.getElementById('cbtn').classList.remove("hide");
             // document.getElementById("gbtn").className="gbtn hide";
             // $('.body-container').hide(1000);
         });
-            $('#cbtn').click(function(){
-                document.getElementById('reset').classList.remove("hide");
-                document.getElementById('cgpa-box').classList.remove("hide");
-                document.getElementById('cbtn').className="hide";
-                // $('#gbtn').attr('disabled','disabled');
-                $('form > input').on('keyup',function(){
-                var empty=false;
-                $('form > input').each(function(){
-                    if($(this).val() == '')
-                        empty=true;
-                if(empty)
-                    $('#submit').attr('disabled','disabled');
-                else
-                    $('#submit').removeAttr('disabled');
-                });
-            });
+            // $('#cbtn').click(function(){
+            //     document.getElementById('reset').classList.remove("hide");
+            //     document.getElementById('cgpa-box').classList.remove("hide");
+            //     document.getElementById('cbtn').className="hide";
+            //     // $('#gbtn').attr('disabled','disabled');
+            //     $('form > input').on('keyup',function(){
+            //     var empty=false;
+            //     $('form > input').each(function(){
+            //         if($(this).val() == '')
+            //             empty=true;
+            //     if(empty)
+            //         $('#submit').attr('disabled','disabled');
+            //     else
+            //         $('#submit').removeAttr('disabled');
+            //     });
+            // });
             $('.cgpa-input').on('keyup',function(){
                 var input=document.getElementById(this.id).value;
                 if(!input==''){
@@ -69,10 +69,10 @@
                     $(this).val('');
                 }
             });
-        });
+        // });
         $('#submit').click(function(){
             document.getElementById('cgpa-msg').classList.remove("hide");
-            document.getElementById('cbtn').className="btn btn-warning hide";
+            // document.getElementById('cbtn').className="btn btn-warning hide";
             var cgpa=parseFloat($('#cgpa').val());
             var gpa=parseFloat($('#gpa').val());
             var c=parseFloat($('#c').val());
@@ -85,13 +85,13 @@
             }
             document.getElementById('cgpa-msg').innerHTML="<br>Your CGPA is  "+f.toFixed(2);
         });
-        $('#close').click(function(){
-            document.getElementById('cgpa-box').className="cgpa-box hide";
-            // $('#cbtn').attr('disabled','disabled'); //This disables the Get CGPA btn after close is pressed for all the time.
-            // document.getElementById('gbtn').className="hide"; //adds hide to get GPA btn which is not required.
-            document.getElementById('cgpa-msg').className="hide";
-            document.getElementById('cbtn').className="btn btn-warning";
-        });
+        // $('#close').click(function(){
+        //     document.getElementById('cgpa-box').className="cgpa-box hide";
+        //     // $('#cbtn').attr('disabled','disabled'); //This disables the Get CGPA btn after close is pressed for all the time.
+        //     // document.getElementById('gbtn').className="hide"; //adds hide to get GPA btn which is not required.
+        //     document.getElementById('cgpa-msg').className="hide";
+        //     document.getElementById('cbtn').className="btn btn-warning";
+        // });
         $('.form-control').on('keyup',function(){
                 var input=document.getElementById(this.id).value;
                 if(!input==''){

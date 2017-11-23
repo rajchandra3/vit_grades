@@ -92,6 +92,7 @@
   js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
 <center>
 <div class="main-container">
     <div class="header-container">
@@ -394,9 +395,10 @@
             <div class="card-container">
                 <div class="card card-outline-primary mb-6">
                   <div class="card-block card-block-outline-info" >
-                    <button class="btn btn-warning" id="cbtn">Calculate CGPA</button>&nbsp;
-                    <a href="https://devil-coder.github.io/CSE-grade-calculator/"><button class="btn btn-danger" id="nbtn">Get CSE Grades</button></a><br>
-                  <section class="cgpa-box hide" id="cgpa-box"><br><center>
+                    <!-- <button class="btn btn-warning" id="cbtn">Calculate CGPA</button>&nbsp;
+                    <a href="https://devil-coder.github.io/CSE-grade-calculator/"><button class="btn btn-danger" id="nbtn">Get CSE Grades</button></a><br> -->
+                  <section class="cgpa-box" id="cgpa-box"><br><center>
+                    <h3>Quick Cgpa Calculator</h3>
                     <form  class="input-group">
                         <input type="text" id='tc' class="form-control cgpa-input" maxlength="3" placeholder="Credits till last Sem?"><br>
                         <input type="text" id='cgpa' class="form-control cgpa-input" maxlength="4" placeholder="CGPA till last Sem?"><br>
@@ -404,7 +406,8 @@
                         <input type="text" id='gpa' class="form-control cgpa-input" maxlength="4" placeholder="GPA this semester?">
                     </form><br>
                     <button class="btn btn-primary" id="submit">Done</button>
-                    <button class="btn btn-warning" id="close">Close</button></center>
+                    <!-- <button class="btn btn-warning" id="close">Close</button> -->
+                </center>
                   </section>
                         <p class="cgpa-msg hide" id="cgpa-msg" style="font-family: 'Raleway', sans-serif;" disabled="disabled"></p>
                   </div>
@@ -415,7 +418,7 @@
             <div class="card-container">
                 <div class="card card-outline-primary mb-6 ">
                   <div class="card-block card-block-outline-info" >
-                    <p class="text-danger"><small>Let us know if this was helpful</small></p>
+                    <h3 class="text-danger"><small>Let us know if this was helpful</small></p>
                     <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevil-coder.github.io%2Fvit_grades%2F&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="400px" height="80px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                   </div>
                   <!-- <div class="fb-comments" data-href="https://devil-coder.github.io/vit_grades/" data-width="100%" data-numposts="5"></div> -->
@@ -424,7 +427,10 @@
         </div>
     </div>
 </div>
-</div>
+
+<!-- Revenue hits ad -->
+<script data-cfasync='false' type='text/javascript' src='//p234200.clksite.com/adServe/banners?tid=234200_454473_1&type=footer&size=728x90'></script>
+
 <footer style="padding: 5%; background-color: #000000; color: #fff;">
     &copy; 2017 Raj Chandra <a href="https://www.facebook.com/raj.chandra.963"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a>
 </footer>
