@@ -447,8 +447,13 @@
 </div>
 <!-- footer for VIT Cgpa Calculator -->
 <footer style="padding: 5% 5% 5% 5%; background-color: #000000; color: #fff;">
-    &copy; 2017-2018 Raj Chandra <a href="https://www.facebook.com/raj.chandra.963"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a>
+    &copy; 2017 - <span id="thisYear"></span> Raj Chandra <a href="https://www.facebook.com/raj.chandra.963"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a>
 </footer>
+<!-- script for year in footer -->
+<script>
+  var d = new Date();
+  document.getElementById('thisYear').innerHTML = d.getFullYear();
+</script>
 <!-- main script file  -->
 <script language="javascript" type="text/javascript" src="jsfile.js"></script>
 </body>
