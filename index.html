@@ -9,7 +9,8 @@
     <link rel="icon" type="image/png" href="http://www.fetchlogos.com/wp-content/uploads/2015/10/VIT-University-Logo.png">
     <link rel="stylesheet" type="text/css" href="animate.css">
     <script type="text/javascript" src="jquery.min.js"></script>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <!-- This is for smartlook -->
     <script type="text/javascript">
@@ -104,7 +105,7 @@
 
     <div class="container" style="margin-bottom: 2%">
         <div class="card-container card-outline-success mb-3 text-center" style="solid;background-color: #ffffff;"><br>
-            <button id="about-btn" class="btn btn-info">How to use?</button><br><br>
+            <button id="about-btn" class="btn btn-info badge-pill badge-info">How to use?</button><br><br>
             <div class="card-block">
                 <blockquote class="info" id="about" style="display: none;">
                 <p>VIT CGPA Calculator is a great tool that will help you calculate the CGPA for the present semester. Moreover VIT CGPA calculator also gives you the power to predict the CGPA for the coming Semesters. VIT CGPA Calcuator has been helping hundreds of students predict their CGPA. Hope it helps you :)</p>
@@ -142,15 +143,16 @@
     <div class="container">
         <div class="row">
     <!-- Ads for CodePark comes here -->
-          <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="col-sm-12 col-md-12 col-lg-12 ads">
             <div class="jumbotron jumbotron-fluid">
-              <div class="container">
-                <h1 class="display-3">
-                  <img src="images/codepark.png" alt="CodePark" height="100" width="150"> CodePark.in</h1>
+              <div class="container ads-container">
+                <span class="badge badge-pill badge-warning">Ads</span>
+                <h1 class="display-3 tada animated">
+                  <img src="images/codepark.png" class="animated" alt="CodePark" height="100" width="150"> CodePark.in</h1>
                 <p class="lead">Codes worth sharing.</p>
                 <hr class="my-4">
                 <p class="lead">
-                  <a class="btn btn-primary btn-lg" href="http://www.CodePark.in" target="_blank" role="button">Learn more</a>
+                  <a class="btn btn-primary btn-lg badge-pill badge-primary" href="http://www.CodePark.in" target="_blank" role="button">Learn more</a>
                 </p>
               </div>
             </div>
@@ -170,10 +172,15 @@
                         <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 7</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa7" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc7" placeholder="Credits"></div>
                         <div style="display: inline-flex;"><label for="gpa">Semester 8</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa8" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc8" placeholder="Credits"></div><br><br>
                         <b><p class="text-info bounceInDown animated" id="fcgpa"></p></b><br>
-                        <button class="btn btn-success" id="sem-cgpa-btn">Check CGPA</button>
+                        <button class="btn btn-success badge-pill badge-success" id="sem-cgpa-btn">Check CGPA</button>
                   </div>
                 </div>
             </div>
+          <!-- CodePark ads -->
+          <div class="alert alert-info ads" onclick="window.location.href='http://www.codepark.in'" role="alert">
+            <span class="badge-pill badge-warning">Ads</span>
+            <p class="mb-0">Learn to Code at CodePark.</p>
+          </div>
         </div>
         <!-- This semseter GPA calculator -->
         <div class="col-sm-12 col-md-6 col-lg-6">
@@ -403,15 +410,15 @@
                         <section>
                     </div>
                         <p id="grades" class="text-info" style="padding:1%; font-size : bolder;"></p><br>
-                        <span class="btn-holder"><button class="gbtn btn btn-info" id="gbtn" >Get GPA</button></span>
-                        <span class="btn-holder"><button class="button btn btn-success animated hide" type="reset" id="reset" onClick="window.location.reload()">Reset</button></span><br><br>
+                        <span class="btn-holder"><button class="gbtn btn btn-info badge-pill badge-info" id="gbtn" >Get GPA</button></span>
+                        <span class="btn-holder"><button class="button btn btn-warning badge-pill badge-warning animated hide" type="reset" id="reset" onClick="window.location.reload()">Reset</button></span><br><br>
                     </section>
                   </div>
                 </div>
             </div>
         </div>
         <!-- This semester cgpa calculator -->
-        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="card-container">
                 <div class="card card-outline-primary mb-6">
                   <div class="card-block card-block-outline-info" >
@@ -425,7 +432,7 @@
                         <input type="text" id='c' class="form-control cgpa-input" maxlength="2" placeholder="Credits in this Sem?"><br>
                         <input type="text" id='gpa' class="form-control cgpa-input" maxlength="4" placeholder="GPA this semester?">
                     </form><br>
-                    <button class="btn btn-primary" id="submit">Done</button>
+                    <button class="btn btn-primary badge-pill badge-primary" id="submit">Done</button>
                     <!-- <button class="btn btn-warning" id="close">Close</button> -->
                 </center>
                   </section>
@@ -435,14 +442,14 @@
             </div>
         </div>
         <!-- fb like and share -->
-        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="card-container">
                 <div class="card card-outline-primary mb-6 ">
                   <div class="card-block card-block-outline-info" >
-                    <h3 class="text-danger"><small>Let us know if this was helpful</small></p>
+                    <h3 class="text-danger"><small>Let us know if this was helpful.</small></p>
                     <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevil-coder.github.io%2Fvit_grades%2F&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="400px" height="80px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                   </div>
-                  <!-- <div class="fb-comments" data-href="https://devil-coder.github.io/vit_grades/" data-width="100%" data-numposts="5"></div> -->
+                  <div class="fb-comments" data-href="https://devil-coder.github.io/vit_grades/" data-width="100%" data-numposts="5"></div>
                 </div>
             </div>
         </div>
@@ -450,7 +457,9 @@
 </div>
 <!-- footer for VIT Cgpa Calculator -->
 <footer style="padding: 5% 5% 5% 5%; background-color: #000000; color: #fff;">
-    &copy; 2017 - <span id="thisYear"></span> Raj Chandra <a href="https://www.facebook.com/raj.chandra.963"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a>
+    &copy; 2017 - <span id="thisYear"></span> Raj Chandra. All Rights Reserved. <br>
+    <a href="https://www.facebook.com/raj.chandra.963"><i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 23px; color: white;"></i></a> &nbsp;
+    <a href=""><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size: 23px; color: white;"></i></a>
 </footer>
 <!-- script for year in footer -->
 <script>
