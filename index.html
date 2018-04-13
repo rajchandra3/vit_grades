@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="description" content="An online tool to calculate CGPA, GPA and Even get a hint of what your CGPA would be after few semesters. It is 100% accurate and very easy to use. More than 14.5k users have been using it to compute their GPAs and CGPA.">
+    <meta name="description" content="An online tool to calculate CGPA, GPA and Even get a hint of what your CGPA would be after few semesters. It is 100% accurate and very easy to use. More than 19.5k users have been using it to compute their GPAs and CGPA.">
     <meta name="keywords" content="CGPA calculator VIT, VIT CGPA CALCULATOR, VIT gpa calculator, gpa calculator VIT, devil-coder cgpa calculator, Raj Chandra vit cgpa calculator, VIT marks calculator">
     <meta name="author" content="Raj Chandra">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#58a6da">
     <title>VIT CGPA Calculator</title>
     <link rel="icon" type="image/png" href="http://www.fetchlogos.com/wp-content/uploads/2015/10/VIT-University-Logo.png">
+    <!-- Animate.css -->
     <link rel="stylesheet" type="text/css" href="animate.css">
+    <!-- Jquery -->
     <script type="text/javascript" src="jquery.min.js"></script>
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <!--<link href="bootstrap/css/bootstrap.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <!-- This is for smartlook -->
     <script type="text/javascript">
@@ -29,51 +39,6 @@
         enable_page_level_ads: true
       });
     </script>
-
-    <style>
-    select{
-        margin:8px;
-        background: white;
-        border-color: #95a5a6;
-        color:#000;
-    }
-    header{
-        padding: 3% 0 0 0;
-        margin-bottom: 4%;
-        width: 100%;
-        background-color: #2980b9;
-        color: white;
-        font-weight: bold;
-        font-size: 45px;
-        text-align: center;
-    }
-    p{
-      font-size:20px;
-      font-weight:bold;
-    }
-    h1{
-        color: #000000;
-        width: 100%;
-        font-size: 24px;
-        text-align: center;
-        position: relative;
-        margin-bottom: 3%;
-    }
-    .card-container{
-        background-color: #ffffff;
-        padding : 3%;
-        /*margin-right: 2%;
-        margin-left: 4%;*/
-        margin-bottom: 3%;
-        border-radius: 10px;
-    }
-    .form-inline{
-        display: inline-flex;
-    }
-    .btn-holder{
-      padding: 3%;
-    }
-    </style>
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -84,8 +49,11 @@
   ga('send', 'pageview');
 
 </script>
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="padding: 0% 0% 0% 0%; background-color:#2980b9; font-family: 'Raleway', sans-serif;">
+<body>
 <!-- for likes -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -110,45 +78,66 @@
     <div class="header-container">
          <header>VIT CGPA CALCULATOR</header>
     </div>
-
-    <div class="container" style="margin-bottom: 2%">
-        <div class="card-container card-outline-success mb-3 text-center" style="solid;background-color: #ffffff;"><br>
-            <button id="about-btn" class="btn btn-info badge-pill badge-info">How to use?</button><br><br>
-            <div class="card-block">
-                <blockquote class="info" id="about" style="display: none;">
-                <p>VIT CGPA Calculator is a great tool that will help you calculate the CGPA for the present semester. Moreover, VIT CGPA calculator also gives you the power to predict the CGPA for the coming Semesters. VIT CGPA Calculator has been helping hundreds of students predict their CGPA. Hope it helps you :)</p>
-                  <section class="how_to" ><br>
-                      To begin with select the credits and the grades of the courses for which the results are out in the section 'Your details'.<br>
-                      <img src="images/fill-details_gpa.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>
-                      If results are out for 5 courses the details should look like this(Note: Selecting all the courses in not binding.) <br>
-                      <img src="images/filled-details.jpeg" alt="vit cgpa calculator" height="180" width="200"> <br><hr>
-                      Now press the 'Get GPA' button. <br>
-                      <img src="images/press_gpa.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>
-                      Your GPA will be displayed. <br>
-                      <img src="images/press-cgpa-btn.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>
-                      Press the Calculate CGPA button to get the CGPA and fill the details. <br>
-                      <img src="images/fill_det_cgpa.jpeg" alt="vit cgpa calculator" height="200" width="200"> <br><hr>
-                      The filled details looks as below , if you had campleted 102 credits with a cgpa of 8.8 last semester and this semester you had 24 credits and your GPA is 9.6. Press the 'Done' button to get the CGPA.<br>
-                      <img src="images/filled-det-cgpa.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>
-                      The CGPA will be displayed as shown.<br>
-                      <img src="images/press-done.jpeg" alt="vit cgpa calculator" height="250" width="200"> <br><hr>
-                      You can get your CSE 1002 grades by pressing the 'Get CSE grade' button. <br>
-                      <img src="images/cse-grades.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>
-                      <h3><b>For any number of Semester</b></h3><br>
-                      <b>Begin by entering the cgpa and credits till the present semester. For example if you are in 4th semester your input should look like this </b><br>
-                      <img src="images/new_fill_basic.png" alt="vit cgpa calculator" height="100%" width="200"> <br><hr>
-                      Then enter the cgpa and credits(you intend to get) for future semesters and click the check cgpa button<br>
-                      <img src="images/new_fill_rest.png" alt="vit cgpa calculator" height="100%" width="200"> <br><hr>
-                      The CGPA will be displayed as shown.<br>
-                      <img src="images/new_get_cgpa.png" alt="vit cgpa calculator" height="100%" width="200"> <br><hr>
-                  </section>
-                  <footer id="attrib">Team<img src="http://www.clker.com/cliparts/1/1/9/2/12065738771352376078Arnoud999_Right_or_wrong_5.svg.hi.png" alt="X" id="close-btn" style=" float: right;" height="20" width="20"></footer>
-                </blockquote>
-            </div>
-          </div>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item link2 active" onclick="changeActiveLink(2)">
+                <a class="nav-link" href="#emc">EXPECTED MARKS CALCULATOR</a>
+            </li>
+            <li class="nav-item link1" onclick="changeActiveLink(1)">
+                <a class="nav-link" href="#qcc">QUICK CGPA CALCULATOR</a>
+            </li>
+            <li class="nav-item link3" onclick="changeActiveLink(3)">
+                <a class="nav-link" href="#ascc">ANY SEM CGPA CALCULATOR</a>
+            </li>
+            <li class="nav-item link4" onclick="changeActiveLink(4)">
+                <a class="nav-link" href="#gc">GPA CALCULATOR</a>
+            </li>
+        </ul>
     </div>
-    <div class="container">
+</nav>
+
+    <!--<div class="container">-->
+        <!--<div class="card-container card-outline-success mb-3 text-center" style="solid;background-color: #ffffff;"><br>-->
+            <!--<button id="about-btn" class="btn btn-primary">How to use?</button><br><br>-->
+            <!--<div class="card-block">-->
+                <!--<blockquote class="info" id="about" style="display: none;">-->
+                <!--<p>VIT CGPA Calculator is a great tool that will help you calculate the CGPA for the present semester. Moreover, VIT CGPA calculator also gives you the power to predict the CGPA for the coming Semesters. VIT CGPA Calculator has been helping hundreds of students predict their CGPA. Hope it helps you :)</p>-->
+                  <!--<section class="how_to" ><br>-->
+                      <!--To begin with select the credits and the grades of the courses for which the results are out in the section 'Your details'.<br>-->
+                      <!--<img src="images/fill-details_gpa.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>-->
+                      <!--If results are out for 5 courses the details should look like this(Note: Selecting all the courses in not binding.) <br>-->
+                      <!--<img src="images/filled-details.jpeg" alt="vit cgpa calculator" height="180" width="200"> <br><hr>-->
+                      <!--Now press the 'Get GPA' button. <br>-->
+                      <!--<img src="images/press_gpa.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>-->
+                      <!--Your GPA will be displayed. <br>-->
+                      <!--<img src="images/press-cgpa-btn.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>-->
+                      <!--Press the Calculate CGPA button to get the CGPA and fill the details. <br>-->
+                      <!--<img src="images/fill_det_cgpa.jpeg" alt="vit cgpa calculator" height="200" width="200"> <br><hr>-->
+                      <!--The filled details looks as below , if you had campleted 102 credits with a cgpa of 8.8 last semester and this semester you had 24 credits and your GPA is 9.6. Press the 'Done' button to get the CGPA.<br>-->
+                      <!--<img src="images/filled-det-cgpa.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>-->
+                      <!--The CGPA will be displayed as shown.<br>-->
+                      <!--<img src="images/press-done.jpeg" alt="vit cgpa calculator" height="250" width="200"> <br><hr>-->
+                      <!--You can get your CSE 1002 grades by pressing the 'Get CSE grade' button. <br>-->
+                      <!--<img src="images/cse-grades.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>-->
+                      <!--<h3><b>For any number of Semester</b></h3><br>-->
+                      <!--<b>Begin by entering the cgpa and credits till the present semester. For example if you are in 4th semester your input should look like this </b><br>-->
+                      <!--<img src="images/new_fill_basic.png" alt="vit cgpa calculator" height="100%" width="200"> <br><hr>-->
+                      <!--Then enter the cgpa and credits(you intend to get) for future semesters and click the check cgpa button<br>-->
+                      <!--<img src="images/new_fill_rest.png" alt="vit cgpa calculator" height="100%" width="200"> <br><hr>-->
+                      <!--The CGPA will be displayed as shown.<br>-->
+                      <!--<img src="images/new_get_cgpa.png" alt="vit cgpa calculator" height="100%" width="200"> <br><hr>-->
+                  <!--</section>-->
+                  <!--<footer id="attrib">Team <i class="fas fa-times float-right" id="close-btn"></i></footer>-->
+                <!--</blockquote>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="container-fluid">
         <div class="row">
     <!-- Ads for CodePark comes here -->
           <!-- <div class="col-sm-12 col-md-12 col-lg-12 ads">
@@ -167,24 +156,191 @@
               </div>
             </div>
           </div> -->
-          <!--All semester CGPA calculator-->
-            <div class="col-sm-12 col-md-6 col-lg-6">
-            <div class="card-container">
-                <div class="card card-outline-primary mb-3 ">
-                  <div class="card-block card-block-outline-info" >
-                    <h1 class="card-title zoomIn animated"><strong>Calculate your CGPA for any number of Semesters</strong></h1>
-                        <div style="display: inline-flex; padding-bottom:10px;"><label for="gpa">Semester 1</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa1" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc1" placeholder="Credits"></div><br>
-                        <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 2</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa2" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc2" placeholder="Credits"></div><br>
-                        <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 3</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa3" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc3" placeholder="Credits"></div><br>
-                        <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 4</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa4" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc4" placeholder="Credits"></div><br>
-                        <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 5</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa5" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc5" placeholder="Credits"></div><br>
-                        <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 6</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa6" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc6" placeholder="Credits"></div><br>
-                        <div style="display: inline-flex;padding-bottom:10px;"><label for="gpa">Semester 7</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa7" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc7" placeholder="Credits"></div>
-                        <div style="display: inline-flex;"><label for="gpa">Semester 8</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gpa" id="gpa8" class="form-control fgpa" placeholder="GPA">&nbsp;&nbsp;&nbsp;<input type="text" class="form-control fcredits" id="fc8" placeholder="Credits"></div><br><br>
-                        <b><p class="text-info bounceInDown animated" id="fcgpa"></p></b><br>
-                        <button class="btn btn-success badge-pill badge-success" id="sem-cgpa-btn">Check CGPA</button>
-                  </div>
+
+            <!--Marks Predictor-->
+            <div class="col-sm-12 col-md-12 col-lg-6 marks-predictor" id="emc" align="left">
+                <div class="card-container">
+                    <a href="#emc" class="badge badge-danger float-right">NEW</a>
+                    <h1>Compute Expected Marks</h1>
+                    <hr>
+                    <form>
+                        <div class="form-group row">
+                            <label for="cat1" class="col-sm-6 col-form-label">Marks in CAT 1 : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="cat1" placeholder="Your score in CAT 1" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">&nbsp; max 50 </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="cat2" class="col-sm-6 col-form-label">Marks in CAT 2 : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="cat2" placeholder="Your score in CAT 2" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">&nbsp; max 50 </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="da" class="col-sm-6 col-form-label">Marks in Internals : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="da" placeholder="Your score in DA(s)" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">&nbsp; max 30 </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="lab" class="col-sm-6 col-form-label">Marks in Lab : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="lab" placeholder="Your score in Lab" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon"> max 100 </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="j-comp" class="col-sm-6 col-form-label">Marks in J Component : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="j-comp" placeholder="Your score in Project" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">max 100 </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="fat" class="col-sm-6 col-form-label">Expected Marks in FAT :</label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="fat" placeholder="Say 98" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">max 100 </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alert alert-primary text-center text-uppercase alert-marks" role="alert">
+                          <b><span id="marks"></span></b>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <button type="button" onclick="getMarks()" class="btn btn-primary float-right">Submit</button>
+                                <small id="projHelp" class="form-text text-danger">*If the course doesn't have J-Component/L-Component you can leave it empty.</small>
+
+                            </div>
+                        </div>
+                    </form>
                 </div>
+            </div>
+
+            <!-- This semester cgpa calculator -->
+            <div class="col-sm-12 col-md-12 col-lg-6 quick-cgpa-calculator" id="qcc">
+                <div class="card-container">
+                    <section class="cgpa-box" id="cgpa-box"><center>
+                        <h1>Quick Cgpa Calculator</h1>
+                        <hr>
+                        <div>
+                            <div class="input-group col-sm-8">
+                                <input type="text" id='tc' class="form-control cgpa-input" maxlength="3" placeholder="Credits till last Sem?" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">max 200 </span>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="input-group col-sm-8">
+                                <input type="text" id='cgpa' class="form-control cgpa-input" maxlength="4" placeholder="CGPA till last Sem?" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">&nbsp; max 10 </span>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="input-group col-sm-8">
+                                <input type="text" id='c' class="form-control cgpa-input" maxlength="2" placeholder="Credits in this Sem?" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">max &nbsp; 27 </span>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="input-group col-sm-8">
+                                <input type="text" id='gpa' class="form-control cgpa-input" maxlength="4" placeholder="GPA this semester?" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">max &nbsp; 10 </span>
+                                </div>
+                            </div><br>
+                            <div class="alert alert-primary text-center text-uppercase alert-cgpa-msg" role="alert">
+                                <b><span class="cgpa-msg" id="cgpa-msg"></span></b>
+                            </div>
+                            <button class="btn btn-primary float-right" id="submit">Submit</button>
+                        </div>
+                    </center>
+                    </section><br><br>
+                </div>
+            </div>
+            <!--(div.input-group.col-sm-8>(label[for='fgpa$']+input#gpa$.form-control.fgpa[name='fgpa$' type='text' placeholder='GPA']+input#fc$.form-control.fcredits[name='fcredit$' type='text' placeholder='GPA']))*10-->
+          <!--All semester CGPA calculator-->
+            <div class="col-sm-12 col-md-6 col-lg-6 n-sem-cgpa-calculator" id="ascc">
+            <div class="card-container">
+                <h1 class="card-title">Calculate your CGPA for any number of Semesters</h1><hr>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">1st Sem</span>
+                    </div>
+                    <input type="text" id="gpa1" class="form-control fgpa" name="fgpa1" placeholder="GPA"  aria-describedby="basic-addon">
+                    <input type="text" id="fc1" class="form-control fcredits" name="fcredit1" placeholder="CREDITS">
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">2nd Sem</span>
+                    </div>
+                    <input type="text" id="gpa2" class="form-control fgpa" name="fgpa2" placeholder="GPA"  aria-describedby="basic-addon">
+                    <input type="text" id="fc2" class="form-control fcredits" name="fcredit2" placeholder="CREDITS">
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">3rd Sem</span>
+                    </div>
+                    <input type="text" id="gpa3" class="form-control fgpa" name="fgpa3" placeholder="GPA"  aria-describedby="basic-addon">
+                    <input type="text" id="fc3" class="form-control fcredits" name="fcredit3" placeholder="CREDITS">
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">4th Sem</span>
+                    </div>
+                    <input type="text" id="gpa4" class="form-control fgpa" name="fgpa4" placeholder="GPA"  aria-describedby="basic-addon">
+                    <input type="text" id="fc4" class="form-control fcredits" name="fcredit4" placeholder="CREDITS">
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">5th Sem</span>
+                    </div>
+                    <input type="text" id="gpa5" class="form-control fgpa" name="fgpa5" placeholder="GPA"  aria-describedby="basic-addon">
+                    <input type="text" id="fc5" class="form-control fcredits" name="fcredit5" placeholder="CREDITS">
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">6th Sem</span>
+                    </div>
+                    <input type="text" id="gpa6" class="form-control fgpa" name="fgpa6" placeholder="GPA"  aria-describedby="basic-addon">
+                    <input type="text" id="fc6" class="form-control fcredits" name="fcredit6" placeholder="CREDITS">
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">7th Sem</span>
+                    </div>
+                    <input type="text" id="gpa7" class="form-control fgpa" name="fgpa7" placeholder="GPA"  aria-describedby="basic-addon">
+                    <input type="text" id="fc7" class="form-control fcredits" name="fcredit7" placeholder="CREDITS">
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">8th Sem</span>
+                    </div>
+                    <input type="text" id="gpa8" class="form-control fgpa" name="fgpa8" placeholder="GPA"  aria-describedby="basic-addon">
+                    <input type="text" id="fc8" class="form-control fcredits" name="fcredit8" placeholder="CREDITS">
+                </div><br>
+                <div class="alert alert-primary text-center text-uppercase alert-fcgpa" role="alert">
+                    <b><span class="text-info" id="fcgpa"></span></b>
+                </div>
+                <button class="btn btn-primary float-right" id="sem-cgpa-btn">Submit</button>
+                <br><br>
             </div>
           </div>
           <!-- CodePark ads -->
@@ -196,281 +352,255 @@
           </div>
         </div> -->
         <!-- This semseter GPA calculator -->
-        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-12 col-lg-6 gpa-calculator" id="gc">
             <div class="card-container">
-                <div class="card card-outline-primary mb-3 ">
-                  <div class="card-block card-block-outline-info" >
-                    <h1 class="card-title zoomIn animated" style="font-size:30px;"><strong>Calculate GPA</strong></h1>
-                    <div class="form-inline">
-                        <label>Course 1 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <select class="form-control" name="Grades" id="g1" >
-                            <option value="0" >Grade</option>
-                            <option value="10">S</option>
-                            <option value="9">A</option>
-                            <option value="8">B</option>
-                            <option value="7">C</option>
-                            <option value="6">D</option>
-                            <option value="5">E</option>
-                            <option value="0">F</option>
-                            <option value="0">N</option>
-                        </select>
-                        <select class="form-control" name="credits" id="c1">
-                            <option value="0" id="c0">Credits</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                    <div class="form-inline">
-                        <label>Course 2 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <select class="form-control" name="grades" id="g2">
-                            <option value="0" >Grade</option>
-                            <option value="10">S</option>
-                            <option value="9">A</option>
-                            <option value="8">B</option>
-                            <option value="7">C</option>
-                            <option value="6">D</option>
-                            <option value="5">E</option>
-                            <option value="0">F</option>
-                            <option value="0">N</option>
-                        </select>
-                        <select class="form-control" name="credits" id="c2">
-                            <option value="0" id="c0">Credits</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                    <div class="form-inline">
-                        <label>Course 3 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <select class="form-control" name="grades" id="g3">
-                            <option value="0" >Grade</option>
-                            <option value="10" >S</option>
-                            <option value="9">A</option>
-                            <option value="8">B</option>
-                            <option value="7">C</option>
-                            <option value="6">D</option>
-                            <option value="5">E</option>
-                            <option value="0">F</option>
-                            <option value="0">N</option>
-                        </select>
-                        <select class="form-control" name="credits" id="c3">
-                            <option value="0" id="c0">Credits</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                    <div class="form-inline">
-                        <label>Course 4 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <select class="form-control" name="Grades" id="g4">
-                            <option value="0" >Grade</option>
-                            <option value="10">S</option>
-                            <option value="9">A</option>
-                            <option value="8">B</option>
-                            <option value="7">C</option>
-                            <option value="6">D</option>
-                            <option value="5">E</option>
-                            <option value="0">F</option>
-                            <option value="0">N</option>
-                        </select>
-                        <select class="form-control" class="form-control" name="credits" id="c4">
-                            <option value="0" id="c0">Credits</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                    <div class="form-inline">
-                        <label>Course 5 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <select class="form-control" name="Grades" id="g5">
-                            <option value="0" >Grade</option>
-                            <option value="10">S</option>
-                            <option value="9">A</option>
-                            <option value="8">B</option>
-                            <option value="7">C</option>
-                            <option value="6">D</option>
-                            <option value="5">E</option>
-                            <option value="0">F</option>
-                            <option value="0">N</option>
-                        </select>
-                        <select class="form-control" name="credits" id="c5">
-                            <option value="0" id="c0">Credits</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                    <div class="form-inline">
-                        <label>Course 6 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <select class="form-control" name="Grades" id="g6">
-                            <option value="0" >Grade</option>
-                            <option value="10">S</option>
-                            <option value="9">A</option>
-                            <option value="8">B</option>
-                            <option value="7">C</option>
-                            <option value="6">D</option>
-                            <option value="5">E</option>
-                            <option value="0">F</option>
-                            <option value="0">N</option>
-                        </select>
-                        <select class="form-control" name="credits" id="c6">
-                            <option value="0" id="c0">Credits</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select><br>
-                    </div>
-                    <div class="form-inline">
-                        <label>Course 7 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <select class="form-control" name="Grades" id="g7">
-                            <option value="0" >Grade</option>
-                            <option value="10">S</option>
-                            <option value="9">A</option>
-                            <option value="8">B</option>
-                            <option value="7">C</option>
-                            <option value="6">D</option>
-                            <option value="5">E</option>
-                            <option value="0">F</option>
-                            <option value="0">N</option>
-                        </select>
-                        <select class="form-control" name="credits" id="c7">
-                            <option value="0" id="c0">Credits</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option> class="form-control"
-                        </select>
-                    </div>
-                    <div class="form-inline">
-                        <label>Course 8 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <select class="form-control" name="Grades" id="g8">
-                            <option value="0" >Grade</option>
-                            <option value="10">S</option>
-                            <option value="9">A</option>
-                            <option value="8">B</option>
-                            <option value="7">C</option>
-                            <option value="6">D</option>
-                            <option value="5">E</option>
-                            <option value="0">F</option>
-                            <option value="0">N</option>
-                        </select>
-                        <select class="form-control" name="credits" id="c8">
-                            <option value="0" id="c0">Credits</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                    <div class="form-inline">
-                        <label>Course 9 </label>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <select class="form-control" name="Grade" id="g9">
-                            <option value="0" >Grade</option>
-                            <option value="10">S</option>
-                            <option value="9">A</option>
-                            <option value="8">B</option>
-                            <option value="7">C</option>
-                            <option value="6">D</option>
-                            <option value="5">E</option>
-                            <option value="0">F</option>
-                            <option value="0">N</option>
-                        </select>
-                        <select class="form-control" name="credits" id="c9">
-                            <option value="0" id="c0">Credits</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                    <div class="form-inline">
-                        <label>Course 10 </label>&nbsp;&nbsp;
-                        <select class="form-control" name="Grades" id="g10">
-                            <option value="0" >Grade</option>
-                            <option value="10">S</option>
-                            <option value="9">A</option>
-                            <option value="8">B</option>
-                            <option value="7">C</option>
-                            <option value="6">D</option>
-                            <option value="5">E</option>
-                            <option value="0">F</option>
-                            <option value="0">N</option>
-                        </select>
-                        <select class="form-control" name="credits" id="c10">
-                            <option value="0" id="c0">Credits</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        <section>
-                    </div>
-                        <p id="grades" class="text-info" style="padding:1%; font-size : bolder;"></p><br>
-                        <span class="btn-holder"><button class="gbtn btn btn-info badge-pill badge-info" id="gbtn" >Get GPA</button></span> &nbsp;
-                        <span class="btn-holder"><button class="button btn btn-warning badge-pill badge-warning hide" type="button" id="reset" onClick="clearAll()">Clear All</button></span><br><br>
-                    </section>
-                  </div>
+                <h1 class="card-title">Calculate GPA</h1><hr>
+                <div class="form-inline">
+                    <label>Course 1 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select class="form-control" name="grades" id="g1" >
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c1">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
                 </div>
-            </div>
-        </div>
-        <!-- This semester cgpa calculator -->
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="card-container">
-                <div class="card card-outline-primary mb-6">
-                  <div class="card-block card-block-outline-info" >
-                    <!-- <button class="btn btn-warning" id="cbtn">Calculate CGPA</button>&nbsp;
-                    <a href="https://devil-coder.github.io/CSE-grade-calculator/"><button class="btn btn-danger" id="nbtn">Get CSE Grades</button></a><br> -->
-                  <section class="cgpa-box" id="cgpa-box"><br><center>
-                    <h3>Quick Cgpa Calculator</h3>
-                    <form  class="input-group">
-                        <input type="text" id='tc' class="form-control cgpa-input" maxlength="3" placeholder="Credits till last Sem?"><br>
-                        <input type="text" id='cgpa' class="form-control cgpa-input" maxlength="4" placeholder="CGPA till last Sem?"><br>
-                        <input type="text" id='c' class="form-control cgpa-input" maxlength="2" placeholder="Credits in this Sem?"><br>
-                        <input type="text" id='gpa' class="form-control cgpa-input" maxlength="4" placeholder="GPA this semester?">
-                    </form><br>
-                    <button class="btn btn-primary badge-pill badge-primary" id="submit">Done</button>
-                    <!-- <button class="btn btn-warning" id="close">Close</button> -->
-                </center>
-                  </section>
-                        <p class="cgpa-msg hide" id="cgpa-msg" style="font-family: 'Raleway', sans-serif;" disabled="disabled"></p>
-                  </div>
+                <div class="form-inline">
+                    <label>Course 2 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select class="form-control" name="grades" id="g2">
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c2">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
                 </div>
+                <div class="form-inline">
+                    <label>Course 3 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select class="form-control" name="grades" id="g3">
+                        <option value="0" >Grade</option>
+                        <option value="10" >S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c3">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <label>Course 4 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select class="form-control" name="Grades" id="g4">
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" class="form-control" name="credits" id="c4">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <label>Course 5 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select class="form-control" name="Grades" id="g5">
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c5">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <label>Course 6 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select class="form-control" name="Grades" id="g6">
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c6">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select><br>
+                </div>
+                <div class="form-inline">
+                    <label>Course 7 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select class="form-control" name="Grades" id="g7">
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c7">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option> class="form-control"
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <label>Course 8 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select class="form-control" name="Grades" id="g8">
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c8">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <label>Course 9 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select class="form-control" name="Grade" id="g9">
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c9">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <label>Course 10 </label>&nbsp;&nbsp;
+                    <select class="form-control" name="Grades" id="g10">
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c10">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <section>
+                </div><br><br>
+                <div class="alert alert-primary alert-grades" role="alert">
+                    <b><span id="grades" class="text-info"></span></b>
+                </div>
+                <button class="gbtn btn btn-primary float-right" id="gbtn" >Submit</button>
+                </section>
+                <br><br>
             </div>
         </div>
         <!-- fb like and share -->
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="card-container">
-                <div class="card card-outline-primary mb-6 ">
-                  <div class="card-block card-block-outline-info" >
-                    <h3 class="text-danger"><small>Feedback.</small></p>
-                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevil-coder.github.io%2Fvit_grades%2F&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="400px" height="80px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                  </div>
-                  <div class="fb-comments" data-href="https://devil-coder.github.io/vit_grades/" data-width="100%" data-numposts="5"></div>
-                </div>
-            </div>
-        </div>
+        <!--<div class="col-sm-12 col-md-12 col-lg-12">-->
+            <!--<div class="card-container">-->
+                <!--<div class="card card-outline-primary mb-6 ">-->
+                  <!--<div class="card-block card-block-outline-info" >-->
+                    <!--<h3 class="text-danger"><small>Feedback.</small></p>-->
+                    <!--<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevil-coder.github.io%2Fvit_grades%2F&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="400px" height="80px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>-->
+                  <!--</div>-->
+                  <!--<div class="fb-comments" data-href="https://devil-coder.github.io/vit_grades/" data-width="100%" data-numposts="5"></div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
     </div>
 </div>
 <!-- footer for VIT Cgpa Calculator -->
 <footer style="padding: 5% 5% 5% 5%; background-color: #000000; color: #fff;">
-    &copy; 2017 - <span id="thisYear"></span> Raj Chandra. All Rights Reserved. <br>
+    &copy; 2017 - <span id="thisYear"></span> <a href="https://www.rajchandra.me">Raj Chandra</a>. All Rights Reserved. <br>
     <a href="https://www.facebook.com/raj.chandra.963"><i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 23px; color: white;"></i></a> &nbsp;
     <a href=""><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size: 23px; color: white;"></i></a>
 </footer>
@@ -480,6 +610,6 @@
   document.getElementById('thisYear').innerHTML = d.getFullYear();
 </script>
 <!-- main script file  -->
-<script language="javascript" type="text/javascript" src="jsfile.js"></script>
+<script language="javascript" type="text/javascript" src="CALCULATOR.js"></script>
 </body>
 </html>
