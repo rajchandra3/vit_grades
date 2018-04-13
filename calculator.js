@@ -3,7 +3,7 @@
 * */
 
 //Expected Marks
-var getMarks = ()=>{
+var getMarks = function(){
     var marksCat1 = parseFloat($('#cat1').val());
     var marksCat2 = parseFloat($('#cat2').val());
     var marksDa = parseFloat($('#da').val());
@@ -209,7 +209,7 @@ $('.form-control').on('keyup',function(){
 });
 
 //Changing active link
-var changeActiveLink = (x)=>{
+var changeActiveLink = function(x){
     $('li').removeClass('active');
     className = '.link'+x;
     $(className).addClass('active');
