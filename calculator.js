@@ -168,7 +168,7 @@ $('.cgpa-input').on('keyup',function(){
         alert('Your CGPA should be between 0 and 10 !');
         $(this).val('');
     }
-    else if((input>27 || input<0) && this.id==='c'){
+    else if((input>32 || input<0) && this.id==='c'){
         alert('Your Credits should be between 16 and 27 !');
         $(this).val('');
     }
@@ -202,7 +202,7 @@ $('.form-control').on('keyup',function(){
         alert('Your Lab, Fat and Project marks should be between 0 and 100 !');
         $(this).val('');
     }
-    else if((input>27 || input<0) && (this.id==='fc1' || this.id==='fc2' || this.id==='fc3' || this.id==='fc4' || this.id==='fc5' || this.id==='fc6' || this.id==='fc7' || this.id==='fc8')){
+    else if((input>32 || input<0) && (this.id==='fc1' || this.id==='fc2' || this.id==='fc3' || this.id==='fc4' || this.id==='fc5' || this.id==='fc6' || this.id==='fc7' || this.id==='fc8')){
         alert('Your Credits should be between 16 and 27 !');
         $(this).val('');
     }
