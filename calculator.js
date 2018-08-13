@@ -57,7 +57,7 @@ $('#submit').click(function(){
         f="Unavailable";
     }
     $('.alert-cgpa-msg').show();
-    document.getElementById('cgpa-msg').innerHTML="YOUR CGPA IS "+f.toFixed(1);
+    document.getElementById('cgpa-msg').innerHTML="YOUR CGPA IS "+f.toFixed(2);
 });
 
 /*
