@@ -18,9 +18,14 @@ var getMarks = function(){
         choice = 2;
     }else if(marksProj && !marksLab){
         choice = 1;
+    }else if(!marksProj && !marksLab){
+        choice = 0; //subjects like ALA - MAT3004
     }
     var tot = (marksCat1 + marksCat2)*0.3 + marksDa + marksFat * 0.4 ;
     switch(choice){
+        case 0:
+            netMarks = tot;
+            break;
         case 1:
             netMarks = tot*0.75 + marksProj * 0.25;
             break;
@@ -36,7 +41,7 @@ var getMarks = function(){
     }
     else{
         $('.alert-marks').show();
-        $('#marks').html('YOUR EXPECTED MARKS IS '+netMarks.toFixed(1));
+        $('#marks').html('YOUR EXPECTED MARKS IS '+netMarks.toFixed(2));
     }
 }
 
@@ -121,7 +126,7 @@ $('#sem-cgpa-btn').on('click',function(){
     }
     else{
         $('.alert-fcgpa').show();
-        $('#fcgpa').html('YOUR CGPA WOULD BE '+fcgpa.toFixed(1));
+        $('#fcgpa').html('YOUR CGPA WOULD BE '+fcgpa.toFixed(2));
     }
 });
 
@@ -138,7 +143,7 @@ $('#gbtn').on('click',function(){
         gpa="Unavailable";
     }
     $('.alert-grades').show();
-    $('#grades').html("YOUR GPA IS "+gpa.toFixed(1));
+    $('#grades').html("YOUR GPA IS "+gpa.toFixed(2));
     document.getElementById('reset').classList.remove("hide");
 });
 
@@ -169,7 +174,7 @@ $('.cgpa-input').on('keyup',function(){
         $(this).val('');
     }
     else if((input>32 || input<0) && this.id==='c'){
-        alert('Your Credits should be between 16 and 27 !');
+        alert('Your Credits should be between 16 and 32 !'); //made it 32 for temporary users
         $(this).val('');
     }
     else if((input>200 || input<0) && this.id==='tc'){
@@ -177,6 +182,7 @@ $('.cgpa-input').on('keyup',function(){
         $(this).val('');
     }
 });
+
 $('.form-control').on('keyup',function(){
     var input=document.getElementById(this.id).value;
     if(!input==''){
