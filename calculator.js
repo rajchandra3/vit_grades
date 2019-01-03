@@ -10,7 +10,7 @@ var getMarks = function(){
     var marksLab = parseFloat($('#lab').val());
     var marksProj = parseFloat($('#j-comp').val());
     var marksFat = parseFloat($('#fat').val());
-    console.log(marksCat1,marksCat2,marksDa,marksLab,marksProj,marksFat);
+    // console.log(marksCat1,marksCat2,marksDa,marksLab,marksProj,marksFat);
     var choice,netMarks;
     if(marksLab && marksProj){
         choice = 3;
@@ -41,7 +41,8 @@ var getMarks = function(){
     }
     else{
         $('.alert-marks').show();
-        $('#marks').html('YOUR EXPECTED MARKS IS '+netMarks.toFixed(2));
+        $('#marks').html(`EXPECTED MARKS ${netMarks.toFixed(2)}`);
+        $('.adsEMC').html(getAds());
     }
 }
 
@@ -63,6 +64,7 @@ $('#submit').click(function(){
     }
     $('.alert-cgpa-msg').show();
     document.getElementById('cgpa-msg').innerHTML="YOUR CGPA IS "+f.toFixed(2);
+    $('.adsQCC').html(getAds());
 });
 
 /*
@@ -127,6 +129,7 @@ $('#sem-cgpa-btn').on('click',function(){
     else{
         $('.alert-fcgpa').show();
         $('#fcgpa').html('YOUR CGPA WOULD BE '+fcgpa.toFixed(2));
+        $('.adsASCC').html(getAds());
     }
 });
 
@@ -143,7 +146,8 @@ $('#gbtn').on('click',function(){
         gpa="Unavailable";
     }
     $('.alert-grades').show();
-    $('#grades').html("YOUR GPA IS "+gpa.toFixed(2));
+    $('#grades').html(`Your GPA is ${gpa.toFixed(2)}`);
+    $('.adsGC').html(getAds());
     document.getElementById('reset').classList.remove("hide");
 });
 

@@ -5,7 +5,7 @@
     <meta name="keywords" content="CGPA calculator VIT, VIT CGPA CALCULATOR, VIT gpa calculator, gpa calculator VIT, devil-coder cgpa calculator, Raj Chandra vit cgpa calculator, VIT marks calculator">
     <meta name="author" content="Raj Chandra">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1b567e">
+    <meta name="theme-color" content="#00b389"> <!--1b567e-->
     <title>VIT CGPA Calculator</title>
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <!-- Animate.css -->
@@ -137,151 +137,155 @@
     <!--</div>-->
     <div class="container-fluid">
         <div class="row">
-    <!-- Ads for CodePark comes here -->
-          <div class="col-sm-12 col-md-12 col-lg-12 ads">
-            <div class="jumbotron jumbotron-fluid">
-              <div class="container ads-container">
-                <div align="right">
-                  <span class="badge-pill badge-light">Ads</span>
-                </div>
-                <h2 class="display-5 tada animated">
-                  <img src="images/codepark.png" class="animated img-fluid" alt="CodePark"></h1>
-                <p class="lead">Codes worth sharing.</p>
-                <hr class="my-4">
-                <p class="lead">
-                  <a class="btn btn-primary btn-lg badge-pill badge-primary" href="https://www.codepark.in" target="_blank" role="button">Visit Website</a>
-                  <section class="col-lg-12 text-center p-5"><p>Keep In Touch</p>
-                      <a href="https://www.facebook.com/codepark.in" target="_blank"><i class="fa fa-facebook-square fa-lg text-dark"></i></a>&emsp;
-                      <a href="https://www.twitter.com/CodePark_in" target="_blank"><i class="fa fa-twitter-square fa-lg text-info"></i></a>&emsp;
-                      <a href="https://www.linkedin.com/company/codepark-in" target="_blank"><i class="fa fa-linkedin fa-lg text-primary"></i></a>&emsp;
-                      <a href="https://www.instagram.com/CodePark_in" target="_blank"><i class="fa fa-instagram fa-lg text-danger"></i></a><br>
-                  </section>
-                </p>
-              </div>
+        <!-- Ads for CodePark comes here -->
+        <div class="col-sm-12 col-md-12 col-lg-12 ads">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container ads-container">
+            <div align="right">
+                <span class="badge-pill badge-light">Ads</span>
             </div>
-          </div>
+            <h2 class="display-5 tada animated">
+                <img src="images/codepark.png" class="animated img-fluid" alt="CodePark"></h1>
+            <p class="lead">Codes worth sharing.</p>
+            <hr class="my-4">
+            <p class="lead">
+                <a class="btn btn-primary btn-lg badge-pill badge-primary" href="https://www.codepark.in" target="_blank" role="button">Visit Website</a>
+                <section class="col-lg-12 text-center p-5"><p>Keep In Touch</p>
+                    <a href="https://www.facebook.com/codepark.in" target="_blank"><i class="fa fa-facebook-square fa-lg text-dark"></i></a>&emsp;
+                    <a href="https://www.twitter.com/CodePark_in" target="_blank"><i class="fa fa-twitter-square fa-lg text-info"></i></a>&emsp;
+                    <a href="https://www.linkedin.com/company/codepark-in" target="_blank"><i class="fa fa-linkedin fa-lg text-primary"></i></a>&emsp;
+                    <a href="https://www.instagram.com/CodePark_in" target="_blank"><i class="fa fa-instagram fa-lg text-danger"></i></a><br>
+                </section>
+            </p>
+            </div>
+        </div>
+        </div>
 
-            <!--Marks Predictor-->
-            <div class="col-sm-12 col-md-12 col-lg-6 marks-predictor" id="emc" align="left">
-                <div class="card-container">
-                    <a href="#emc" class="badge badge-danger float-right">NEW</a>
-                    <h1>Compute Expected Marks</h1>
+        <!--Marks Predictor-->
+        <div class="col-sm-12 col-md-12 col-lg-6 marks-predictor" id="emc" align="left">
+            <div class="card-container">
+                <a href="#emc" class="badge badge-danger float-right">NEW</a>
+                <h1>Compute Expected Marks</h1>
+                <hr>
+                <form>
+                    <div class="form-group row">
+                        <label for="cat1" class="col-sm-6 col-form-label">Marks in CAT 1 : </label>
+                        <div class="input-group col">
+                            <input type="text"  class="form-control" id="cat1" placeholder="Your score in CAT 1" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">&nbsp; max 50 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="cat2" class="col-sm-6 col-form-label">Marks in CAT 2 : </label>
+                        <div class="input-group col">
+                            <input type="text"  class="form-control" id="cat2" placeholder="Your score in CAT 2" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">&nbsp; max 50 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="da" class="col-sm-6 col-form-label">Marks in Internals : </label>
+                        <div class="input-group col">
+                            <input type="text"  class="form-control" id="da" placeholder="Your score in DA(s)" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">&nbsp; max 30 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="lab" class="col-sm-6 col-form-label">Marks in Lab : </label>
+                        <div class="input-group col">
+                            <input type="text"  class="form-control" id="lab" placeholder="Your score in Lab" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon"> max 100 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="j-comp" class="col-sm-6 col-form-label">Marks in J Component : </label>
+                        <div class="input-group col">
+                            <input type="text"  class="form-control" id="j-comp" placeholder="Your score in Project" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">max 100 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="fat" class="col-sm-6 col-form-label">Expected Marks in FAT :</label>
+                        <div class="input-group col">
+                            <input type="text"  class="form-control" id="fat" placeholder="Say 98" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">max 100 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-primary text-center alert-marks" role="alert">
+                        <b><span id="marks"></span></b>
+                    </div>
+                    <div class="col-sm-12 ads adsEMC"></div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <button type="button" onclick="getMarks()" class="btn btn-primary float-right">Submit</button>
+                            <small id="projHelp" class="form-text text-danger">*If the course doesn't have J-Component/L-Component you can leave it empty.</small>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- This semester cgpa calculator -->
+        <div class="col-sm-12 col-md-12 col-lg-6 quick-cgpa-calculator" id="qcc">
+            <div class="card-container">
+                <section class="cgpa-box" id="cgpa-box"><center>
+                    <h1>Quick Cgpa Calculator</h1>
                     <hr>
-                    <form>
-                        <div class="form-group row">
-                            <label for="cat1" class="col-sm-6 col-form-label">Marks in CAT 1 : </label>
-                            <div class="input-group col">
-                                <input type="text"  class="form-control" id="cat1" placeholder="Your score in CAT 1" aria-label="Marks Input" aria-describedby="basic-addon">
-                                <div class="input-group-append">
-                                    <span class="input-group-text" id="basic-addon">&nbsp; max 50 </span>
-                                </div>
+                    <div>
+                        <div class="input-group col-sm-8">
+                            <input type="text" id='tc' class="form-control cgpa-input" maxlength="3" placeholder="Credits till last Sem?" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">max 200 </span>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="cat2" class="col-sm-6 col-form-label">Marks in CAT 2 : </label>
-                            <div class="input-group col">
-                                <input type="text"  class="form-control" id="cat2" placeholder="Your score in CAT 2" aria-label="Marks Input" aria-describedby="basic-addon">
-                                <div class="input-group-append">
-                                    <span class="input-group-text" id="basic-addon">&nbsp; max 50 </span>
-                                </div>
+                        <br>
+                        <div class="input-group col-sm-8">
+                            <input type="text" id='cgpa' class="form-control cgpa-input" maxlength="4" placeholder="CGPA till last Sem?" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">&nbsp; max 10 </span>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="da" class="col-sm-6 col-form-label">Marks in Internals : </label>
-                            <div class="input-group col">
-                                <input type="text"  class="form-control" id="da" placeholder="Your score in DA(s)" aria-label="Marks Input" aria-describedby="basic-addon">
-                                <div class="input-group-append">
-                                    <span class="input-group-text" id="basic-addon">&nbsp; max 30 </span>
-                                </div>
+                        <br>
+                        <div class="input-group col-sm-8">
+                            <input type="text" id='c' class="form-control cgpa-input" maxlength="2" placeholder="Credits in this Sem?" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">max &nbsp; 32 </span>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="lab" class="col-sm-6 col-form-label">Marks in Lab : </label>
-                            <div class="input-group col">
-                                <input type="text"  class="form-control" id="lab" placeholder="Your score in Lab" aria-label="Marks Input" aria-describedby="basic-addon">
-                                <div class="input-group-append">
-                                    <span class="input-group-text" id="basic-addon"> max 100 </span>
-                                </div>
+                        <br>
+                        <div class="input-group col-sm-8">
+                            <input type="text" id='gpa' class="form-control cgpa-input" maxlength="4" placeholder="GPA this semester?" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">max &nbsp; 10 </span>
                             </div>
+                        </div><br>
+                        <div class="alert alert-primary text-center alert-cgpa-msg" role="alert">
+                            <b><span class="cgpa-msg" id="cgpa-msg"></span></b>
                         </div>
-                        <div class="form-group row">
-                            <label for="j-comp" class="col-sm-6 col-form-label">Marks in J Component : </label>
-                            <div class="input-group col">
-                                <input type="text"  class="form-control" id="j-comp" placeholder="Your score in Project" aria-label="Marks Input" aria-describedby="basic-addon">
-                                <div class="input-group-append">
-                                    <span class="input-group-text" id="basic-addon">max 100 </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="fat" class="col-sm-6 col-form-label">Expected Marks in FAT :</label>
-                            <div class="input-group col">
-                                <input type="text"  class="form-control" id="fat" placeholder="Say 98" aria-label="Marks Input" aria-describedby="basic-addon">
-                                <div class="input-group-append">
-                                    <span class="input-group-text" id="basic-addon">max 100 </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="alert alert-primary text-center text-uppercase alert-marks" role="alert">
-                          <b><span id="marks"></span></b>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-12">
-                                <button type="button" onclick="getMarks()" class="btn btn-primary float-right">Submit</button>
-                                <small id="projHelp" class="form-text text-danger">*If the course doesn't have J-Component/L-Component you can leave it empty.</small>
-
-                            </div>
-                        </div>
-                    </form>
+                        <div class="col-sm-12 ads adsQCC"></div>
+                        <button class="btn btn-primary float-right" id="submit">Submit</button>
+                    </div>
+                </center>
+                </section><br><br>
                 </div>
-            </div>
+        </div>
 
-            <!-- This semester cgpa calculator -->
-            <div class="col-sm-12 col-md-12 col-lg-6 quick-cgpa-calculator" id="qcc">
-                <div class="card-container">
-                    <section class="cgpa-box" id="cgpa-box"><center>
-                        <h1>Quick Cgpa Calculator</h1>
-                        <hr>
-                        <div>
-                            <div class="input-group col-sm-8">
-                                <input type="text" id='tc' class="form-control cgpa-input" maxlength="3" placeholder="Credits till last Sem?" aria-label="Marks Input" aria-describedby="basic-addon">
-                                <div class="input-group-append">
-                                    <span class="input-group-text" id="basic-addon">max 200 </span>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="input-group col-sm-8">
-                                <input type="text" id='cgpa' class="form-control cgpa-input" maxlength="4" placeholder="CGPA till last Sem?" aria-label="Marks Input" aria-describedby="basic-addon">
-                                <div class="input-group-append">
-                                    <span class="input-group-text" id="basic-addon">&nbsp; max 10 </span>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="input-group col-sm-8">
-                                <input type="text" id='c' class="form-control cgpa-input" maxlength="2" placeholder="Credits in this Sem?" aria-label="Marks Input" aria-describedby="basic-addon">
-                                <div class="input-group-append">
-                                    <span class="input-group-text" id="basic-addon">max &nbsp; 32 </span>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="input-group col-sm-8">
-                                <input type="text" id='gpa' class="form-control cgpa-input" maxlength="4" placeholder="GPA this semester?" aria-label="Marks Input" aria-describedby="basic-addon">
-                                <div class="input-group-append">
-                                    <span class="input-group-text" id="basic-addon">max &nbsp; 10 </span>
-                                </div>
-                            </div><br>
-                            <div class="alert alert-primary text-center text-uppercase alert-cgpa-msg" role="alert">
-                                <b><span class="cgpa-msg" id="cgpa-msg"></span></b>
-                            </div>
-                            <button class="btn btn-primary float-right" id="submit">Submit</button>
-                        </div>
-                    </center>
-                    </section><br><br>
-                  </div>
-            </div>
-            <!--(div.input-group.col-sm-8>(label[for='fgpa$']+input#gpa$.form-control.fgpa[name='fgpa$' type='text' placeholder='GPA']+input#fc$.form-control.fcredits[name='fcredit$' type='text' placeholder='GPA']))*10-->
-          <!--All semester CGPA calculator-->
-            <div class="col-sm-12 col-md-6 col-lg-6 n-sem-cgpa-calculator" id="ascc">
+        <!--(div.input-group.col-sm-8>(label[for='fgpa$']+input#gpa$.form-control.fgpa[name='fgpa$' type='text' placeholder='GPA']+input#fc$.form-control.fcredits[name='fcredit$' type='text' placeholder='GPA']))*10-->
+
+        <!--All semester CGPA calculator-->
+        <div class="col-sm-12 col-md-6 col-lg-6 n-sem-cgpa-calculator" id="ascc">
             <div class="card-container">
                 <h1 class="card-title">Calculate your CGPA for any number of Semesters</h1><hr>
                 <div class="input-group col-sm-8">
@@ -340,21 +344,15 @@
                     <input type="text" id="gpa8" class="form-control fgpa" name="fgpa8" placeholder="GPA"  aria-describedby="basic-addon">
                     <input type="text" id="fc8" class="form-control fcredits" name="fcredit8" placeholder="CREDITS">
                 </div><br>
-                <div class="alert alert-primary text-center text-uppercase alert-fcgpa" role="alert">
+                <div class="alert alert-primary text-center alert-fcgpa" role="alert">
                     <b><span class="text-info" id="fcgpa"></span></b>
                 </div>
+                <div class="col-sm-12 ads adsASCC"></div>
                 <button class="btn btn-primary float-right" id="sem-cgpa-btn">Submit</button>
                 <br><br>
               </div>
-          </div>
-          <!-- CodePark ads -->
-                 <!--  <div class="alert alert-success" onclick="window.location.href='https://www.facebook.com/codepark.in'" role="alert">
-                    <div align="right">
-                      <span class="badge-pill badge-light">Ads</span>
-                    </div>
-                    <p class="mb-0">See latest post from CodePark.</p>
-                  </div>
-                </div> -->
+        </div>
+
         <!-- This semseter GPA calculator -->
         <div class="col-sm-12 col-md-12 col-lg-6 gpa-calculator" id="gc">
             <div class="card-container">
@@ -524,7 +522,7 @@
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
-                        <option value="5">5</option> class="form-control"
+                        <option value="5">5</option>
                     </select>
                 </div><br>
                 <div class="input-group col-sm-8">
@@ -603,6 +601,7 @@
                 <div class="alert alert-primary alert-grades" role="alert">
                     <b><span id="grades" class="text-info"></span></b>
                 </div>
+                <div class="col-sm-12 ads adsGC"></div>
                 <button class="gbtn btn btn-primary float-right" id="gbtn" >Submit</button>
                 </section>
                 <br><br>
@@ -610,30 +609,39 @@
         </div>
       </div>
     </div>
-      <!-- fb like and share -->
-      <div class="col-sm-12 col-md-12 col-lg-12">
-          <div class="card-container">
-              <div class="card card-outline-primary mb-6 ">
-                <div class="card-block card-block-outline-info" >
-                  <h3 class="text-danger"><small>  </small></p>
-                  <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevil-coder.github.io%2Fvit_grades%2F&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="400px" height="80px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                </div>
-                <div class="fb-comments" data-href="https://devil-coder.github.io/vit_grades/" data-width="100%" data-numposts="5"></div>
-              </div>
-          </div>
-      </div>
-<!-- footer for VIT Cgpa Calculator -->
-<footer style="padding: 5% 5% 5% 5%; background-color: #000000; color: #fff;">
-    &copy; 2017 - <span id="thisYear"></span> <a href="https://www.rajchandra.me">Raj Chandra</a>. All Rights Reserved. <br>
-    <a href="https://www.facebook.com/raj.chandra.963"><i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 23px; color: white;" target="_blank"></i></a> &nbsp;
-    <a href="https://www.linkedin.com/in/rajchandra3/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size: 23px; color: white;"></i></a>
-</footer>
+
+    <!-- CodePark ads -->
+<!--     <div class="alert alert-success" onclick="window.location.href='https://www.codepark.in'" role="alert">
+        <div align="right">
+            <span class="badge-pill badge-light">Ads</span>
+        </div>
+        <p class="mb-0"> CodePark is live </p>
+    </div> -->
+    <!-- fb like and share -->
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="card-container">
+            <div class="card card-outline-primary mb-6 ">
+            <div class="card-block card-block-outline-info" >
+                <h3 class="text-danger"><small>  </small></p>
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevil-coder.github.io%2Fvit_grades%2F&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="400px" height="80px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
+            <div class="fb-comments" data-href="https://devil-coder.github.io/vit_grades/" data-width="100%" data-numposts="5"></div>
+            </div>
+        </div>
+    </div>
+    <!-- footer for VIT Cgpa Calculator -->
+    <footer style="padding: 5% 5% 5% 5%; background-color: #000000; color: #fff;">
+        &copy; 2017 - <span id="thisYear"></span> <a href="https://www.rajchandra.me">Raj Chandra</a>. All Rights Reserved. <br>
+        <a href="https://www.facebook.com/raj.chandra.963"><i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 23px; color: white;" target="_blank"></i></a> &nbsp;
+        <a href="https://www.linkedin.com/in/rajchandra3/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size: 23px; color: white;"></i></a>
+    </footer>
 <!-- script for year in footer -->
 <script>
   var d = new Date();
   document.getElementById('thisYear').innerHTML = d.getFullYear();
 </script>
 <!-- main script file  -->
+<script language="javascript" type="text/javascript" src="ads.js"></script>
 <script language="javascript" type="text/javascript" src="calculator.js"></script>
 </body>
 </html>
