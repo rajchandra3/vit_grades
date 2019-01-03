@@ -10,7 +10,6 @@
 //     // handle error
 //     console.log(error);
 //   })
-
 let getAds = ()=>{ //typeOfAd
     let ads = [
         {
@@ -73,9 +72,13 @@ let getAds = ()=>{ //typeOfAd
                     font-size : 10; 
                     font-style: monospace;
                     font-weight : normal;">${ad.body}</p>
-                <a href="${ad.link}" target="_blank">
-                    <button class="btn btn-codepark">${ad.linkText}</button>
-                </a>
+                    <a 
+                        class="btn btn-codepark btn-lg badge-pill badge-codepark" 
+                        href="${ad.link}" 
+                        target="_blank" 
+                        role="button">
+                        ${ad.linkText}
+                    </a>
             </div>`
     ]
     let templateNumber = Math.floor(Math.random()*(templates.length));
