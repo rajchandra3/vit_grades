@@ -12,16 +12,22 @@
 //   })
 let getAds = ()=>{ //typeOfAd
     $(".google-ads").html("");
-    $(".google-ads").append(`<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-format="fluid"
-         data-ad-layout-key="-ed+6k-30-ac+ty"
-         data-ad-client="ca-pub-8598751574376549"
-         data-ad-slot="7049595449"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>`);
+    var element = document.querySelectorAll('.google-ads');
+    for (i = 0; i < element.length; ++i) {
+        element[i].innerHTML = `
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-format="fluid"
+             data-ad-layout-key="-ed+6k-30-ac+ty"
+             data-ad-client="ca-pub-8598751574376549"
+             data-ad-slot="7049595449"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        `;
+    }
+    
     let ads = [
         {
             type : `g`,
