@@ -1,4 +1,4 @@
-var BASE_URL = `http://localhost:8083/calculator`;
+var BASE_URL = `https://www.rajchandra.me/calculator`;
 let question_id;
 let getFeebackQuestion = ()=>{
     axios.get(`${BASE_URL}/feedback/question`)
