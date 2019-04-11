@@ -1,26 +1,46 @@
 var BASE_URL = `https://www.rajchandra.me/calculator`;
+// https://www.rajchandra.me
+// http://localhost:8083
+
 let question_id;
 let getFeebackQuestion = ()=>{
-    axios.get(`${BASE_URL}/feedback/question`)
-    .then(function (response) {
-        console.log(response.data);
-        $('#question').html(response.data.q);
-        question_id = response.data.id;
-    })
-    .catch(function (error) {
-      console.log(error);
-      $('#message-placeholder').val('something is not right');
-    });
+    console.log('Getting cookie :',getCookie('q1'));
+    let cookie = getCookie('q1');
+    if(!cookie){
+        console.log('Set q1 cookie');
+        setCookie('q1','false',1000);
+    }else if(cookie == 'true'){
+        console.log('Hide feedback');
+        $('#feedback').css({"display" : "none"});
+    }else if(cookie == 'false'){
+        console.log('Show feedback');
+        axios.get(`${BASE_URL}/feedback/question`)
+        .then(function (response) {
+            $('#question').html(response.data.q);
+            question_id = response.data.id;
+        })
+        .catch(function (error) {
+            console.log(error);
+            $('#message-placeholder').val('something is not right');
+        });
+    }
 }
 let sendFeedback = ()=>{
-    let data = $("input[name='q1']:checked").val();
-    if(data){
-        axios.post(`${BASE_URL}/feedback/response`, {
-            response : data,
-            id : question_id
-        })
+    let response = $("input[name='q1']:checked").val();
+    let data = {
+        response : response,
+        id : question_id
+    }
+    console.log(data)
+    if(response){
+        axios.post(`${BASE_URL}/feedback/response`, data)
           .then(function (response) {
             $('#message-placeholder').html(response.data.message);
+            if(response.data.code == 0){
+                setCookie('q1','true',1000);
+                // remove the feeback
+                $('#feedback').css({"display" : "none"});
+            }
           })
           .catch(function (error) {
             $('#message-placeholder').html("Error Occured!!");
@@ -29,3 +49,27 @@ let sendFeedback = ()=>{
         alert('Please select one of the choices!!')
     }
 }
+
+//set cookies
+let setCookie = (cname, cvalue, exdays)=> {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  
+//get cookies
+let getCookie =(cname) => {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
