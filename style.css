@@ -1,3 +1,8 @@
+.google-ads {
+  animation-duration: 3s;
+  animation-delay: 2s;
+  /*animation-iteration-count: 2;*/
+}
 select{
     background: white;
     border-color: #95a5a6;
@@ -100,30 +105,30 @@ fieldset:disabled a.btn {
     background-color: #00b389;
     border-color: #00b399;
   }
-  
+
 .btn-codepark:hover {
     color: #fff;
     background-color: #00b389;
     border-color: #00b399;
   }
-  
+
 .btn-codepark:focus, .btn-codepark.focus {
     box-shadow: 0 0 0 0.2rem rgba(0,179,153, 0.5);
   }
-  
+
 .btn-codepark.disabled, .btn-codepark:disabled {
     color: #fff;
     background-color: #00b389;
     border-color: #00b399;
   }
-  
+
 .btn-codepark:not(:disabled):not(.disabled):active, .btn-codepark:not(:disabled):not(.disabled).active,
   .show > .btn-codepark.dropdown-toggle {
     color: #fff;
     background-color: #00b389;
     border-color: #00b399;
   }
-  
+
 .btn-codepark:not(:disabled):not(.disabled):active:focus, .btn-codepark:not(:disabled):not(.disabled).active:focus,
   .show > .btn-codepark.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(0,179,153, 0.5);

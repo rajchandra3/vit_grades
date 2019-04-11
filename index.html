@@ -5,7 +5,7 @@
     <meta name="keywords" content="CGPA calculator VIT, VIT CGPA CALCULATOR, VIT gpa calculator, gpa calculator VIT, devil-coder cgpa calculator, Raj Chandra vit cgpa calculator, VIT marks calculator">
     <meta name="author" content="Raj Chandra">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#00b389"> <!--1b567e-->
+    <meta name="theme-color" content="#1b567e"> <!--1b567e-->
     <title>VIT CGPA Calculator</title>
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <!-- Animate.css -->
@@ -22,12 +22,13 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <!--approved ads -->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-8598751574376549",
-          enable_page_level_ads: true
-     });
-</script>
+
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8598751574376549",
+              enable_page_level_ads: true
+         });
+    </script>
     <!-- This is for smartlook -->
     <script type="text/javascript">
         window.smartlook||(function(d) {
@@ -47,30 +48,30 @@
     </script>
     <!-- Google analytics -->
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-99147431-4', 'auto');
-  ga('send', 'pageview');
+      ga('create', 'UA-99147431-4', 'auto');
+      ga('send', 'pageview');
 
-</script>
-    <!-- Schema.org -->
+    </script>
+        <!-- Schema.org -->
     <script type='application/ld+json'>
-{
-  "@context": "http://www.schema.org",
-  "@type": "WebSite",
-  "name": "CGPA Calculator | VIT",
-  "alternateName": "VIT CGPA Calculator",
-  "url": "https://getcgpa.rajchandra.me"
-}
- </script>
+    {
+      "@context": "http://www.schema.org",
+      "@type": "WebSite",
+      "name": "CGPA Calculator | VIT",
+      "alternateName": "VIT CGPA Calculator",
+      "url": "https://getcgpa.rajchandra.me"
+    }
+     </script>
 
     <!--Custom CSS-->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="getFeebackQuestion()">
 <!-- for likes -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -156,32 +157,60 @@
     <!--</div>-->
     <div class="container-fluid">
         <div class="row">
-        <!-- Ads for CodePark comes here -->
+        <!-- Feedback form -->
         <div class="col-sm-12 col-md-12 col-lg-12 ads">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container ads-container">
-            <div align="right">
-                <span class="badge-pill badge-light">Ads</span>
-            </div>
-            <h2 class="display-5 tada animated">
-                <img src="images/codepark.png" class="animated img-fluid" alt="CodePark"></h1>
-            <p class="lead">Codes worth sharing.</p>
-            <hr class="my-4">
-            <p class="lead">
-                <a class="btn btn-primary btn-lg badge-pill badge-primary" href="https://www.codepark.in" target="_blank" role="button">Visit Website</a>
-                <section class="col-lg-12 text-center p-5"><p>Keep In Touch</p>
-                    <a href="https://www.facebook.com/codepark.in" target="_blank"><i class="fa fa-facebook-square fa-lg text-dark"></i></a>&emsp;
-                    <a href="https://www.twitter.com/CodePark_in" target="_blank"><i class="fa fa-twitter-square fa-lg text-info"></i></a>&emsp;
-                    <a href="https://www.linkedin.com/company/codepark-in" target="_blank"><i class="fa fa-linkedin fa-lg text-primary"></i></a>&emsp;
-                    <a href="https://www.instagram.com/CodePark_in" target="_blank"><i class="fa fa-instagram fa-lg text-danger"></i></a><br>
-                </section>
-            </p>
-            </div>
+          <div class="jumbotron jumbotron-fluid">
+              <div class="container ads-container">
+              <div align="right">
+                  <span class="badge-pill badge-light">feedback</span>
+              </div>
+              <p class="lead">
+                  <section class="col-lg-12 text-center p-3"><p id="question"></p>
+                    <!-- Feeback area -->
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="q1" id="q-useful" value="yes">
+                            <label class="form-check-label" for="q1">YES</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="q1" id="q-useful" value="no">
+                            <label class="form-check-label" for="q1">NO</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="q1" id="q-useful" value="maybe">
+                            <label class="form-check-label" for="q1">MAYBE</label>
+                        </div>
+                        <button class="btn btn-primary" id="message-placeholder" onclick="sendFeedback()">Send</button> 
+                  </section>
+              </p>
+              </div>
+          </div>
         </div>
-        </div>
+        <!-- Ads for CodePark comes here -->
+        <!-- div class="col-sm-12 col-md-12 col-lg-12 ads">
+          <div class="jumbotron jumbotron-fluid">
+              <div class="container ads-container">
+              <div align="right">
+                  <span class="badge-pill badge-light">Ads</span>
+              </div>
+              <h2 class="display-5 bounceIn animated delay-2s">
+                  <img src="images/codepark.png" class="animated img-fluid" alt="CodePark"></h1>
+              <p class="lead">Codes worth sharing.</p>
+              <hr class="my-4">
+              <p class="lead">
+                  <a class="btn btn-primary btn-lg badge-pill badge-primary" href="https://www.codepark.in" target="_blank" role="button">Visit Website</a>
+                  <section class="col-lg-12 text-center p-5"><p>Keep In Touch</p>
+                      <a href="https://www.facebook.com/codepark.in" target="_blank"><i class="fa fa-facebook-square fa-lg text-dark"></i></a>&emsp;
+                      <a href="https://www.twitter.com/CodePark_in" target="_blank"><i class="fa fa-twitter-square fa-lg text-info"></i></a>&emsp;
+                      <a href="https://www.linkedin.com/company/codepark-in" target="_blank"><i class="fa fa-linkedin fa-lg text-primary"></i></a>&emsp;
+                      <a href="https://www.instagram.com/CodePark_in" target="_blank"><i class="fa fa-instagram fa-lg text-danger"></i></a><br>
+                  </section>
+              </p>
+              </div>
+          </div>
+        </div> -->
 
         <!--Marks Predictor-->
-        <div class="col-sm-12 col-md-12 col-lg-6 marks-predictor" id="emc" align="left">
+        <div class="col-sm-12 col-md-12 col-lg-6 marks-predictor bounceInLeft animated" id="emc" align="left">
             <div class="card-container">
                 <a href="#emc" class="badge badge-danger float-right">NEW</a>
                 <h1>Compute Expected Marks</h1>
@@ -266,7 +295,7 @@
                         <script>
                              (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
-                        
+
                     </div>
             </div>
         </div>
@@ -397,7 +426,7 @@
                 <div class="col-sm-12 ads adsASCC"></div>
                 <button class="btn btn-primary float-right" id="sem-cgpa-btn">Submit</button>
                 <br><br>
-                
+
                 <!-- Google Ads -->
                 <div class="google-ads">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -666,7 +695,7 @@
                 <button class="gbtn btn btn-primary float-right" id="gbtn" >Submit</button>
                 </section>
                 <br><br>
-                
+
                 <!-- Google Ads -->
                 <div class="google-ads">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -730,7 +759,7 @@
                     <script>
                          (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
-                    
+
                 </div>
         </div>
     </div>
@@ -746,6 +775,8 @@
   document.getElementById('thisYear').innerHTML = d.getFullYear();
 </script>
 <!-- main script file  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+<script language="javascript" type="text/javascript" src="requests.js"></script>
 <script language="javascript" type="text/javascript" src="ads.js"></script>
 <script language="javascript" type="text/javascript" src="calculator.js"></script>
 </body>

@@ -11,23 +11,6 @@
 //     console.log(error);
 //   })
 let getAds = ()=>{ //typeOfAd
-    $(".google-ads").html("");
-    var element = document.querySelectorAll('.google-ads');
-    for (i = 0; i < element.length; ++i) {
-        element[i].innerHTML = `
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-format="fluid"
-             data-ad-layout-key="-ed+6k-30-ac+ty"
-             data-ad-client="ca-pub-8598751574376549"
-             data-ad-slot="7049595449"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        `;
-    }
-    
     let ads = [
         {
             type : `g`,
@@ -66,33 +49,24 @@ let getAds = ()=>{ //typeOfAd
             linkText : `Show me more`
         }
     ]
-    
+
     let AdNumber = Math.floor(Math.random()*(ads.length));
-    // let i = 0;
-    // let ad;
-    // while(ads[i]){
-    //     if(ads[i].type === typeOfAd){
-    //         ad = ads[i];
-    //         break;
-    //     }
-    //     i++;
-    // }
     ad = ads[AdNumber];
     let templates = [
-            `<div style="
+            `<div class="custom-ads" style="
                 margin : 15px;
-                border-radius : 5px; 
+                border-radius : 5px;
                 border : 0.5px solid #00b389;
                 padding : 2px 2px 10px 2px;
                 text-align : center;">
                 <p style="
-                    font-size : 10; 
+                    font-size : 10;
                     font-style: monospace;
                     font-weight : normal;">${ad.body}</p>
-                    <a 
-                        class="btn btn-codepark btn-lg badge-pill badge-codepark" 
-                        href="${ad.link}" 
-                        target="_blank" 
+                    <a
+                        class="btn btn-codepark btn-lg badge-pill badge-codepark"
+                        href="${ad.link}"
+                        target="_blank"
                         role="button">
                         ${ad.linkText}
                     </a>
