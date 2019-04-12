@@ -11,17 +11,25 @@ let getFeebackQuestion = ()=>{
         setCookie('q1','false',1000);
     }else if(cookie == 'true'){
         console.log('Hide feedback');
-        $('#feedback').css({"display" : "none"});
+        $('#feedback').css({
+            "display" : "none"
+        });
     }else if(cookie == 'false'){
         console.log('Show feedback');
         axios.get(`${BASE_URL}/feedback/question`)
         .then(function (response) {
             $('#question').html(response.data.q);
             question_id = response.data.id;
+            $('#feedback').css({
+                "display" : "block"
+            });
         })
         .catch(function (error) {
             console.log(error);
-            $('#message-placeholder').val('something is not right');
+            $('#message-placeholder').html('Something is not right');
+            $('#feedback').css({
+                "display" : "none"
+            });
         });
     }
 }

@@ -3,6 +3,11 @@
   animation-delay: 2s;
   /*animation-iteration-count: 2;*/
 }
+#feedback{
+  display: none;
+  transition: display 2s ease-in-out;
+  -moz-transition : display 2s ease-in-out
+}
 select{
     background: white;
     border-color: #95a5a6;
