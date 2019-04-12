@@ -14,7 +14,8 @@ let getFeebackQuestion = ()=>{
         $('#feedback').css({
             "display" : "none"
         });
-    }else if(cookie == 'false'){
+    }
+    if(cookie == 'false' || !cookie){
         console.log('Show feedback');
         axios.get(`${BASE_URL}/feedback/question`)
         .then(function (response) {
