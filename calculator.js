@@ -7,10 +7,11 @@ var getMarks = function(){
     var marksCat1 = parseFloat($('#cat1').val());
     var marksCat2 = parseFloat($('#cat2').val());
     var marksDa = parseFloat($('#da').val());
+    var marksAl = parseFloat($('#al').val()) || 0;
     var marksLab = parseFloat($('#lab').val());
     var marksProj = parseFloat($('#j-comp').val());
     var marksFat = parseFloat($('#fat').val());
-    // console.log(marksCat1,marksCat2,marksDa,marksLab,marksProj,marksFat);
+    console.log(marksCat1,marksCat2,marksDa,marksAl,marksLab,marksProj,marksFat);
     var choice,netMarks;
     if(marksLab && marksProj){
         choice = 3;
@@ -21,7 +22,8 @@ var getMarks = function(){
     }else if(!marksProj && !marksLab){
         choice = 0; //subjects like ALA - MAT3004
     }
-    var tot = (marksCat1 + marksCat2)*0.3 + marksDa + marksFat * 0.4 ;
+    var internals = ((marksCat1 + marksCat2)*0.3 + marksDa + marksAl);
+    var tot = (internals >60 ? 60 : internals)+ marksFat * 0.4 ;
     switch(choice){
         case 0:
             netMarks = tot;
@@ -37,13 +39,14 @@ var getMarks = function(){
             break;
     }
     if(isNaN(netMarks)){
-        alert("Insufficient Data !!");
+        $('#modal-body').html('Insufficient Data !!');
+        $('#modal-error').modal('show');
     }
     else{
         $('.alert-marks').show();
         $('#marks').html(`EXPECTED MARKS ${netMarks.toFixed(2)}`);
-        $('.adsEMC').html(getAds());
     }
+    $('.adsEMC').html(getAds());
 }
 
 /*
@@ -59,11 +62,13 @@ $('#submit').click(function(){
 
     var f=(((cgpa*tc)+(gpa*c))/(tc+c));
     if(isNaN(f)){
-        alert("Insufficient data!");
+        $('#modal-body').html('Insufficient Data !!');
+        $('#modal-error').modal('show');
         f="Unavailable";
+    }else{
+        $('.alert-cgpa-msg').show();
+        document.getElementById('cgpa-msg').innerHTML="YOUR CGPA IS "+f.toFixed(2);
     }
-    $('.alert-cgpa-msg').show();
-    document.getElementById('cgpa-msg').innerHTML="YOUR CGPA IS "+f.toFixed(2);
     $('.adsQCC').html(getAds());
 });
 
@@ -124,13 +129,14 @@ $('#sem-cgpa-btn').on('click',function(){
     }
     fcgpa=((parseFloat(gpa1)*fc1)+(parseFloat(gpa2)*fc2)+(parseFloat(gpa3)*fc3)+(parseFloat(gpa4)*fc4)+(parseFloat(gpa5)*fc5)+(parseFloat(gpa6)*fc6)+(parseFloat(gpa7)*fc7)+(parseFloat(gpa8)*fc8))/(fc1*1+fc2*1+fc3*1+fc4*1+fc5*1+fc6*1+fc7*1+fc8*1);
     if(isNaN(fcgpa)){
-        alert("Insufficient Data !!");
+        $('#modal-body').html('Insufficient Data !!');
+        $('#modal-error').modal('show');
     }
     else{
         $('.alert-fcgpa').show();
         $('#fcgpa').html('YOUR CGPA WOULD BE '+fcgpa.toFixed(2));
-        $('.adsASCC').html(getAds());
     }
+        $('.adsASCC').html(getAds());
 });
 
 /*
@@ -142,13 +148,15 @@ $('#gbtn').on('click',function(){
     gpa=(c1*g1+c2*g2+c3*g3+c4*g4+c5*g5+c6*g6+c7*g7+c8*g8+c9*g9+c10*g10)/(c1+c2+c3+c4+c5+c6+c7+c8+c9+c10);
 
     if(isNaN(gpa)){
-        alert("Insufficient data!");
+        $('#modal-body').html('Insufficient Data !!');
+        $('#modal-error').modal('show');
         gpa="Unavailable";
+    }else{
+        $('.alert-grades').show();
+        $('#grades').html(`Your GPA is ${gpa.toFixed(2)}`);
+        document.getElementById('reset').classList.remove("hide");
     }
-    $('.alert-grades').show();
-    $('#grades').html(`Your GPA is ${gpa.toFixed(2)}`);
     $('.adsGC').html(getAds());
-    document.getElementById('reset').classList.remove("hide");
 });
 
 function clearAll(){
@@ -165,24 +173,29 @@ $('.cgpa-input').on('keyup',function(){
     if(!input==''){
         var re=/^\d+\.?\d{0,2}$/;
         if (!(re.test(input))){
-            alert("Please enter a valid data.");
+            $('#modal-body').html('Please enter a valid data');
+            $('#modal-error').modal('show');
             $(this).val('');
         }
     }
     if((input>10 || input<0) && this.id==='gpa'){
-        alert('Your GPA should be between 0 and 10 !');
+        $('#modal-body').html('Your GPA should be between 0 and 10 !');
+        $('#modal-error').modal('show');
         $(this).val('');
     }
     else if((input>10 || input<0) && this.id==='cgpa'){
-        alert('Your CGPA should be between 0 and 10 !');
+        $('#modal-body').html('Your CGPA should be between 0 and 10 !');
+        $('#modal-error').modal('show');
         $(this).val('');
     }
     else if((input>32 || input<0) && this.id==='c'){
-        alert('Your Credits should be between 16 and 32 !'); //made it 32 for temporary users
+        $('#modal-body').html('Your Credits should be between 16 and 32 !');
+        $('#modal-error').modal('show');
         $(this).val('');
     }
     else if((input>200 || input<0) && this.id==='tc'){
-        alert('Your Credits should be between 0 and 200 !');
+        $('#modal-body').html('Your Credits should be between 0 and 200 !');
+        $('#modal-error').modal('show');
         $(this).val('');
     }
 });
@@ -192,28 +205,39 @@ $('.form-control').on('keyup',function(){
     if(!input==''){
         var re=/^\d+\.?\d{0,2}$/;
         if (!(re.test(input))){
-            alert("Please enter a valid data.");
+            $('#modal-body').html('Please enter a valid data');
+            $('#modal-error').modal('show');
             $(this).val('');
         }
     }
     if((input>10 || input<0) && (this.id==='gpa1' || this.id==='gpa2' || this.id==='gpa3' || this.id==='gpa4' || this.id==='gpa5' || this.id==='gpa6' || this.id==='gpa7' || this.id==='gpa8')){
-        alert('Your GPA should be between 0 and 10 !');
+        $('#modal-body').html('Your GPA should be between 0 and 10 !');
+        $('#modal-error').modal('show');
         $(this).val('');
     }
     else if((input>50 || input<0) && (this.id==='cat1' || this.id==='cat2')){
-        alert('Your CAT1 and CAT2 marks should be between 0 and 50 !');
+        $('#modal-body').html('Your CAT1 and CAT2 marks should be between 0 and 50 !');
+        $('#modal-error').modal('show');
         $(this).val('');
     }
     else if((input>30 || input<0) && (this.id==='da')){
-        alert('Your DA marks should be between 0 and 30 !');
+        $('#modal-body').html('Your DA marks should be between 0 and 30 !');
+        $('#modal-error').modal('show');
+        $(this).val('');
+    }
+    else if((input>10 || input<0) && (this.id==='al')){
+        $('#modal-body').html('Additional Learning marks should be between 0 and 10 !');
+        $('#modal-error').modal('show');
         $(this).val('');
     }
     else if((input>100 || input<0) && (this.id==='lab' || this.id==='j-comp' || this.id==='fat')){
-        alert('Your Lab, Fat and Project marks should be between 0 and 100 !');
+        $('#modal-body').html('Your Lab, Fat and Project marks should be between 0 and 100 !');
+        $('#modal-error').modal('show');
         $(this).val('');
     }
     else if((input>32 || input<0) && (this.id==='fc1' || this.id==='fc2' || this.id==='fc3' || this.id==='fc4' || this.id==='fc5' || this.id==='fc6' || this.id==='fc7' || this.id==='fc8')){
-        alert('Your Credits should be between 16 and 27 !');
+        $('#modal-body').html('Your Credits should be between 16 and 27 !');
+        $('#modal-error').modal('show');
         $(this).val('');
     }
 });
