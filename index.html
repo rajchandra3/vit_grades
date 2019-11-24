@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#1b567e"> <!--1b567e-->
     <title>VIT CGPA Calculator</title>
-    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="icon" type="image/png" href="/src/components/images/favicon.png">
     <!-- Animate.css -->
-    <link rel="stylesheet" type="text/css" href="animate.css">
+    <link rel="stylesheet" type="text/css" href="/src/components/lib/animate.css">
     <!-- Bootstrap -->
     <!--<link href="bootstrap/css/bootstrap.css" rel="stylesheet">-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -69,7 +69,7 @@
      </script>
 
     <!--Custom CSS-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/src/components/main/css/style.css">
     
     <!-- start Mixpanel -->
     <script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
@@ -78,7 +78,7 @@
         MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
         mixpanel.init("7ff5ca7b4aa0bef4db830b057c9076a2");</script>
     <!-- end Mixpanel -->
-    <script language="javascript" type="text/javascript" src="mixpanel.js"></script>
+    <script language="javascript" type="text/javascript" src="/src/middleware/mixpanel/mixpanel.js"></script>
 </head>
 <body onload="getFeebackQuestion()">
 <!-- for likes -->
@@ -142,8 +142,7 @@
                       <!--<img src="images/filled-details.jpeg" alt="vit cgpa calculator" height="180" width="200"> <br><hr>-->
                       <!--Now press the 'Get GPA' button. <br>-->
                       <!--<img src="images/press_gpa.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>-->
-                      <!--Your GPA will be displayed. <br>-->
-                      <!--<img src="images/press-cgpa-btn.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>-->
+                      <!--Your GPA will be displayed. <br>-->                      <!--<img src="images/press-cgpa-btn.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>-->
                       <!--Press the Calculate CGPA button to get the CGPA and fill the details. <br>-->
                       <!--<img src="images/fill_det_cgpa.jpeg" alt="vit cgpa calculator" height="200" width="200"> <br><hr>-->
                       <!--The filled details looks as below , if you had campleted 102 credits with a cgpa of 8.8 last semester and this semester you had 24 credits and your GPA is 9.6. Press the 'Done' button to get the CGPA.<br>-->
@@ -735,12 +734,12 @@
     </div>
 
     <!-- CodePark ads -->
-<!--     <div class="alert alert-success" onclick="window.location.href='https://www.codepark.in'" role="alert">
+    <div class="alert alert-success" onclick='window.location.href="https://www.codepark.in"' role="alert">
         <div align="right">
             <span class="badge-pill badge-light">Ads</span>
         </div>
         <p class="mb-0"> CodePark is live </p>
-    </div> -->
+    </div>
     <!-- fb like and share -->
     <div class="col-sm-12 col-md-12 col-lg-12">
         <div class="card-container">
@@ -806,15 +805,15 @@
         <a href="https://www.facebook.com/raj.chandra.963"><i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 23px; color: white;" target="_blank"></i></a> &nbsp;
         <a href="https://www.linkedin.com/in/rajchandra3/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size: 23px; color: white;"></i></a>
     </footer>
-<!-- script for year in footer -->
-<script>
-  var d = new Date();
-  document.getElementById('thisYear').innerHTML = d.getFullYear();
-</script>
-<!-- main script file  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-<script language="javascript" type="text/javascript" src="requests.js"></script>
-<script language="javascript" type="text/javascript" src="ads.js"></script>
-<script language="javascript" type="text/javascript" src="calculator.js"></script>
+    <!-- script for year in footer -->
+    <script>
+        var d = new Date();
+        document.getElementById('thisYear').innerHTML = d.getFullYear();
+    </script>
+    <!-- main script file  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script language="javascript" type="text/javascript" src="/src/components/main/js/requests.js"></script>
+    <script language="javascript" type="text/javascript" src="/src/components/ads/ads.js"></script>
+    <script language="javascript" type="text/javascript" src="/src/components/main/js/calculator.js"></script>
 </body>
 </html>
