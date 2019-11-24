@@ -4,19 +4,15 @@ var BASE_URL = `https://www.rajchandra.me/calculator`;
 
 let question_id;
 let getFeebackQuestion = ()=>{
-    console.log('Getting cookie :',getCookie('q1'));
     let cookie = getCookie('q1');
     if(!cookie){
-        console.log('Set q1 cookie');
         setCookie('q1','false',1000);
     }else if(cookie == 'true'){
-        console.log('Hide feedback');
         $('#feedback').css({
             "display" : "none"
         });
     }
     if(cookie == 'false' || !cookie){
-        console.log('Show feedback');
         axios.get(`${BASE_URL}/feedback/question`)
         .then(function (response) {
             $('#question').html(response.data.q);
@@ -26,7 +22,6 @@ let getFeebackQuestion = ()=>{
             });
         })
         .catch(function (error) {
-            console.log(error);
             $('#message-placeholder').html('Something is not right');
             $('#feedback').css({
                 "display" : "none"
@@ -40,7 +35,6 @@ let sendFeedback = ()=>{
         response : response,
         id : question_id
     }
-    console.log(data)
     if(response){
         axios.post(`${BASE_URL}/feedback/response`, data)
           .then(function (response) {

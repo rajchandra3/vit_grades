@@ -11,7 +11,6 @@ var getMarks = function(){
     var marksLab = parseFloat($('#lab').val());
     var marksProj = parseFloat($('#j-comp').val());
     var marksFat = parseFloat($('#fat').val());
-    console.log(marksCat1,marksCat2,marksDa,marksAl,marksLab,marksProj,marksFat);
     var choice,netMarks;
     if(marksLab && marksProj){
         choice = 3;

@@ -16,7 +16,8 @@ select{
 header{
     padding: 3% 0 0 0;
     width: 100%;
-    background : linear-gradient(to bottom right,#58a6da,#1b567e);
+    /* background : linear-gradient(to bottom right,#58a6da,#1b567e); */
+    background : linear-gradient(to bottom right,#c31432,#240b36);
     color: white;
     font-weight: bold;
     font-size: 45px;
@@ -56,7 +57,9 @@ body{
 }
 .container-fluid{
     padding : 2%;
-    background : linear-gradient(to bottom,#58a6da,#091d2a);
+    /* background : linear-gradient(to bottom,#58a6da,#091d2a); */    
+    background : linear-gradient(to bottom,#c31432,#240b36);
+
 }
 /* For CodePark btn */
 
