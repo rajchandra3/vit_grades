@@ -153,7 +153,7 @@ $('#gbtn').on('click',function(){
     }else{
         $('.alert-grades').show();
         $('#grades').html(`Your GPA is ${gpa.toFixed(2)}`);
-        document.getElementById('reset').classList.remove("hide");
+        // document.getElementById('reset').classList.remove("hide");
     }
     $('.adsGC').html(getAds());
 });
