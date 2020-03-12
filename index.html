@@ -80,7 +80,8 @@
     <!-- end Mixpanel -->
     <script language="javascript" type="text/javascript" src="mixpanel.js"></script>
 </head>
-<body onload="getFeebackQuestion()">
+<!-- <body onload="getFeebackQuestion()"> -->
+<body onload="track('page_views')">
 <!-- for likes -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -101,134 +102,78 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <center>
-<div class="main-container" onload>
-    <script>track('page_views')</script>
-    <div class="header-container">
-         <header>VIT CGPA CALCULATOR</header>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color : #240b36;">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item link2 active" onclick="changeActiveLink(2) || track('nav_click_emc')">
-                <a class="nav-link" href="#emc">EXPECTED MARKS CALCULATOR</a>
-            </li>
-            <li class="nav-item link1" onclick="changeActiveLink(1) || track('nav_click_qcc')">
-                <a class="nav-link" href="#qcc">QUICK CGPA CALCULATOR</a>
-            </li>
-            <li class="nav-item link3" onclick="changeActiveLink(3) || track('nav_click_ascc')">
-                <a class="nav-link" href="#ascc">ANY SEM CGPA CALCULATOR</a>
-            </li>
-            <li class="nav-item link4" onclick="changeActiveLink(4) || track('nav_click_gc')">
-                <a class="nav-link" href="#gc">GPA CALCULATOR</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-    <!--<div class="container">-->
-        <!--<div class="card-container card-outline-success mb-3 text-center" style="solid;background-color: #ffffff;"><br>-->
-            <!--<button id="about-btn" class="btn btn-primary">How to use?</button><br><br>-->
-            <!--<div class="card-block">-->
-                <!--<blockquote class="info" id="about" style="display: none;">-->
-                <!--<p>VIT CGPA Calculator is a great tool that will help you calculate the CGPA for the present semester. Moreover, VIT CGPA calculator also gives you the power to predict the CGPA for the coming Semesters. VIT CGPA Calculator has been helping hundreds of students predict their CGPA. Hope it helps you :)</p>-->
-                  <!--<section class="how_to" ><br>-->
-                      <!--To begin with select the credits and the grades of the courses for which the results are out in the section 'Your details'.<br>-->
-                      <!--<img src="images/fill-details_gpa.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>-->
-                      <!--If results are out for 5 courses the details should look like this(Note: Selecting all the courses in not binding.) <br>-->
-                      <!--<img src="images/filled-details.jpeg" alt="vit cgpa calculator" height="180" width="200"> <br><hr>-->
-                      <!--Now press the 'Get GPA' button. <br>-->
-                      <!--<img src="images/press_gpa.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>-->
-                      <!--Your GPA will be displayed. <br>-->
-                      <!--<img src="images/press-cgpa-btn.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>-->
-                      <!--Press the Calculate CGPA button to get the CGPA and fill the details. <br>-->
-                      <!--<img src="images/fill_det_cgpa.jpeg" alt="vit cgpa calculator" height="200" width="200"> <br><hr>-->
-                      <!--The filled details looks as below , if you had campleted 102 credits with a cgpa of 8.8 last semester and this semester you had 24 credits and your GPA is 9.6. Press the 'Done' button to get the CGPA.<br>-->
-                      <!--<img src="images/filled-det-cgpa.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>-->
-                      <!--The CGPA will be displayed as shown.<br>-->
-                      <!--<img src="images/press-done.jpeg" alt="vit cgpa calculator" height="250" width="200"> <br><hr>-->
-                      <!--You can get your CSE 1002 grades by pressing the 'Get CSE grade' button. <br>-->
-                      <!--<img src="images/cse-grades.jpeg" alt="vit cgpa calculator" height="300" width="200"> <br><hr>-->
-                      <!--<h3><b>For any number of Semester</b></h3><br>-->
-                      <!--<b>Begin by entering the cgpa and credits till the present semester. For example if you are in 4th semester your input should look like this </b><br>-->
-                      <!--<img src="images/new_fill_basic.png" alt="vit cgpa calculator" height="100%" width="200"> <br><hr>-->
-                      <!--Then enter the cgpa and credits(you intend to get) for future semesters and click the check cgpa button<br>-->
-                      <!--<img src="images/new_fill_rest.png" alt="vit cgpa calculator" height="100%" width="200"> <br><hr>-->
-                      <!--The CGPA will be displayed as shown.<br>-->
-                      <!--<img src="images/new_get_cgpa.png" alt="vit cgpa calculator" height="100%" width="200"> <br><hr>-->
-                  <!--</section>-->
-                  <!--<footer id="attrib">Team <i class="fas fa-times float-right" id="close-btn"></i></footer>-->
-                <!--</blockquote>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!-- CodePark ad video -->
+<div class="container-fluid no-padding no-margin">
     <div class="row">
+        
+        <!-- header -->
         <div class="col-sm-12 col-md-12 col-lg-12">
-                <div class="vid"> <iframe width="100%" height="300px" src="https://www.youtube.com/embed/E7V18qYR61o?start=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <h1 class="font-weight-bolder p-4">VIT CGPA CALCULATOR</h1>
+        </div>
+
+        <!-- navbar -->
+        <div class="col-sm-12 col-md-12 col-lg-12 main-container">
+            <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav mt-2 mt-lg-0">
+                        <li class="nav-item link2 active" onclick="changeActiveLink(2) || track('nav_click_emc')">
+                            <a class="nav-link" href="#emc">EXPECTED MARKS CALCULATOR</a>
+                        </li>
+                        <li class="nav-item link1" onclick="changeActiveLink(1) || track('nav_click_qcc')">
+                            <a class="nav-link" href="#qcc">QUICK CGPA CALCULATOR</a>
+                        </li>
+                        <li class="nav-item link3" onclick="changeActiveLink(3) || track('nav_click_ascc')">
+                            <a class="nav-link" href="#ascc">ANY SEM CGPA CALCULATOR</a>
+                        </li>
+                        <li class="nav-item link4" onclick="changeActiveLink(4) || track('nav_click_gc')">
+                            <a class="nav-link" href="#gc">GPA CALCULATOR</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </div>
-    <!-- Main -->
-    <div class="container-fluid">
-        <div class="row">
-        <!-- Feedback form -->
-        <!-- <div class="col-sm-12 col-md-12 col-lg-12" id="feedback">
-          <div class="jumbotron jumbotron-fluid">
-              <div class="container feedback-container">
-              <div align="right">
-                  <span class="badge-pill badge-light">feedback</span>
-              </div>
-              <p class="lead">
-                  <section class="col-lg-12 text-center p-3"><p id="question"></p> -->
-                    <!-- Feeback area -->
-                        <!-- <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="q1" id="q-useful" value="yes">
-                            <label class="form-check-label" for="q1">YES</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="q1" id="q-useful" value="no">
-                            <label class="form-check-label" for="q1">NO</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="q1" id="q-useful" value="maybe">
-                            <label class="form-check-label" for="q1">MAYBE</label>
-                        </div>
-                        <button class="btn btn-primary" id="message-placeholder" onclick="sendFeedback() || track('feedback_clicked')">Send</button>
-                  </section>
-              </p>
-              </div>
-          </div>
-        </div> -->
-        <!-- Ads for CodePark comes here -->
-        <!-- div class="col-sm-12 col-md-12 col-lg-12 ads">
-          <div class="jumbotron jumbotron-fluid">
-              <div class="container ads-container">
-              <div align="right">
-                  <span class="badge-pill badge-light">Ads</span>
-              </div>
-              <h2 class="display-5 bounceIn animated delay-2s">
-                  <img src="images/codepark.png" class="animated img-fluid" alt="CodePark"></h1>
-              <p class="lead">Codes worth sharing.</p>
-              <hr class="my-4">
-              <p class="lead">
-                  <a class="btn btn-primary btn-lg badge-pill badge-primary" href="https://www.codepark.in" target="_blank" role="button">Visit Website</a>
-                  <section class="col-lg-12 text-center p-5"><p>Keep In Touch</p>
-                      <a href="https://www.facebook.com/codepark.in" target="_blank"><i class="fa fa-facebook-square fa-lg text-dark"></i></a>&emsp;
-                      <a href="https://www.twitter.com/CodePark_in" target="_blank"><i class="fa fa-twitter-square fa-lg text-info"></i></a>&emsp;
-                      <a href="https://www.linkedin.com/company/codepark-in" target="_blank"><i class="fa fa-linkedin fa-lg text-primary"></i></a>&emsp;
-                      <a href="https://www.instagram.com/CodePark_in" target="_blank"><i class="fa fa-instagram fa-lg text-danger"></i></a><br>
-                  </section>
-              </p>
-              </div>
-          </div>
-        </div> -->
+    <div class="row">
+        <!-- jumbo ads -->
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <!-- color game ads -->
+            <div class="jumbotron jumbotron-fluid p-4">
+                    <div class="container ads-container">
+                    <div align="right">
+                        <span class="badge-pill badge-light">Ads</span>
+                    </div>
+                    <div class="ad-1-logo"></div>
+                    <h2 class="ad-1-title display-5 bounceIn animated delay-2s"></h2>
+                    <p class="lead ad-1-description">Do you enjoy playing games? Challenge yourself </p>
+                    <a href="url" target="_blank">
+                        <div class="btn btn-success">Play Now</div>
+                    </a>
+                    </div>
+                    <script>
+                        const url=`https://color-tile.rajchandra.me`;
+                        // axios.get(url)
+                        // .then((response)=>{
+                        //     const title = response.data.match(/<title>(.*)<\/title>/)[1];
+                        //     const desc = response.data.match(/<meta property="og:description" content="(.*)">/)[1];
+                        //     const logo = `${url}/src/images/favicon.png`;
+                        document.querySelector('.ad-1-title').innerHTML=`Play Color Tile Game`;
+                        document.querySelector('.ad-1-description').innerHTML=`Are you bored studying, check out easy to play color game, all you need is a correct guess!`; 
+                        document.querySelector('.ad-1-logo').innerHTML=`
+                        <img src="${url}/src/images/icons/icon-512x512.png" height="100" class="rounded p-2">
+                        `;
+                        // })
+                        // .catch(e=>console.log(e));
+                    </script>
+            </div>
+            <!-- codepark video ads -->
+                <!-- <div class="vid"> <iframe width="100%" height="300px" src="https://www.youtube.com/embed/E7V18qYR61o?start=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div> -->
+        </div>
 
         <!--Marks Predictor-->
-        <div class="col-sm-12 col-md-12 col-lg-6 marks-predictor bounceInLeft animated" id="emc" align="left">
-            <div class="card-container">
+        <div class="col-sm-12 col-md-12 col-lg-6 marks-predictor bounceInLeft animated" id="emc">
+            <div class="card-container p-4 mb-5 has-box-shadow">
                 <a href="#emc" class="badge badge-danger float-right">NEW</a>
                 <h1>Compute Expected Marks</h1>
                 <hr>
@@ -328,7 +273,7 @@
 
         <!-- This semester cgpa calculator -->
         <div class="col-sm-12 col-md-12 col-lg-6 quick-cgpa-calculator" id="qcc">
-            <div class="card-container">
+            <div class="card-container p-4 mb-5 has-box-shadow">
                 <section class="cgpa-box" id="cgpa-box"><center>
                     <h1>Quick Cgpa Calculator</h1>
                     <hr>
@@ -363,7 +308,7 @@
                         <div class="alert alert-primary text-center alert-cgpa-msg" role="alert">
                             <b><span class="cgpa-msg" id="cgpa-msg"></span></b>
                         </div>
-                        <div class="col-sm-12 ads adsQCC"></div>
+                        <div class="col-sm-8 ads adsQCC"></div>
                         <button class="btn btn-primary float-right" id="submit" onclick="track('computed_qcc')">Submit</button>
                     </div>
                 </center>
@@ -383,12 +328,10 @@
                 </div><br>
                 </div>
         </div>
-
-        <!--(div.input-group.col-sm-8>(label[for='fgpa$']+input#gpa$.form-control.fgpa[name='fgpa$' type='text' placeholder='GPA']+input#fc$.form-control.fcredits[name='fcredit$' type='text' placeholder='GPA']))*10-->
-
+        
         <!--All semester CGPA calculator-->
         <div class="col-sm-12 col-md-6 col-lg-6 n-sem-cgpa-calculator" id="ascc">
-            <div class="card-container">
+            <div class="card-container p-4 mb-5 has-box-shadow">
                 <h1 class="card-title">Calculate your CGPA for any number of Semesters</h1><hr>
                 <div class="input-group col-sm-8">
                     <div class="input-group-prepend">
@@ -471,7 +414,7 @@
 
         <!-- This semseter GPA calculator -->
         <div class="col-sm-12 col-md-12 col-lg-6 gpa-calculator" id="gc">
-            <div class="card-container">
+            <div class="card-container p-4 mb-5 has-box-shadow">
                 <h1 class="card-title">Calculate GPA</h1><hr>
                 <div class="input-group col-sm-8">
                     <div class="input-group-prepend">
@@ -737,90 +680,91 @@
                     </div><br>
             </div>
         </div>
-      </div>
-    </div>
 
-    <!-- CodePark ads -->
-<!--     <div class="alert alert-success" onclick="window.location.href='https://www.codepark.in'" role="alert">
-        <div align="right">
-            <span class="badge-pill badge-light">Ads</span>
-        </div>
-        <p class="mb-0"> CodePark is live </p>
-    </div> -->
-    <!-- fb like and share -->
-    <div class="col-sm-12 col-md-12 col-lg-12">
-        <div class="card-container">
-            <div class="card card-outline-primary mb-6 ">
-            <div class="card-block card-block-outline-info" >
-                <!-- <h3 class="text-danger"><small>  </small></h3> -->
-
-            <!-- Google Ads -->
-            <div class="google-ads">
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-format="fluid"
-                         data-ad-layout-key="-ed+6k-30-ac+ty"
-                         data-ad-client="ca-pub-8598751574376549"
-                         data-ad-slot="7049595449"></ins>
-                    <script>
-                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-            <br><br>
-            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevil-coder.github.io%2Fvit_grades%2F&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="400px" height="80px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <!-- CodePark ads -->
+    <!--     <div class="alert alert-success" onclick="window.location.href='https://www.codepark.in'" role="alert">
+            <div align="right">
+                <span class="badge-pill badge-light">Ads</span>
             </div>
-            <div class="fb-comments" data-href="https://devil-coder.github.io/vit_grades/" data-width="100%" data-numposts="5"></div>
-            </div>
+            <p class="mb-0"> CodePark is live </p>
+        </div> -->
+        <!-- fb like and share -->
+        <div class="col-sm-12 col-md-12 col-lg-8=12">
+            <div class="card-container p-4 mb-5 has-box-shadow">
+                <div class="card card-outline-primary mb-6 ">
+                <div class="card-block card-block-outline-info" >
+                    <!-- <h3 class="text-danger"><small>  </small></h3> -->
 
-            <!-- Google Ads -->
-            <div class="google-ads">
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-format="fluid"
-                         data-ad-layout-key="-ed+6k-30-ac+ty"
-                         data-ad-client="ca-pub-8598751574376549"
-                         data-ad-slot="7049595449"></ins>
-                    <script>
-                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-
+                <!-- Google Ads -->
+                <div class="google-ads">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-format="fluid"
+                            data-ad-layout-key="-ed+6k-30-ac+ty"
+                            data-ad-client="ca-pub-8598751574376549"
+                            data-ad-slot="7049595449"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                <br><br>
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevil-coder.github.io%2Fvit_grades%2F&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="400px" height="80px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                 </div>
+                <div class="fb-comments" data-href="https://devil-coder.github.io/vit_grades/" data-width="100%" data-numposts="5"></div>
+                </div>
+
+                <!-- Google Ads -->
+                <div class="google-ads">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-format="fluid"
+                            data-ad-layout-key="-ed+6k-30-ac+ty"
+                            data-ad-client="ca-pub-8598751574376549"
+                            data-ad-slot="7049595449"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+
+                    </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="modal-error" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Error</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Gotcha</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- footer for VIT Cgpa Calculator -->
+        <div class="col-sm-12 col-md-12 col-lg-12 footer-container">
+            <footer class="p-4">
+                &copy; 2017 - <span id="thisYear"></span> <a href="https://www.rajchandra.me">Raj Chandra</a>. All Rights Reserved. <br>
+                <a href="https://www.facebook.com/raj.chandra.963"><i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 23px; color: white;" target="_blank"></i></a> &nbsp;
+                <a href="https://www.linkedin.com/in/rajchandra3/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size: 23px; color: white;"></i></a>
+            </footer>
         </div>
     </div>
-    <!-- Modal -->
-    <div class="modal fade" id="modal-error" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modal-title">Error</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body" id="modal-body"></div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Gotcha</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- footer for VIT Cgpa Calculator -->
-    <footer style="padding: 5% 5% 5% 5%; background-color: #000000; color: #fff;">
-        &copy; 2017 - <span id="thisYear"></span> <a href="https://www.rajchandra.me">Raj Chandra</a>. All Rights Reserved. <br>
-        <a href="https://www.facebook.com/raj.chandra.963"><i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 23px; color: white;" target="_blank"></i></a> &nbsp;
-        <a href="https://www.linkedin.com/in/rajchandra3/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size: 23px; color: white;"></i></a>
-    </footer>
-<!-- script for year in footer -->
-<script>
-  var d = new Date();
-  document.getElementById('thisYear').innerHTML = d.getFullYear();
-</script>
-<!-- main script file  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-<script language="javascript" type="text/javascript" src="requests.js"></script>
-<script language="javascript" type="text/javascript" src="ads.js"></script>
-<script language="javascript" type="text/javascript" src="calculator.js"></script>
+</div>
+    <!-- script for year in footer -->
+    <script>
+    var d = new Date();
+    document.getElementById('thisYear').innerHTML = d.getFullYear();
+    </script>
+    <!-- main script file  -->
+    <script language="javascript" type="text/javascript" src="requests.js"></script>
+    <script language="javascript" type="text/javascript" src="ads.js"></script>
+    <script language="javascript" type="text/javascript" src="calculator.js"></script>
 </body>
 </html>
