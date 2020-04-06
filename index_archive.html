@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="An online tool to calculate CGPA, GPA and Even get a hint of what your CGPA would be after few semesters. It is 100% accurate and very easy to use. More than 30,000 users have been using it to compute their GPAs and CGPA.">
+    <meta name="keywords" content="CGPA calculator VIT, VIT CGPA CALCULATOR, VIT gpa calculator, gpa calculator VIT, devil-coder cgpa calculator, Raj Chandra vit cgpa calculator, VIT marks calculator">
+    <meta name="author" content="Raj Chandra">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b567e"> <!--1b567e-->
+    <title>VIT CGPA Calculator</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <!-- Animate.css -->
+    <link rel="stylesheet" type="text/css" href="animate.css">
+    <!-- Bootstrap -->
+    <!--<link href="bootstrap/css/bootstrap.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!--approved ads -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8598751574376549",
+              enable_page_level_ads: true
+         });
+    </script>
+    <!-- This is for smartlook -->
+    <script type="text/javascript">
+        window.smartlook||(function(d) {
+        var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+        var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+        c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
+        })(document);
+        smartlook('init', '5cf36883890fabf1016e165aa9cac1e3a2e49b99');
+    </script>
+    <!-- Google adsense -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8598751574376549",
+        enable_page_level_ads: true
+      });
+    </script>
+    <!-- Google analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-99147431-4', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+        <!-- Schema.org -->
+    <script type='application/ld+json'>
+    {
+      "@context": "http://www.schema.org",
+      "@type": "WebSite",
+      "name": "CGPA Calculator | VIT",
+      "alternateName": "VIT CGPA Calculator",
+      "url": "https://getcgpa.rajchandra.me"
+    }
+     </script>
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- start Mixpanel -->
+    <script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+        0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+        for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+        MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+        mixpanel.init("7ff5ca7b4aa0bef4db830b057c9076a2");</script>
+    <!-- end Mixpanel -->
+    <script language="javascript" type="text/javascript" src="mixpanel.js"></script>
+</head>
+<!-- <body onload="getFeebackQuestion()"> -->
+<body onload="track('page_views')">
+<!-- for likes -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- for comments -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="container-fluid no-padding no-margin">
+    <div class="row">
+        <nav class="navbar fixed-bottom navbar-expand-md navbar-dark sticky-bottom bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mt-2 mt-lg-0">
+                    <li class="nav-item link2 active" onclick="changeActiveLink(2) || track('nav_click_emc')">
+                        <a class="nav-link" href="#emc">EXPECTED MARKS CALCULATOR</a>
+                    </li>
+                    <li class="nav-item link1" onclick="changeActiveLink(1) || track('nav_click_qcc')">
+                        <a class="nav-link" href="#qcc">QUICK CGPA CALCULATOR</a>
+                    </li>
+                    <li class="nav-item link3" onclick="changeActiveLink(3) || track('nav_click_ascc')">
+                        <a class="nav-link" href="#ascc">ANY SEM CGPA CALCULATOR</a>
+                    </li>
+                    <li class="nav-item link4" onclick="changeActiveLink(4) || track('nav_click_gc')">
+                        <a class="nav-link" href="#gc">GPA CALCULATOR</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- header -->
+        <div class="col-sm-12 col-md-12 col-lg-12 no-margin no-padding">
+            <div class="font-weight-bolder p-4 font-weight-bolder">VIT CGPA CALCULATOR</div>
+        </div>
+        <!-- jumbo ads -->
+        <div class="col-sm-12 col-md-12 col-lg-12 no-padding no-margin">
+            <!-- color game ads -->
+            <div class="jumbotron jumbotron-fluid p-4">
+                    <div class="container ads-container">
+                    <div align="right">
+                        <span class="badge-pill badge-light">Ads</span>
+                    </div>
+                    <div class="ad-1-logo"></div>
+                    <h2 class="ad-1-title display-5 bounceIn animated delay-2s"></h2>
+                    <p class="lead ad-1-description">Do you enjoy playing games? Challenge yourself </p>
+                    <a href="http://color-tile.rajchandra.me" target="_blank">
+                        <div class="btn btn-success">Play Now</div>
+                    </a>
+                    </div>
+                    <script>
+                        const url=`https://color-tile.rajchandra.me`;
+                        // axios.get(url)
+                        // .then((response)=>{
+                        //     const title = response.data.match(/<title>(.*)<\/title>/)[1];
+                        //     const desc = response.data.match(/<meta property="og:description" content="(.*)">/)[1];
+                        //     const logo = `${url}/src/images/favicon.png`;
+                        document.querySelector('.ad-1-title').innerHTML=`Play Color Tile Game`;
+                        document.querySelector('.ad-1-description').innerHTML=`Are you bored studying, check out easy to play color game, all you need is a correct guess!`; 
+                        document.querySelector('.ad-1-logo').innerHTML=`
+                        <img src="${url}/src/images/icons/icon-512x512.png" height="100" class="rounded p-2">
+                        `;
+                        // })
+                        // .catch(e=>console.log(e));
+                    </script>
+            </div>
+            <!-- codepark video ads -->
+                <!-- <div class="vid"> <iframe width="100%" height="300px" src="https://www.youtube.com/embed/E7V18qYR61o?start=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div> -->
+        </div>
+
+        <!--Marks Predictor-->
+        <div class="row col-sm-12 col-md-12 col-lg-12 marks-predictor bounceInLeft animated" id="emc">
+            <!-- ads for large screens -->
+            <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- color-tile-ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8598751574376549"
+                    data-ad-slot="6993669367"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="card-container col-lg-6 p-4 mb-5 has-box-shadow">
+                <div class="col-lg-10 col-md-8 col-sm-12">
+                    <h1>Compute Expected Marks</h1>
+                    <hr>
+                    <form>
+                        <div class="form-group row">
+                            <label for="cat1" class="col-sm-6 col-form-label text-right">Marks in CAT 1 : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="cat1" placeholder="Your score in CAT 1" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">&nbsp; max 50 </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="cat2" class="col-sm-6 col-form-label text-right">Marks in CAT 2 : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="cat2" placeholder="Your score in CAT 2" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">&nbsp; max 50 </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="da" class="col-sm-6 col-form-label text-right">Marks in Internals : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="da" placeholder="Your score in DA(s)" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">&nbsp; max 30 </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="cat1" class="col-sm-6 col-form-label text-right">Additional Learning : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="al" placeholder="Your score in AL" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">&nbsp; max 10 </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="lab" class="col-sm-6 col-form-label text-right">Marks in Lab : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="lab" placeholder="Your score in Lab" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon"> max 100 </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="j-comp" class="col-sm-6 col-form-label text-right">Marks in J Component : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="j-comp" placeholder="Your score in Project" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">max 100 </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="fat" class="col-sm-6 col-form-label text-right">Expected Marks in FAT :</label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="fat" placeholder="Say 98" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">max 100 </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alert alert-primary text-center alert-marks" role="alert">
+                            <b><span id="marks"></span></b>
+                        </div>
+                        <div class="col-sm-12 ads adsEMC"></div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <button type="button" onclick="getMarks() || track('computed_emc')" class="btn btn-primary float-right">Submit</button>
+                                <small id="projHelp" class="form-text text-danger">*If the course doesn't have J-Component/L-Component you can leave it empty.</small>
+    
+                            </div>
+                        </div>
+                    </form>
+    
+                    <!-- Google Ads -->
+                    <div class="google-ads">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                                style="display:block"
+                                data-ad-format="fluid"
+                                data-ad-layout-key="-ed+6k-30-ac+ty"
+                                data-ad-client="ca-pub-8598751574376549"
+                                data-ad-slot="7049595449"></ins>
+                        <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ads for large screens -->
+            <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- color-tile-ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8598751574376549"
+                    data-ad-slot="6993669367"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+
+        <!-- quick cgpa calculator -->
+        <div class="row col-sm-12 col-md-12 col-lg-12 quick-cgpa-calculator" id="qcc">
+            <!-- ads for large screens -->
+            <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- color-tile-ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8598751574376549"
+                    data-ad-slot="6993669367"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="card-container col-lg-6 p-4 mb-5 has-box-shadow">
+                
+                <!-- ads for large screens -->
+                <div class="vertical-ads d-none col-md-2 d-md-block d-lg-block d-xl-block">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- color-tile-ads -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-8598751574376549"
+                        data-ad-slot="6993669367"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <!-- main content -->
+                <div class="col-lg-8 col-md-8 col-sm-12 no-margin no-padding cgpa-box" id="cgpa-box">
+                    <h1>Quick Cgpa Calculator</h1>
+                    <hr>
+                    <div>
+                        <div class="input-group col-sm-12">
+                            <input type="text" id='tc' class="form-control cgpa-input" maxlength="3" placeholder="Credits till last Sem?" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">max 200 </span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="input-group col-sm-12">
+                            <input type="text" id='cgpa' class="form-control cgpa-input" maxlength="4" placeholder="CGPA till last Sem?" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">&nbsp; max 10 </span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="input-group col-sm-12">
+                            <input type="text" id='c' class="form-control cgpa-input" maxlength="2" placeholder="Credits in this Sem?" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">max &nbsp; 32 </span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="input-group col-sm-12">
+                            <input type="text" id='gpa' class="form-control cgpa-input" maxlength="4" placeholder="GPA this semester?" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">max &nbsp; 10 </span>
+                            </div>
+                        </div><br>
+                        <div class="alert alert-primary text-center alert-cgpa-msg" role="alert">
+                            <b><span class="cgpa-msg" id="cgpa-msg"></span></b>
+                        </div>
+                        <div class="col-sm-8 ads adsQCC"></div>
+                        <button class="btn btn-primary float-right" id="submit" onclick="track('computed_qcc')">Submit</button>
+                    </div>
+
+
+                    <!-- Google Ads -->
+                    <div class="google-ads p-3">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-format="fluid"
+                            data-ad-layout-key="-ed+6k-30-ac+ty"
+                            data-ad-client="ca-pub-8598751574376549"
+                            data-ad-slot="7049595449"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+
+                <!-- ads for large screens -->
+                <div class="vertical-ads d-none col-md-2 d-md-block d-lg-block d-xl-block">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- color-tile-ads -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-8598751574376549"
+                        data-ad-slot="6993669367"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            <!-- ads for large screens -->
+            <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- color-tile-ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8598751574376549"
+                    data-ad-slot="6993669367"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+        
+        <!--All semester CGPA calculator-->
+        <div class="row col-sm-12 col-md-12 col-lg-12 n-sem-cgpa-calculator" id="ascc">
+            <!-- ads for large screens -->
+            <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- color-tile-ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8598751574376549"
+                    data-ad-slot="6993669367"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="card-container col-lg-6 p-4 mb-5 has-box-shadow">
+                <h1 class="card-title">Calculate your CGPA for any number of Semesters</h1><hr>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">1st Sem</span>
+                    </div>
+                    <input type="text" id="gpa1" class="form-control fgpa" name="fgpa1" placeholder="GPA"  aria-describedby="basic-addon">
+                    <input type="text" id="fc1" class="form-control fcredits" name="fcredit1" placeholder="CREDITS">
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">2nd Sem</span>
+                    </div>
+                    <input type="text" id="gpa2" class="form-control fgpa" name="fgpa2" placeholder="GPA"  aria-describedby="basic-addon">
+                    <input type="text" id="fc2" class="form-control fcredits" name="fcredit2" placeholder="CREDITS">
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">3rd Sem</span>
+                    </div>
+                    <input type="text" id="gpa3" class="form-control fgpa" name="fgpa3" placeholder="GPA"  aria-describedby="basic-addon">
+                    <input type="text" id="fc3" class="form-control fcredits" name="fcredit3" placeholder="CREDITS">
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">4th Sem</span>
+                    </div>
+                    <input type="text" id="gpa4" class="form-control fgpa" name="fgpa4" placeholder="GPA"  aria-describedby="basic-addon">
+                    <input type="text" id="fc4" class="form-control fcredits" name="fcredit4" placeholder="CREDITS">
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">5th Sem</span>
+                    </div>
+                    <input type="text" id="gpa5" class="form-control fgpa" name="fgpa5" placeholder="GPA"  aria-describedby="basic-addon">
+                    <input type="text" id="fc5" class="form-control fcredits" name="fcredit5" placeholder="CREDITS">
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">6th Sem</span>
+                    </div>
+                    <input type="text" id="gpa6" class="form-control fgpa" name="fgpa6" placeholder="GPA"  aria-describedby="basic-addon">
+                    <input type="text" id="fc6" class="form-control fcredits" name="fcredit6" placeholder="CREDITS">
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">7th Sem</span>
+                    </div>
+                    <input type="text" id="gpa7" class="form-control fgpa" name="fgpa7" placeholder="GPA"  aria-describedby="basic-addon">
+                    <input type="text" id="fc7" class="form-control fcredits" name="fcredit7" placeholder="CREDITS">
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">8th Sem</span>
+                    </div>
+                    <input type="text" id="gpa8" class="form-control fgpa" name="fgpa8" placeholder="GPA"  aria-describedby="basic-addon">
+                    <input type="text" id="fc8" class="form-control fcredits" name="fcredit8" placeholder="CREDITS">
+                </div><br>
+                <div class="alert alert-primary text-center alert-fcgpa" role="alert">
+                    <b><span class="text-info" id="fcgpa"></span></b>
+                </div>
+                <div class="col-sm-12 ads adsASCC"></div>
+                <button class="btn btn-primary float-right" id="sem-cgpa-btn" onclick="track('computed_ascc')">Submit</button>
+                <br><br>
+
+                <!-- Google Ads -->
+                <div class="google-ads">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-format="fluid"
+                             data-ad-layout-key="-ed+6k-30-ac+ty"
+                             data-ad-client="ca-pub-8598751574376549"
+                             data-ad-slot="7049595449"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div><br>
+            </div>
+            <!-- ads for large screens -->
+            <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- color-tile-ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8598751574376549"
+                    data-ad-slot="6993669367"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+
+        <!-- This semseter GPA calculator -->
+        <div class="row col-sm-12 col-md-12 col-lg-12 gpa-calculator" id="gc">
+            <!-- ads for large screens -->
+            <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- color-tile-ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8598751574376549"
+                    data-ad-slot="6993669367"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="card-container col-lg-6 p-4 mb-5 has-box-shadow">
+                <h1 class="card-title">Calculate GPA</h1><hr>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">Course </span>
+                    </div>
+                    <select class="form-control" name="grades" id="g1" >
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c1">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="20">20</option>
+                    </select>
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">Course </span>
+                    </div>
+                    <select class="form-control" name="grades" id="g2">
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c2">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="20">20</option>
+                    </select>
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">Course </span>
+                    </div>
+                    <select class="form-control" name="grades" id="g3">
+                        <option value="0" >Grade</option>
+                        <option value="10" >S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c3">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="20">20</option>
+                    </select>
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">Course </span>
+                    </div>
+                    <select class="form-control" name="Grades" id="g4">
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" class="form-control" name="credits" id="c4">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="20">20</option>
+                    </select>
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">Course </span>
+                    </div>
+                    <select class="form-control" name="Grades" id="g5">
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c5">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="20">20</option>
+                    </select>
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">Course </span>
+                    </div>
+                    <select class="form-control" name="Grades" id="g6">
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c6">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="20">20</option>
+                    </select><br>
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">Course </span>
+                    </div>
+                    <select class="form-control" name="Grades" id="g7">
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c7">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="20">20</option>
+                    </select>
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">Course </span>
+                    </div>
+                    <select class="form-control" name="Grades" id="g8">
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c8">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="20">20</option>
+                    </select>
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">Course </span>
+                    </div>
+                    <select class="form-control" name="Grade" id="g9">
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c9">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="20">20</option>
+                    </select>
+                </div><br>
+                <div class="input-group col-sm-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon">Course </span>
+                    </div>
+                    <select class="form-control" name="Grades" id="g10">
+                        <option value="0" >Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">N</option>
+                    </select>
+                    <select class="form-control" name="credits" id="c10">
+                        <option value="0" id="c0">Credits</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="20">20</option>
+                    </select>
+                    <section>
+                </div><br><br>
+                <div class="alert alert-primary alert-grades" role="alert">
+                    <b><span id="grades" class="text-info"></span></b>
+                </div>
+                <div class="col-sm-12 ads adsGC"></div>
+                <button class="gbtn btn btn-primary float-right" id="gbtn" onclick="track('computed_gpa')">Submit</button>
+                </section>
+                <br><br>
+
+                <!-- Google Ads -->
+                <div class="google-ads">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-format="fluid"
+                             data-ad-layout-key="-ed+6k-30-ac+ty"
+                             data-ad-client="ca-pub-8598751574376549"
+                             data-ad-slot="7049595449"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div><br>
+            </div>
+            <!-- ads for large screens -->
+            <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- color-tile-ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8598751574376549"
+                    data-ad-slot="6993669367"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+
+        <!-- CodePark ads -->
+    <!--     <div class="alert alert-success" onclick="window.location.href='https://www.codepark.in'" role="alert">
+            <div align="right">
+                <span class="badge-pill badge-light">Ads</span>
+            </div>
+            <p class="mb-0"> CodePark is live </p>
+        </div> -->
+        <!-- fb like and share -->
+        <div class="col-sm-12 col-md-12 col-lg-12 no-margin no-padding">
+            <div class="card-container col-lg-6 p-4 mb-5 has-box-shadow">
+                <div class="card card-outline-primary mb-6 ">
+                <div class="card-block card-block-outline-info" >
+                    <!-- <h3 class="text-danger"><small>  </small></h3> -->
+
+                <!-- Google Ads -->
+                <div class="google-ads">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-format="fluid"
+                        data-ad-layout-key="-ed+6k-30-ac+ty"
+                        data-ad-client="ca-pub-8598751574376549"
+                        data-ad-slot="7049595449"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <br><br>
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevil-coder.github.io%2Fvit_grades%2F&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="400px" height="80px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </div>
+                <div class="fb-comments" data-href="https://devil-coder.github.io/vit_grades/" data-width="100%" data-numposts="5"></div>
+                </div>
+
+                <!-- Google Ads -->
+                <div class="google-ads">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-format="fluid"
+                        data-ad-layout-key="-ed+6k-30-ac+ty"
+                        data-ad-client="ca-pub-8598751574376549"
+                        data-ad-slot="7049595449"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="modal-error" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Error</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Gotcha</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- footer for VIT Cgpa Calculator -->
+        <div class="col-sm-12 col-md-12 col-lg-12 footer-container">
+            <footer class="p-4">
+                &copy; 2017 - <span id="thisYear"></span> <a href="https://www.rajchandra.me">Raj Chandra</a>. All Rights Reserved. <br>
+                <a href="https://www.facebook.com/raj.chandra.963"><i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 23px; color: white;" target="_blank"></i></a> &nbsp;
+                <a href="https://www.linkedin.com/in/rajchandra3/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size: 23px; color: white;"></i></a>
+            </footer>
+        </div>
+    </div>
+</div>
+    <!-- script for year in footer -->
+    <script>
+    var d = new Date();
+    document.getElementById('thisYear').innerHTML = d.getFullYear();
+    </script>
+    <!-- main script file  -->
+    <script language="javascript" type="text/javascript" src="requests.js"></script>
+    <script language="javascript" type="text/javascript" src="ads.js"></script>
+    <script language="javascript" type="text/javascript" src="calculator.js"></script>
+</body>
+</html>
