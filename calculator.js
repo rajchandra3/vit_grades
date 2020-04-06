@@ -192,8 +192,8 @@ $('.cgpa-input').on('keyup',function(){
         $('#modal-error').modal('show');
         $(this).val('');
     }
-    else if((input>200 || input<0) && this.id==='tc'){
-        $('#modal-body').html('Your Credits should be between 0 and 200 !');
+    else if((input>250 || input<0) && this.id==='tc'){
+        $('#modal-body').html('Your Credits should be between 0 and 250 !');
         $('#modal-error').modal('show');
         $(this).val('');
     }
