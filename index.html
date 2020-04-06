@@ -107,12 +107,12 @@
         
         <!-- header -->
         <div class="col-sm-12 col-md-12 col-lg-12">
-            <h1 class="font-weight-bolder p-4">VIT CGPA CALCULATOR</h1>
+            <div class="font-weight-bolder p-4 display-4">VIT CGPA CALCULATOR</div>
         </div>
 
         <!-- navbar -->
-        <div class="col-sm-12 col-md-12 col-lg-12 main-container">
-            <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark">
+        <!-- <div class="col-sm-12 col-md-12 col-lg-12 main-container"> -->
+            <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark sticky-bottom bg-dark">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -133,7 +133,7 @@
                     </ul>
                 </div>
             </nav>
-        </div>
+        <!-- </div> -->
     </div>
     <div class="row">
         <!-- jumbo ads -->
@@ -172,148 +172,193 @@
         </div>
 
         <!--Marks Predictor-->
-        <div class="col-sm-12 col-md-12 col-lg-6 marks-predictor bounceInLeft animated" id="emc">
-            <div class="card-container p-4 mb-5 has-box-shadow">
-                <a href="#emc" class="badge badge-danger float-right">NEW</a>
-                <h1>Compute Expected Marks</h1>
-                <hr>
-                <form>
-                    <div class="form-group row">
-                        <label for="cat1" class="col-sm-6 col-form-label">Marks in CAT 1 : </label>
-                        <div class="input-group col">
-                            <input type="text"  class="form-control" id="cat1" placeholder="Your score in CAT 1" aria-label="Marks Input" aria-describedby="basic-addon">
-                            <div class="input-group-append">
-                                <span class="input-group-text" id="basic-addon">&nbsp; max 50 </span>
+        <div class="row col-sm-12 col-md-12 col-lg-12 marks-predictor bounceInLeft animated" id="emc">
+            <!-- ads for large screens -->
+            <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- color-tile-ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8598751574376549"
+                    data-ad-slot="6993669367"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="card-container col-lg-6 p-4 mb-5 has-box-shadow">
+                <div class="col-lg-10 col-md-8 col-sm-12">
+                    <h1>Compute Expected Marks</h1>
+                    <hr>
+                    <form>
+                        <div class="form-group row">
+                            <label for="cat1" class="col-sm-6 col-form-label text-right">Marks in CAT 1 : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="cat1" placeholder="Your score in CAT 1" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">&nbsp; max 50 </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="cat2" class="col-sm-6 col-form-label">Marks in CAT 2 : </label>
-                        <div class="input-group col">
-                            <input type="text"  class="form-control" id="cat2" placeholder="Your score in CAT 2" aria-label="Marks Input" aria-describedby="basic-addon">
-                            <div class="input-group-append">
-                                <span class="input-group-text" id="basic-addon">&nbsp; max 50 </span>
+                        <div class="form-group row">
+                            <label for="cat2" class="col-sm-6 col-form-label text-right">Marks in CAT 2 : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="cat2" placeholder="Your score in CAT 2" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">&nbsp; max 50 </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="da" class="col-sm-6 col-form-label">Marks in Internals : </label>
-                        <div class="input-group col">
-                            <input type="text"  class="form-control" id="da" placeholder="Your score in DA(s)" aria-label="Marks Input" aria-describedby="basic-addon">
-                            <div class="input-group-append">
-                                <span class="input-group-text" id="basic-addon">&nbsp; max 30 </span>
+                        <div class="form-group row">
+                            <label for="da" class="col-sm-6 col-form-label text-right">Marks in Internals : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="da" placeholder="Your score in DA(s)" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">&nbsp; max 30 </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="cat1" class="col-sm-6 col-form-label">Additional Learning : </label>
-                        <div class="input-group col">
-                            <input type="text"  class="form-control" id="al" placeholder="Your score in AL" aria-label="Marks Input" aria-describedby="basic-addon">
-                            <div class="input-group-append">
-                                <span class="input-group-text" id="basic-addon">&nbsp; max 10 </span>
+                        <div class="form-group row">
+                            <label for="cat1" class="col-sm-6 col-form-label text-right">Additional Learning : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="al" placeholder="Your score in AL" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">&nbsp; max 10 </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="lab" class="col-sm-6 col-form-label">Marks in Lab : </label>
-                        <div class="input-group col">
-                            <input type="text"  class="form-control" id="lab" placeholder="Your score in Lab" aria-label="Marks Input" aria-describedby="basic-addon">
-                            <div class="input-group-append">
-                                <span class="input-group-text" id="basic-addon"> max 100 </span>
+                        <div class="form-group row">
+                            <label for="lab" class="col-sm-6 col-form-label text-right">Marks in Lab : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="lab" placeholder="Your score in Lab" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon"> max 100 </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="j-comp" class="col-sm-6 col-form-label">Marks in J Component : </label>
-                        <div class="input-group col">
-                            <input type="text"  class="form-control" id="j-comp" placeholder="Your score in Project" aria-label="Marks Input" aria-describedby="basic-addon">
-                            <div class="input-group-append">
-                                <span class="input-group-text" id="basic-addon">max 100 </span>
+                        <div class="form-group row">
+                            <label for="j-comp" class="col-sm-6 col-form-label text-right">Marks in J Component : </label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="j-comp" placeholder="Your score in Project" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">max 100 </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="fat" class="col-sm-6 col-form-label">Expected Marks in FAT :</label>
-                        <div class="input-group col">
-                            <input type="text"  class="form-control" id="fat" placeholder="Say 98" aria-label="Marks Input" aria-describedby="basic-addon">
-                            <div class="input-group-append">
-                                <span class="input-group-text" id="basic-addon">max 100 </span>
+                        <div class="form-group row">
+                            <label for="fat" class="col-sm-6 col-form-label text-right">Expected Marks in FAT :</label>
+                            <div class="input-group col">
+                                <input type="text"  class="form-control" id="fat" placeholder="Say 98" aria-label="Marks Input" aria-describedby="basic-addon">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon">max 100 </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="alert alert-primary text-center alert-marks" role="alert">
-                        <b><span id="marks"></span></b>
-                    </div>
-                    <div class="col-sm-12 ads adsEMC"></div>
-                    <div class="form-group row">
-                        <div class="col-sm-12">
-                            <button type="button" onclick="getMarks() || track('computed_emc')" class="btn btn-primary float-right">Submit</button>
-                            <small id="projHelp" class="form-text text-danger">*If the course doesn't have J-Component/L-Component you can leave it empty.</small>
-
+                        <div class="alert alert-primary text-center alert-marks" role="alert">
+                            <b><span id="marks"></span></b>
                         </div>
-                    </div>
-                </form>
-
-                <!-- Google Ads -->
-                <div class="google-ads">
+                        <div class="col-sm-12 ads adsEMC"></div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <button type="button" onclick="getMarks() || track('computed_emc')" class="btn btn-primary float-right">Submit</button>
+                                <small id="projHelp" class="form-text text-danger">*If the course doesn't have J-Component/L-Component you can leave it empty.</small>
+    
+                            </div>
+                        </div>
+                    </form>
+    
+                    <!-- Google Ads -->
+                    <div class="google-ads">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <ins class="adsbygoogle"
-                             style="display:block"
-                             data-ad-format="fluid"
-                             data-ad-layout-key="-ed+6k-30-ac+ty"
-                             data-ad-client="ca-pub-8598751574376549"
-                             data-ad-slot="7049595449"></ins>
+                                style="display:block"
+                                data-ad-format="fluid"
+                                data-ad-layout-key="-ed+6k-30-ac+ty"
+                                data-ad-client="ca-pub-8598751574376549"
+                                data-ad-slot="7049595449"></ins>
                         <script>
-                             (adsbygoogle = window.adsbygoogle || []).push({});
+                                (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
-
                     </div>
+                </div>
+            </div>
+
+            <!-- ads for large screens -->
+            <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- color-tile-ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8598751574376549"
+                    data-ad-slot="6993669367"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </div>
         </div>
 
-        <!-- This semester cgpa calculator -->
-        <div class="col-sm-12 col-md-12 col-lg-6 quick-cgpa-calculator" id="qcc">
-            <div class="card-container p-4 mb-5 has-box-shadow">
-                <section class="cgpa-box" id="cgpa-box"><center>
+        <!-- quick cgpa calculator -->
+        <div class="row col-sm-12 col-md-12 col-lg-12 quick-cgpa-calculator" id="qcc">
+            <!-- ads for large screens -->
+            <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- color-tile-ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8598751574376549"
+                    data-ad-slot="6993669367"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="card-container col-lg-6 p-4 mb-5 has-box-shadow">
+                
+                <!-- ads for large screens -->
+                <div class="vertical-ads d-none col-md-2 d-md-block d-lg-block d-xl-block">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- color-tile-ads -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-8598751574376549"
+                        data-ad-slot="6993669367"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <!-- main content -->
+                <div class="col-lg-8 col-md-8 col-sm-12 no-margin no-padding cgpa-box" id="cgpa-box">
                     <h1>Quick Cgpa Calculator</h1>
                     <hr>
                     <div>
-                        <!-- ads for large screens -->
-                        <div class="vertical-ads d-none col-md-2 d-md-block d-lg-block d-xl-block">
-                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <!-- color-tile-ads -->
-                            <ins class="adsbygoogle"
-                                style="display:block"
-                                data-ad-client="ca-pub-8598751574376549"
-                                data-ad-slot="6993669367"
-                                data-ad-format="auto"
-                                data-full-width-responsive="true"></ins>
-                            <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>
-                        </div>
-                        <div class="input-group col-sm-8">
+                        <div class="input-group col-sm-12">
                             <input type="text" id='tc' class="form-control cgpa-input" maxlength="3" placeholder="Credits till last Sem?" aria-label="Marks Input" aria-describedby="basic-addon">
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon">max 200 </span>
                             </div>
                         </div>
                         <br>
-                        <div class="input-group col-sm-8">
+                        <div class="input-group col-sm-12">
                             <input type="text" id='cgpa' class="form-control cgpa-input" maxlength="4" placeholder="CGPA till last Sem?" aria-label="Marks Input" aria-describedby="basic-addon">
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon">&nbsp; max 10 </span>
                             </div>
                         </div>
                         <br>
-                        <div class="input-group col-sm-8">
+                        <div class="input-group col-sm-12">
                             <input type="text" id='c' class="form-control cgpa-input" maxlength="2" placeholder="Credits in this Sem?" aria-label="Marks Input" aria-describedby="basic-addon">
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon">max &nbsp; 32 </span>
                             </div>
                         </div>
                         <br>
-                        <div class="input-group col-sm-8">
+                        <div class="input-group col-sm-12">
                             <input type="text" id='gpa' class="form-control cgpa-input" maxlength="4" placeholder="GPA this semester?" aria-label="Marks Input" aria-describedby="basic-addon">
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon">max &nbsp; 10 </span>
@@ -325,27 +370,71 @@
                         <div class="col-sm-8 ads adsQCC"></div>
                         <button class="btn btn-primary float-right" id="submit" onclick="track('computed_qcc')">Submit</button>
                     </div>
-                </center>
-                </section><br><br>
-                <!-- Google Ads -->
-                <div class="google-ads">
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+                    <!-- Google Ads -->
+                    <div class="google-ads p-3">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-format="fluid"
+                            data-ad-layout-key="-ed+6k-30-ac+ty"
+                            data-ad-client="ca-pub-8598751574376549"
+                            data-ad-slot="7049595449"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+
+                <!-- ads for large screens -->
+                <div class="vertical-ads d-none col-md-2 d-md-block d-lg-block d-xl-block">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- color-tile-ads -->
                     <ins class="adsbygoogle"
                         style="display:block"
-                        data-ad-format="fluid"
-                        data-ad-layout-key="-ed+6k-30-ac+ty"
                         data-ad-client="ca-pub-8598751574376549"
-                        data-ad-slot="7049595449"></ins>
+                        data-ad-slot="6993669367"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
-                </div><br>
                 </div>
+            </div>
+            <!-- ads for large screens -->
+            <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- color-tile-ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8598751574376549"
+                    data-ad-slot="6993669367"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
         
         <!--All semester CGPA calculator-->
-        <div class="col-sm-12 col-md-6 col-lg-6 n-sem-cgpa-calculator" id="ascc">
-            <div class="card-container p-4 mb-5 has-box-shadow">
+        <div class="row col-sm-12 col-md-12 col-lg-12 n-sem-cgpa-calculator" id="ascc">
+            <!-- ads for large screens -->
+            <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- color-tile-ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8598751574376549"
+                    data-ad-slot="6993669367"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="card-container col-lg-6 p-4 mb-5 has-box-shadow">
                 <h1 class="card-title">Calculate your CGPA for any number of Semesters</h1><hr>
                 <div class="input-group col-sm-8">
                     <div class="input-group-prepend">
@@ -423,12 +512,40 @@
                              (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
                     </div><br>
-              </div>
+            </div>
+            <!-- ads for large screens -->
+            <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- color-tile-ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8598751574376549"
+                    data-ad-slot="6993669367"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
 
         <!-- This semseter GPA calculator -->
-        <div class="col-sm-12 col-md-12 col-lg-6 gpa-calculator" id="gc">
-            <div class="card-container p-4 mb-5 has-box-shadow">
+        <div class="row col-sm-12 col-md-12 col-lg-12 gpa-calculator" id="gc">
+            <!-- ads for large screens -->
+            <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- color-tile-ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8598751574376549"
+                    data-ad-slot="6993669367"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="card-container col-lg-6 p-4 mb-5 has-box-shadow">
                 <h1 class="card-title">Calculate GPA</h1><hr>
                 <div class="input-group col-sm-8">
                     <div class="input-group-prepend">
@@ -452,6 +569,7 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="20">20</option>
                     </select>
                 </div><br>
                 <div class="input-group col-sm-8">
@@ -476,6 +594,7 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="20">20</option>
                     </select>
                 </div><br>
                 <div class="input-group col-sm-8">
@@ -500,6 +619,7 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="20">20</option>
                     </select>
                 </div><br>
                 <div class="input-group col-sm-8">
@@ -524,6 +644,7 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="20">20</option>
                     </select>
                 </div><br>
                 <div class="input-group col-sm-8">
@@ -548,6 +669,7 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="20">20</option>
                     </select>
                 </div><br>
                 <div class="input-group col-sm-8">
@@ -572,6 +694,7 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="20">20</option>
                     </select><br>
                 </div><br>
                 <div class="input-group col-sm-8">
@@ -596,6 +719,7 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="20">20</option>
                     </select>
                 </div><br>
                 <div class="input-group col-sm-8">
@@ -620,6 +744,7 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="20">20</option>
                     </select>
                 </div><br>
                 <div class="input-group col-sm-8">
@@ -644,6 +769,7 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="20">20</option>
                     </select>
                 </div><br>
                 <div class="input-group col-sm-8">
@@ -668,6 +794,7 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="20">20</option>
                     </select>
                     <section>
                 </div><br><br>
@@ -693,6 +820,20 @@
                         </script>
                     </div><br>
             </div>
+            <!-- ads for large screens -->
+            <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- color-tile-ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8598751574376549"
+                    data-ad-slot="6993669367"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
 
         <!-- CodePark ads -->
@@ -703,14 +844,50 @@
             <p class="mb-0"> CodePark is live </p>
         </div> -->
         <!-- fb like and share -->
-        <div class="col-sm-12 col-md-12 col-lg-8=12">
-            <div class="card-container p-4 mb-5 has-box-shadow">
-                <div class="card card-outline-primary mb-6 ">
-                <div class="card-block card-block-outline-info" >
-                    <!-- <h3 class="text-danger"><small>  </small></h3> -->
-
-                <!-- Google Ads -->
-                <div class="google-ads">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="row card-container col-lg-6 p-4 mb-5 has-box-shadow">
+                <div class="col-lg-3 col-md-2">
+                    <!-- ads for large screens -->
+                    <div class="vertical-ads d-none col-md-4 col-lg-2 d-md-block d-lg-block d-xl-block">
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- color-tile-ads -->
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-8598751574376549"
+                            data-ad-slot="6993669367"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-8">
+                    <div class="card card-outline-primary mb-6 ">
+                    <div class="card-block card-block-outline-info" >
+                        <!-- <h3 class="text-danger"><small>  </small></h3> -->
+    
+                    <!-- Google Ads -->
+                    <div class="google-ads">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <ins class="adsbygoogle"
+                                style="display:block"
+                                data-ad-format="fluid"
+                                data-ad-layout-key="-ed+6k-30-ac+ty"
+                                data-ad-client="ca-pub-8598751574376549"
+                                data-ad-slot="7049595449"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
+                    <br><br>
+                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevil-coder.github.io%2Fvit_grades%2F&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="400px" height="80px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                    </div>
+                    <div class="fb-comments" data-href="https://devil-coder.github.io/vit_grades/" data-width="100%" data-numposts="5"></div>
+                    </div>
+    
+                    <!-- Google Ads -->
+                    <div class="google-ads">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <ins class="adsbygoogle"
                             style="display:block"
@@ -722,26 +899,24 @@
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
                     </div>
-                <br><br>
-                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevil-coder.github.io%2Fvit_grades%2F&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="400px" height="80px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                </div>
-                <div class="fb-comments" data-href="https://devil-coder.github.io/vit_grades/" data-width="100%" data-numposts="5"></div>
-                </div>
 
-                <!-- Google Ads -->
-                <div class="google-ads">
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                </div>
+                <div class="col-lg-3 col-md-2">
+                    <!-- ads for large screens -->
+                    <div class="vertical-ads d-none col-md-4 col-lg-2 d-md-block d-lg-block d-xl-block">
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- color-tile-ads -->
                         <ins class="adsbygoogle"
                             style="display:block"
-                            data-ad-format="fluid"
-                            data-ad-layout-key="-ed+6k-30-ac+ty"
                             data-ad-client="ca-pub-8598751574376549"
-                            data-ad-slot="7049595449"></ins>
+                            data-ad-slot="6993669367"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
                         <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
-
                     </div>
+                </div>
             </div>
         </div>
         <!-- Modal -->
@@ -762,7 +937,7 @@
         </div>
         </div>
         <!-- footer for VIT Cgpa Calculator -->
-        <div class="col-sm-12 col-md-12 col-lg-12 footer-container">
+        <div class="col-sm-12 col-md-12 col-lg-12 footer-container m-5">
             <footer class="p-4">
                 &copy; 2017 - <span id="thisYear"></span> <a href="https://www.rajchandra.me">Raj Chandra</a>. All Rights Reserved. <br>
                 <a href="https://www.facebook.com/raj.chandra.963"><i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 23px; color: white;" target="_blank"></i></a> &nbsp;

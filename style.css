@@ -25,6 +25,9 @@
   transition: display 2s ease-in-out;
   -moz-transition : display 2s ease-in-out
 }
+footer{
+  margin-bottom: 3rem !important;
+}
 select{
     background: white;
     border-color: #95a5a6;
