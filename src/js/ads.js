@@ -15,37 +15,37 @@ let getAds = ()=>{ //typeOfAd
         {
             type : `g`,
             body : `Check coronavirus updates`,
-            link : `https://corona-go.info/`,
+            link : `https://rajchandra.me/r/PoPmqT9pi?s=card_cta_ad&m=cgpa-calculator`,
             linkText : `Check Now`
         },
         {
             type : `e`,
             body : `Stay Home, Save Lives!`,
-            link : `https://corona-go.info/`,
+            link : `https://rajchandra.me/r/PoPmqT9pi?s=card_cta_ad&m=cgpa-calculator`,
             linkText : `View Now`
         },
         {
             type : `tw`,
             body : `Stay Indoor, Play Color Game`,
-            link : `http://color-tile.rajchandra.me`,
+            link : `https://rajchandra.me/r/0biYgwkl4?s=card_cta_ad&m=cgpa-calculator`,
             linkText : `Play Now`
         },
         {
             type : `tf`,
             body : `I challenge you to win 5 games in a row, can you?`,
-            link : `http://color-tile.rajchandra.me`,
+            link : `https://rajchandra.me/r/0biYgwkl4?s=card_cta_ad&m=cgpa-calculator`,
             linkText : `Challenge Accepted?`
         },
         {
             type : `ts`,
             body : `Aren't you bored yet? Huh, I am, I play color tile do you?`,
-            link : `http://color-tile.rajchandra.me`,
+            link : `https://rajchandra.me/r/0biYgwkl4?s=card_cta_ad&m=cgpa-calculator`,
             linkText : `Play Color Tile`
         },
         {
             type : `i`,
             body : `Checking my cgpa all the time is no fun, you know what is fun, THE COLOR GAME`,
-            link : `http://color-tile.rajchandra.me`,
+            link : `https://rajchandra.me/r/0biYgwkl4?s=card_cta_ad&m=cgpa-calculator`,
             linkText : `Let's play`
         }
     ]
