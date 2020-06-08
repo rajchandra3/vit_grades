@@ -102,7 +102,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mt-2 mt-lg-0">
                 <li class="nav-item link2 active" onclick="changeActiveLink(2) || track('nav_click_emc')">
-                    <a class="nav-link" href="#emc">EXPECTED MARKS CALCULATOR</a>
+                    <a class="nav-link" href="#nfemc">EXPECTED MARKS CALCULATOR (NO FAT)</a>
                 </li>
                 <li class="nav-item link1" onclick="changeActiveLink(1) || track('nav_click_qcc')">
                     <a class="nav-link" href="#qcc">QUICK CGPA CALCULATOR</a>
@@ -112,6 +112,9 @@
                 </li>
                 <li class="nav-item link4" onclick="changeActiveLink(4) || track('nav_click_gc')">
                     <a class="nav-link" href="#gc">GPA CALCULATOR</a>
+                </li>
+                <li class="nav-item link2 active" onclick="changeActiveLink(2) || track('nav_click_emc')">
+                    <a class="nav-link" href="#emc">EXPECTED MARKS CALCULATOR</a>
                 </li>
             </ul>
         </div>
@@ -185,8 +188,8 @@
             <!-- <div class="vid"> <iframe width="100%" height="300px" src="https://www.youtube.com/embed/E7V18qYR61o?start=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div> -->
     </div>
 
-    <!--Marks Predictor-->
-    <div class="row col-sm-12 col-md-12 col-lg-12 centered marks-predictor no-padding" id="emc">
+    <!--NO FAT Marks Predictor-->
+    <div class="row col-sm-12 col-md-12 col-lg-12 centered marks-predictor no-padding" id="nfemc">
         <!-- ads for large screens -->
         <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -204,79 +207,81 @@
 
         <div class="card-container col-lg-6 col-sm-12 p-4 mb-5 has-box-shadow">
             <div class="col-lg-10 col-md-8 col-sm-12 centered">
-                <h1>Compute Expected Marks</h1>
+                <h1>Compute Expected Marks (NO FAT)
+                    <span class="badge badge-danger text-right">New</span>
+                </h1>
                 <hr>
                 <form>
                     <div class="form-group row">
-                        <label for="cat1" class="col-sm-6 col-form-label text-right">Marks in CAT 1 : </label>
+                        <label for="nf-cat1" class="col-sm-6 col-form-label text-right">Marks in CAT 1 : </label>
                         <div class="input-group col">
-                            <input type="text"  class="form-control" id="cat1" placeholder="Your score in CAT 1" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <input type="text"  class="form-control" id="nf-cat1" placeholder="Your score in CAT 1" aria-label="Marks Input" aria-describedby="basic-addon">
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon">&nbsp; max 50 </span>
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="cat2" class="col-sm-6 col-form-label text-right">Marks in CAT 2 : </label>
+                        <label for="nf-cat2" class="col-sm-6 col-form-label text-right">Marks in CAT 2 : </label>
                         <div class="input-group col">
-                            <input type="text"  class="form-control" id="cat2" placeholder="Your score in CAT 2" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <input type="text"  class="form-control" id="nf-cat2" placeholder="Your score in CAT 2" aria-label="Marks Input" aria-describedby="basic-addon">
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon">&nbsp; max 50 </span>
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="da" class="col-sm-6 col-form-label text-right">Marks in Internals : </label>
+                        <label for="nf-da" class="col-sm-6 col-form-label text-right">Marks in Internals : </label>
                         <div class="input-group col">
-                            <input type="text"  class="form-control" id="da" placeholder="Your score in DA(s)" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <input type="text"  class="form-control" id="nf-da" placeholder="Your score in DA(s)" aria-label="Marks Input" aria-describedby="basic-addon">
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon">&nbsp; max 30 </span>
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="cat1" class="col-sm-6 col-form-label text-right">Additional Learning : </label>
+                        <label for="nf-al" class="col-sm-6 col-form-label text-right">Additional Learning : </label>
                         <div class="input-group col">
-                            <input type="text"  class="form-control" id="al" placeholder="Your score in AL" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <input type="text"  class="form-control" id="nf-al" placeholder="Your score in AL" aria-label="Marks Input" aria-describedby="basic-addon">
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon">&nbsp; max 10 </span>
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="lab" class="col-sm-6 col-form-label text-right">Marks in Lab : </label>
+                        <label for="nf-lab" class="col-sm-6 col-form-label text-right">Marks in Lab : </label>
                         <div class="input-group col">
-                            <input type="text"  class="form-control" id="lab" placeholder="Your score in Lab" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <input type="text"  class="form-control" id="nf-lab" placeholder="Your score in Lab" aria-label="Marks Input" aria-describedby="basic-addon">
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon"> max 100 </span>
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="j-comp" class="col-sm-6 col-form-label text-right">Marks in J Component : </label>
+                        <label for="nf-j-comp" class="col-sm-6 col-form-label text-right">Marks in J Component : </label>
                         <div class="input-group col">
-                            <input type="text"  class="form-control" id="j-comp" placeholder="Your score in Project" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <input type="text"  class="form-control" id="nf-j-comp" placeholder="Your score in Project" aria-label="Marks Input" aria-describedby="basic-addon">
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon">max 100 </span>
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="fat" class="col-sm-6 col-form-label text-right">Expected Marks in FAT :</label>
+                        <label for="nf-fat" class="col-sm-6 col-form-label text-right">Expected Marks in FAT :</label>
                         <div class="input-group col">
-                            <input type="text"  class="form-control" id="fat" placeholder="Say 98" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <input type="text"  class="form-control" id="nf-fat" placeholder="--" aria-label="Marks Input" aria-describedby="basic-addon" disabled>
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon">max 100 </span>
                             </div>
                         </div>
                     </div>
-                    <div class="alert alert-primary text-center alert-marks" role="alert">
-                        <b><span id="marks"></span></b>
+                    <div class="alert alert-primary text-center alert-nf-marks" role="alert">
+                        <b><span id="nf-marks"></span></b>
                     </div>
-                    <div class="col-sm-12 ads adsEMC"></div>
+                    <div class="col-sm-12 ads adsNFEMC"></div>
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <button type="button" onclick="getMarks() || track('computed_emc')" class="btn btn-primary float-right">Submit</button>
+                            <button type="button" onclick="getMarksWithoutFat() || track('nf_computed_emc')" class="btn btn-primary float-right">Submit</button>
                             <small id="projHelp" class="form-text text-danger">*If the course doesn't have J-Component/L-Component you can leave it empty.</small>
 
                         </div>
@@ -369,7 +374,7 @@
                     <div class="input-group col-sm-12">
                         <input type="text" id='c' class="form-control cgpa-input" maxlength="2" placeholder="Credits in this Sem?" aria-label="Marks Input" aria-describedby="basic-addon">
                         <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon">max &nbsp; 32 </span>
+                            <span class="input-group-text" id="basic-addon">max &nbsp; 39 </span>
                         </div>
                     </div>
                     <br>
@@ -801,7 +806,7 @@
                     </select>
                     <section>
                 </div><br><br>
-                <div class="alert alert-primary alert-grades" role="alert">
+                <div class="alert alert-primary alert-grades text-center" role="alert">
                     <b><span id="grades" class="text-info"></span></b>
                 </div>
                 <div class="col-sm-12 ads adsGC"></div>
@@ -840,6 +845,136 @@
         </div>
     </div>
 
+    <!--Marks Predictor-->
+    <div class="row col-sm-12 col-md-12 col-lg-12 centered marks-predictor no-padding" id="emc">
+        <!-- ads for large screens -->
+        <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- color-tile-ads -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-8598751574376549"
+                data-ad-slot="6993669367"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <div class="card-container col-lg-6 col-sm-12 p-4 mb-5 has-box-shadow">
+            <div class="col-lg-10 col-md-8 col-sm-12 centered">
+                <h1>Compute Expected Marks</h1>
+                <hr>
+                <form>
+                    <div class="form-group row">
+                        <label for="cat1" class="col-sm-6 col-form-label text-right">Marks in CAT 1 : </label>
+                        <div class="input-group col">
+                            <input type="text"  class="form-control" id="cat1" placeholder="Your score in CAT 1" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">&nbsp; max 50 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="cat2" class="col-sm-6 col-form-label text-right">Marks in CAT 2 : </label>
+                        <div class="input-group col">
+                            <input type="text"  class="form-control" id="cat2" placeholder="Your score in CAT 2" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">&nbsp; max 50 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="da" class="col-sm-6 col-form-label text-right">Marks in Internals : </label>
+                        <div class="input-group col">
+                            <input type="text"  class="form-control" id="da" placeholder="Your score in DA(s)" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">&nbsp; max 30 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="cat1" class="col-sm-6 col-form-label text-right">Additional Learning : </label>
+                        <div class="input-group col">
+                            <input type="text"  class="form-control" id="al" placeholder="Your score in AL" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">&nbsp; max 10 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="lab" class="col-sm-6 col-form-label text-right">Marks in Lab : </label>
+                        <div class="input-group col">
+                            <input type="text"  class="form-control" id="lab" placeholder="Your score in Lab" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon"> max 100 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="j-comp" class="col-sm-6 col-form-label text-right">Marks in J Component : </label>
+                        <div class="input-group col">
+                            <input type="text"  class="form-control" id="j-comp" placeholder="Your score in Project" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">max 100 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="fat" class="col-sm-6 col-form-label text-right">Expected Marks in FAT :</label>
+                        <div class="input-group col">
+                            <input type="text"  class="form-control" id="fat" placeholder="Say 98" aria-label="Marks Input" aria-describedby="basic-addon">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon">max 100 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-primary text-center alert-marks" role="alert">
+                        <b><span id="marks"></span></b>
+                    </div>
+                    <div class="col-sm-12 ads adsEMC"></div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <button type="button" onclick="getMarks() || track('computed_emc')" class="btn btn-primary float-right">Submit</button>
+                            <small id="projHelp" class="form-text text-danger">*If the course doesn't have J-Component/L-Component you can leave it empty.</small>
+
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Google Ads -->
+                <div class="google-ads">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-format="fluid"
+                            data-ad-layout-key="-ed+6k-30-ac+ty"
+                            data-ad-client="ca-pub-8598751574376549"
+                            data-ad-slot="7049595449"></ins>
+                    <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <!-- ads for large screens -->
+        <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- color-tile-ads -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-8598751574376549"
+                data-ad-slot="6993669367"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
     <!-- Modal -->
     <div class="modal fade" id="modal-error" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -852,7 +987,7 @@
         </div>
         <div class="modal-body" id="modal-body"></div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Gotcha</button>
+            <button type="button" class="btn btn-light" data-dismiss="modal">Got it</button>
         </div>
         </div>
     </div>

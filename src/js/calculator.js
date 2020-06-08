@@ -1,3 +1,52 @@
+//expected marks without fat
+var getMarksWithoutFat = function(){
+    var marksCat1 = parseFloat($('#nf-cat1').val());
+    var marksCat2 = parseFloat($('#nf-cat2').val());
+    var marksDa = parseFloat($('#nf-da').val());
+    var marksAl = parseFloat($('#nf-al').val()) || 0;
+    var marksLab = parseFloat($('#nf-lab').val());
+    var marksProj = parseFloat($('#nf-j-comp').val());
+    // var marksFat = parseFloat($('#fat').val());
+    var choice,netMarks;
+    if(marksLab && marksProj){
+        choice = 3;
+    }else if(marksLab && !marksProj){
+        choice = 2;
+    }else if(marksProj && !marksLab){
+        choice = 1;
+    }else if(!marksProj && !marksLab){
+        choice = 0; //subjects like ALA - MAT3004
+    }
+    var internals = ((marksCat1 + marksCat2)*0.3 + marksDa);
+    const marksFat = internals + (2/3*internals);
+    internals+=marksAl;
+    $('#nf-fat').val(marksFat);
+    var tot = (internals >60 ? 60 : internals)+ marksFat * 0.4 ;
+    switch(choice){
+        case 0:
+            netMarks = tot;
+            break;
+        case 1:
+            netMarks = tot*0.75 + marksProj * 0.25;
+            break;
+        case 2:
+            netMarks = tot*0.75 + marksLab * 0.25;
+            break;
+        case 3:
+            netMarks = tot*0.6 + marksLab * 0.2 + marksProj * 0.2 ;
+            break;
+    }
+    if(isNaN(netMarks)){
+        $('#modal-body').html('Insufficient Data !!');
+        $('#modal-error').modal('show');
+    }
+    else{
+        $('.alert-nf-marks').show();
+        $('#nf-marks').html(`EXPECTED MARKS ${netMarks.toFixed(2)}`);
+    }
+    $('.adsNFEMC').html(getAds());
+}
+
 /*
 * Expected Marks Calculator
 * */
@@ -187,8 +236,8 @@ $('.cgpa-input').on('keyup',function(){
         $('#modal-error').modal('show');
         $(this).val('');
     }
-    else if((input>32 || input<0) && this.id==='c'){
-        $('#modal-body').html('Your Credits should be between 16 and 32 !');
+    else if((input>39 || input<0) && this.id==='c'){
+        $('#modal-body').html('Your Credits should be between 16 and 39 !');
         $('#modal-error').modal('show');
         $(this).val('');
     }
@@ -214,17 +263,17 @@ $('.form-control').on('keyup',function(){
         $('#modal-error').modal('show');
         $(this).val('');
     }
-    else if((input>50 || input<0) && (this.id==='cat1' || this.id==='cat2')){
+    else if((input>50 || input<0) && (this.id==='cat1' || this.id==='cat2') && (this.id==='nf-cat1' || this.id==='nf-cat2')){
         $('#modal-body').html('Your CAT1 and CAT2 marks should be between 0 and 50 !');
         $('#modal-error').modal('show');
         $(this).val('');
     }
-    else if((input>30 || input<0) && (this.id==='da')){
+    else if((input>30 || input<0) && (this.id==='da') && (this.id==='nf-da')){
         $('#modal-body').html('Your DA marks should be between 0 and 30 !');
         $('#modal-error').modal('show');
         $(this).val('');
     }
-    else if((input>10 || input<0) && (this.id==='al')){
+    else if((input>10 || input<0) && (this.id==='al') && (this.id==='nf-al')){
         $('#modal-body').html('Additional Learning marks should be between 0 and 10 !');
         $('#modal-error').modal('show');
         $(this).val('');
@@ -234,8 +283,8 @@ $('.form-control').on('keyup',function(){
         $('#modal-error').modal('show');
         $(this).val('');
     }
-    else if((input>32 || input<0) && (this.id==='fc1' || this.id==='fc2' || this.id==='fc3' || this.id==='fc4' || this.id==='fc5' || this.id==='fc6' || this.id==='fc7' || this.id==='fc8')){
-        $('#modal-body').html('Your Credits should be between 16 and 27 !');
+    else if((input>39 || input<0) && (this.id==='fc1' || this.id==='fc2' || this.id==='fc3' || this.id==='fc4' || this.id==='fc5' || this.id==='fc6' || this.id==='fc7' || this.id==='fc8')){
+        $('#modal-body').html('Your Credits should be between 16 and 39 !');
         $('#modal-error').modal('show');
         $(this).val('');
     }
