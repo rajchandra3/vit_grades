@@ -20,7 +20,7 @@ var getMarksWithoutFat = function(){
     var internals = ((marksCat1 + marksCat2)*0.3 + marksDa);
     const marksFat = internals + (2/3*internals);
     internals+=marksAl;
-    $('#nf-fat').val(marksFat);
+    $('#nf-fat').val(marksFat.toFixed(1));
     var tot = (internals >60 ? 60 : internals)+ marksFat * 0.4 ;
     switch(choice){
         case 0:
@@ -30,6 +30,7 @@ var getMarksWithoutFat = function(){
             netMarks = tot*0.75 + marksProj * 0.25;
             break;
         case 2:
+            marksLab+= (2/3*marksLab);
             netMarks = tot*0.75 + marksLab * 0.25;
             break;
         case 3:
@@ -263,23 +264,28 @@ $('.form-control').on('keyup',function(){
         $('#modal-error').modal('show');
         $(this).val('');
     }
-    else if((input>50 || input<0) && (this.id==='cat1' || this.id==='cat2') && (this.id==='nf-cat1' || this.id==='nf-cat2')){
-        $('#modal-body').html('Your CAT1 and CAT2 marks should be between 0 and 50 !');
+    else if((input>50 || input<0) && (this.id==='cat1' || this.id==='cat2' || this.id==='nf-cat1' || this.id==='nf-cat2')){
+        $('#modal-body').html('Your marks should be between 0 and 50 !');
         $('#modal-error').modal('show');
         $(this).val('');
     }
-    else if((input>30 || input<0) && (this.id==='da') && (this.id==='nf-da')){
-        $('#modal-body').html('Your DA marks should be between 0 and 30 !');
+    else if( (input>60 || input<0) && (this.id==='nf-lab')){
+        $('#modal-body').html('Your marks should be between 0 and 60 !');
         $('#modal-error').modal('show');
         $(this).val('');
     }
-    else if((input>10 || input<0) && (this.id==='al') && (this.id==='nf-al')){
+    else if((input>30 || input<0) && (this.id==='da' || this.id==='nf-da')){
+        $('#modal-body').html('Your marks should be between 0 and 30 !');
+        $('#modal-error').modal('show');
+        $(this).val('');
+    }
+    else if((input>10 || input<0) && (this.id==='al' || this.id==='nf-al')){
         $('#modal-body').html('Additional Learning marks should be between 0 and 10 !');
         $('#modal-error').modal('show');
         $(this).val('');
     }
     else if((input>100 || input<0) && (this.id==='lab' || this.id==='j-comp' || this.id==='fat')){
-        $('#modal-body').html('Your Lab, Fat and Project marks should be between 0 and 100 !');
+        $('#modal-body').html('Your marks should be between 0 and 100 !');
         $('#modal-error').modal('show');
         $(this).val('');
     }

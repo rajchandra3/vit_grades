@@ -80,6 +80,10 @@
         mixpanel.init("7ff5ca7b4aa0bef4db830b057c9076a2");</script>
     <!-- end Mixpanel -->
     <script language="javascript" type="text/javascript" src="./src/js/mixpanel.js"></script>
+
+    <!-- load js files  -->
+    <script src="./serviceWorker.js"></script>
+    <script src="./src/js/sw.js"></script>
 </head>
 <!-- <body onload="getFeebackQuestion()"> -->
 <body onload="track('page_views')">
@@ -255,7 +259,7 @@
                         <div class="input-group col">
                             <input type="text"  class="form-control" id="nf-lab" placeholder="Your score in Lab" aria-label="Marks Input" aria-describedby="basic-addon">
                             <div class="input-group-append">
-                                <span class="input-group-text" id="basic-addon"> max 100 </span>
+                                <span class="input-group-text" id="basic-addon">&nbsp; max 60 </span>
                             </div>
                         </div>
                     </div>
@@ -264,7 +268,7 @@
                         <div class="input-group col">
                             <input type="text"  class="form-control" id="nf-j-comp" placeholder="Your score in Project" aria-label="Marks Input" aria-describedby="basic-addon">
                             <div class="input-group-append">
-                                <span class="input-group-text" id="basic-addon">max 100 </span>
+                                <span class="input-group-text" id="basic-addon">&nbsp; max 100 </span>
                             </div>
                         </div>
                     </div>
@@ -273,14 +277,27 @@
                         <div class="input-group col">
                             <input type="text"  class="form-control" id="nf-fat" placeholder="--" aria-label="Marks Input" aria-describedby="basic-addon" disabled>
                             <div class="input-group-append">
-                                <span class="input-group-text" id="basic-addon">max 100 </span>
+                                <span class="input-group-text" id="basic-addon">&nbsp; max 100 </span>
                             </div>
                         </div>
                     </div>
                     <div class="alert alert-primary text-center alert-nf-marks" role="alert">
                         <b><span id="nf-marks"></span></b>
                     </div>
-                    <div class="col-sm-12 ads adsNFEMC"></div>
+
+                    <!-- Google Ads -->
+                    <div class="google-ads">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                                style="display:block"
+                                data-ad-format="fluid"
+                                data-ad-layout-key="-ed+6k-30-ac+ty"
+                                data-ad-client="ca-pub-8598751574376549"
+                                data-ad-slot="7049595449"></ins>
+                        <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div> <br>
                     <div class="form-group row">
                         <div class="col-sm-12">
                             <button type="button" onclick="getMarksWithoutFat() || track('nf_computed_emc')" class="btn btn-primary float-right">Submit</button>
@@ -289,20 +306,7 @@
                         </div>
                     </div>
                 </form>
-
-                <!-- Google Ads -->
-                <div class="google-ads">
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <ins class="adsbygoogle"
-                            style="display:block"
-                            data-ad-format="fluid"
-                            data-ad-layout-key="-ed+6k-30-ac+ty"
-                            data-ad-client="ca-pub-8598751574376549"
-                            data-ad-slot="7049595449"></ins>
-                    <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
+                <div class="col-sm-12 ads adsNFEMC"></div>
             </div>
         </div>
 
@@ -389,10 +393,6 @@
                     <div class="alert alert-primary text-center alert-cgpa-msg" role="alert">
                         <b><span class="cgpa-msg" id="cgpa-msg"></span></b>
                     </div>
-                    <div class="col-sm-8 ads adsQCC"></div>
-                    <button class="btn btn-primary float-right" id="submit" onclick="track('computed_qcc')">Submit</button>
-
-
                     <!-- Google Ads -->
                     <div class="google-ads p-3">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -406,6 +406,10 @@
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
                     </div>
+                    <button class="btn btn-primary float-right" id="submit" onclick="track('computed_qcc')">Submit</button>
+
+
+                    <div class="col-sm-8 ads adsQCC"></div>
                 </div>
             </div>
         </div>
@@ -503,9 +507,6 @@
                 <div class="alert alert-primary text-center alert-fcgpa" role="alert">
                     <b><span class="text-info" id="fcgpa"></span></b>
                 </div>
-                <div class="col-sm-12 ads adsASCC"></div>
-                <button class="btn btn-primary float-right" id="sem-cgpa-btn" onclick="track('computed_ascc')">Submit</button>
-                <br><br>
 
                 <!-- Google Ads -->
                 <div class="google-ads p-3">
@@ -520,6 +521,9 @@
                         (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
                 </div>
+                <button class="btn btn-primary float-right clerfix" id="sem-cgpa-btn" onclick="track('computed_ascc')">Submit</button>
+                <br><br>
+                <div class="col-sm-12 ads adsASCC"></div>
             </div>
         </div>
         <!-- ads for large screens -->
@@ -811,25 +815,25 @@
                 <div class="alert alert-primary alert-grades text-center" role="alert">
                     <b><span id="grades" class="text-info"></span></b>
                 </div>
-                <div class="col-sm-12 ads adsGC"></div>
+
+                <!-- Google Ads -->
+                <div class="google-ads">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-format="fluid"
+                             data-ad-layout-key="-ed+6k-30-ac+ty"
+                             data-ad-client="ca-pub-8598751574376549"
+                             data-ad-slot="7049595449"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div><br>
                 <button class="gbtn btn btn-primary float-right" id="gbtn" onclick="track('computed_gpa')">Submit</button>
                 </section>
                 <br><br>
+                <div class="col-sm-12 ads adsGC"></div>
             </div>
-
-            <!-- Google Ads -->
-            <div class="google-ads">
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-format="fluid"
-                         data-ad-layout-key="-ed+6k-30-ac+ty"
-                         data-ad-client="ca-pub-8598751574376549"
-                         data-ad-slot="7049595449"></ins>
-                    <script>
-                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div><br>
         </div>
         <!-- ads for large screens -->
         <div class="vertical-ads d-none col-md-4 col-lg-3 d-md-block d-lg-block d-xl-block">
