@@ -36,14 +36,12 @@ function registerValidSW(swUrl, config) {
                             // At this point, the updated precached content has been fetched,
                             // but the previous service worker will still serve the older
                             // content until all client tabs are closed.
-                            alert(`📱App version ${version} is here 🎉
+                            alert(`📱App version is here 🎉
                                     \n🌟We have updated the app in the background
                                     \n✅Please close all the tabs for this page to view the updated version!
                                     \n🤖Updating the app will prevent data loss and security risks`);
 
-                            window.mixpanel.track('App New Version Prompted', {
-                                version,
-                            });
+                            window.mixpanel.track('App New Version Prompted');
                             // Execute callback
                             if (config && config.onUpdate) {
                                 config.onUpdate(registration);
@@ -64,9 +62,7 @@ function registerValidSW(swUrl, config) {
             };
         })
         .catch((error) => {
-            window.mixpanel.track('Error during service worker registration', {
-                version,
-            });
+            window.mixpanel.track('Error during service worker registration');
             console.error('Error during service worker registration:', error);
         });
 }
@@ -143,8 +139,7 @@ function unregister() {
             })
             .catch((error) => {
                 window.mixpanel.track('Error in Service worker', {
-                    version,
-                    error,
+                    error
                 });
                 console.error(error.message);
             });
