@@ -26,6 +26,32 @@ const jumboAvailableAds = [
 ]
 
 const jumboAd = jumboAvailableAds[0];
+
+document.querySelector('.ad-1-title').innerHTML=jumboAd.title;
+document.querySelector('.ad-1-description').innerHTML=jumboAd.desc; 
+document.querySelector('.ad-1-logo').innerHTML=`
+<a href="${jumboAd.link}" target="_blank">
+<img src="${jumboAd.logo}" height="100" class="rounded p-2">
+</a>
+`;
+document.querySelector('.ad-1-link').href = jumboAd.link;
+switch(jumboAd.cta_type){
+    case 'link':
+        document.querySelector('cta').innerHTML = `
+            <a href=${jumboAd.link} target="_blank" class="ad-1-link">
+                <div class="btn btn-success ad-1-cta">${jumboAd.cta_text}</div>
+            </a>
+        `;
+    break;
+    case 'download':
+        document.querySelector('cta').innerHTML = `
+            <div class="btn btn-success ad-1-cta ">${jumboAd.cta_text}</div>
+        `;
+    break;
+
+}
+document.querySelector('.ad-1-cta').innerHTML = jumboAd.cta_text;
+
 let getAds = ()=>{ //typeOfAd
     let ads = [
         {

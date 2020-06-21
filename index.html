@@ -194,40 +194,6 @@
                 <p class="lead ad-1-description"> </p>
                 <div class="cta"></div>
             </div>
-            <script>
-                const url=jumboAd.link;
-                // axios.get(url)
-                // .then((response)=>{
-                //     const title = response.data.match(/<title>(.*)<\/title>/)[1];
-                //     const desc = response.data.match(/<meta property="og:description" content="(.*)">/)[1];
-                //     const logo = `${url}/src/images/favicon.png`;
-                document.querySelector('.ad-1-title').innerHTML=jumboAd.title;
-                document.querySelector('.ad-1-description').innerHTML=jumboAd.desc; 
-                document.querySelector('.ad-1-logo').innerHTML=`
-                <a href="${jumboAd.link}" target="_blank">
-                <img src="${jumboAd.logo}" height="100" class="rounded p-2">
-                </a>
-                `;
-                document.querySelector('.ad-1-link').href = jumboAd.link;
-                switch(jumboAd.cta_type){
-                    case 'link':
-                        document.querySelector('cta').innerHTML = `
-                            <a href=${jumboAd.link} target="_blank" class="ad-1-link">
-                                <div class="btn btn-success ad-1-cta">${jumboAd.cta_text}</div>
-                            </a>
-                        `;
-                    break;
-                    case 'download':
-                        document.querySelector('cta').innerHTML = `
-                            <div class="btn btn-success ad-1-cta ">${jumboAd.cta_text}</div>
-                        `;
-                    break;
-
-                }
-                document.querySelector('.ad-1-cta').innerHTML = jumboAd.cta_text;
-                // })
-                // .catch(e=>console.log(e));
-            </script>
         </div>
         <!-- ads for large screens -->
         <div class="vertical-ads d-none col-md-3 d-md-block d-lg-block d-xl-block">
