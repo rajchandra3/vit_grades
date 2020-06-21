@@ -5,6 +5,16 @@
 .centered{
   margin: auto;
 }
+.sticky-content{
+  /* position:'-webkit-sticky';
+  position: 'sticky'; */
+  position: relative;
+  bottom:'1rem';
+  margin-top: '1rem';
+}
+.hidden{
+  display: none !important;
+}
 .no-padding{
   padding: 0px !important;
 }
