@@ -8,6 +8,18 @@
     <meta name="theme-color" content="#1b567e"> <!--1b567e-->
     <title>VIT CGPA Calculator</title>
     <link rel="icon" type="image/png" href="./src/images/icons/favicon.png">
+
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="/src/images/icons/icon-72x72.png" />
+    <link rel="apple-touch-icon" href="/src/images/icons/icon-96x96.png" />
+    <link rel="apple-touch-icon" href="/src/images/icons/icon-128x128.png" />
+    <link rel="apple-touch-icon" href="/src/images/icons/icon-144x144.png" />
+    <link rel="apple-touch-icon" href="/src/images/icons/icon-152x152.png" />
+    <link rel="apple-touch-icon" href="/src/images/icons/icon-192x192.png" />
+    <link rel="apple-touch-icon" href="/src/images/icons/icon-384x384.png" />
+    <link rel="apple-touch-icon" href="/src/images/icons/icon-512x512.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#302b63" />
+
     <!-- manifest file -->
     <link rel="manifest" href="manifest.json" />
     <!-- Bootstrap -->
@@ -81,10 +93,11 @@
     <!-- end Mixpanel -->
     <script language="javascript" type="text/javascript" src="./src/js/mixpanel.js"></script>
     <script src="./src/js/installPWA.js" type="module"></script>
+    <script src="./src/js/sw.js"></script>
 
     <!-- load js files  -->
+    <script language="javascript" type="text/javascript" src="./src/js/ads.js"></script>
     <script src="./serviceWorker.js"></script>
-    <script src="./src/js/sw.js"></script>
 </head>
 <!-- <body onload="getFeebackQuestion()"> -->
 <body onload="track('page_views')">
@@ -106,6 +119,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mt-2 mt-lg-0">
                 <li class="nav-item link2 active" onclick="changeActiveLink(2) || track('nav_click_emc')">
@@ -147,33 +161,70 @@
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
-        <!-- color game ads -->
-        <div class="jumbotron jumbotron-fluid col-lg-6 p-4 centered mb-4">
+        <!-- pwa download ads -->
+        <div class="jumbotron jumbotron-fluid col-lg-6 p-4 centered mb-4 install-app-container hidden">
             <div class="container ads-container">
                 <div class="text-right">
                     <span class="badge-pill badge-light">Ads</span>
                 </div>
-                <div class="ad-1-logo"></div>
+                <div class="ad-2-logo">
+                    <img src="https://files.rajchandra.me/images/logos/cgpa-calculator.png" height="100" class="rounded p-2">
+                </div>
+                <h2 class="ad-2-title display-5 bounceIn animated delay-2s">
+                    We heard you 🎉
+                </h2>
+                <p class="lead ad-2-description">
+                    🌟No more googling to find the CGPA Calculator, install the app on your device (Available on Mobile & Laptops)
+                </p>
+                <div class="cta">
+                    <button class="btn btn-primary install-app-button centered">Install <i class="fa fa-download"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- color game ads -->
+        <div class="jumbotron jumbotron-fluid col-lg-6 p-4 centered mb-4 hidden">
+            <div class="container ads-container">
+                <div class="text-right">
+                    <span class="badge-pill badge-light">Ads</span>
+                </div>
+                <div class="ad-1-logo">
+                </div>
                 <h2 class="ad-1-title display-5 bounceIn animated delay-2s"></h2>
-                <p class="lead ad-1-description">Do you enjoy playing games? Challenge yourself </p>
-                <a href="https://rajchandra.me/r/0biYgwkl4?s=jumbotron-ad&m=cgpa-calculator" target="_blank">
-                    <div class="btn btn-success">Play Now</div>
-                </a>
+                <p class="lead ad-1-description"> </p>
+                <div class="cta"></div>
             </div>
             <script>
-                const url=`https://rajchandra.me/r/0biYgwkl4?s=jumbotron-ad&m=cgpa-calculator`;
+                const url=jumboAd.link;
                 // axios.get(url)
                 // .then((response)=>{
                 //     const title = response.data.match(/<title>(.*)<\/title>/)[1];
                 //     const desc = response.data.match(/<meta property="og:description" content="(.*)">/)[1];
                 //     const logo = `${url}/src/images/favicon.png`;
-                document.querySelector('.ad-1-title').innerHTML=`Play Color Tile Game`;
-                document.querySelector('.ad-1-description').innerHTML=`Are you bored studying, check out easy to play color game, all you need is a correct guess!`; 
+                document.querySelector('.ad-1-title').innerHTML=jumboAd.title;
+                document.querySelector('.ad-1-description').innerHTML=jumboAd.desc; 
                 document.querySelector('.ad-1-logo').innerHTML=`
-                <a href="https://rajchandra.me/r/0biYgwkl4?s=jumbotron-ad-logo&m=cgpa-calculator" target="_blank">
-                <img src="https://files.rajchandra.me/images/logos/color-tile.png" height="100" class="rounded p-2">
+                <a href="${jumboAd.link}" target="_blank">
+                <img src="${jumboAd.logo}" height="100" class="rounded p-2">
                 </a>
                 `;
+                document.querySelector('.ad-1-link').href = jumboAd.link;
+                switch(jumboAd.cta_type){
+                    case 'link':
+                        document.querySelector('cta').innerHTML = `
+                            <a href=${jumboAd.link} target="_blank" class="ad-1-link">
+                                <div class="btn btn-success ad-1-cta">${jumboAd.cta_text}</div>
+                            </a>
+                        `;
+                    break;
+                    case 'download':
+                        document.querySelector('cta').innerHTML = `
+                            <div class="btn btn-success ad-1-cta ">${jumboAd.cta_text}</div>
+                        `;
+                    break;
+
+                }
+                document.querySelector('.ad-1-cta').innerHTML = jumboAd.cta_text;
                 // })
                 // .catch(e=>console.log(e));
             </script>
@@ -983,11 +1034,6 @@
         </div>
     </div>
 
-    <!-- Install button -->
-    <div class="row col-sm-12 col-md-12 col-lg-12 centered install-app-container p-5">
-        <button class="btn btn-primary install-app-button centered">Install App</button>
-    </div>
-
     <!-- Modal -->
     <div class="modal fade" id="modal-error" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -1090,7 +1136,6 @@
     </script>
     <!-- main script file  -->
     <script language="javascript" type="text/javascript" src="./src/js/requests.js"></script>
-    <script language="javascript" type="text/javascript" src="./src/js/ads.js"></script>
     <script language="javascript" type="text/javascript" src="./src/js/calculator.js"></script>
     <script type="module" src="https://files.rajchandra.me/js/config.js"></script>
     <script type="text/javascript" src="https://files.rajchandra.me/js/footer.js"></script>

@@ -1,5 +1,4 @@
 const installBtn = document.querySelector('.install-app-button');
-console.log('mixpanel', mixpanel.track('pwa page loaded'))
 const hideContainer = () => {
     document
         .querySelector('.install-app-container')

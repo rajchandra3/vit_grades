@@ -1,15 +1,31 @@
+const jumboAvailableAds = [
+    {
+        title:'Install App',
+        desc:'No more googling to find the the CGPA Calculator, install the app in your device (Available on Mobile & Laptops)',
+        logo:'https://files.rajchandra.me/images/logos/cgpa-calculator.png',
+        link:'',
+        type:'download',
+        cta_text:'Install Now'
+    },
+    {
+        title:'Play Color Tile Game',
+        desc:'Are you bored studying, check out easy to play color game, all you need is a correct guess!',
+        logo:'https://files.rajchandra.me/images/logos/color-tile.png',
+        link:'https://rajchandra.me/r/0biYgwkl4?s=jumbotron-ad&m=cgpa-calculator',
+        type:'link',
+        cta_text:'Play Now'
+    },
+    {
+        title:'',
+        desc:'',
+        logo:'',
+        link:'',
+        type:'',
+        cta_text:'Install Now'
+    }
+]
 
-// Ads
-// let eventsInCodePark = '';
-// axios.get('https://www.codepark.in/events')
-//   .then(function (response) {
-//     // handle success
-//     eventsInCodePark = response.data.eventData;
-//   })
-//   .catch(function (error) {
-//     // handle error
-//     console.log(error);
-//   })
+const jumboAd = jumboAvailableAds[0];
 let getAds = ()=>{ //typeOfAd
     let ads = [
         {
