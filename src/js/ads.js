@@ -1,56 +1,56 @@
-const jumboAvailableAds = [
-    {
-        title:'Install App',
-        desc:'No more googling to find the the CGPA Calculator, install the app in your device (Available on Mobile & Laptops)',
-        logo:'https://files.rajchandra.me/images/logos/cgpa-calculator.png',
-        link:'',
-        type:'download',
-        cta_text:'Install Now'
-    },
-    {
-        title:'Play Color Tile Game',
-        desc:'Are you bored studying, check out easy to play color game, all you need is a correct guess!',
-        logo:'https://files.rajchandra.me/images/logos/color-tile.png',
-        link:'https://rajchandra.me/r/0biYgwkl4?s=jumbotron-ad&m=cgpa-calculator',
-        type:'link',
-        cta_text:'Play Now'
-    },
-    {
-        title:'',
-        desc:'',
-        logo:'',
-        link:'',
-        type:'',
-        cta_text:'Install Now'
-    }
-]
+// const jumboAvailableAds = [
+//     {
+//         title:'Install App',
+//         desc:'No more googling to find the the CGPA Calculator, install the app in your device (Available on Mobile & Laptops)',
+//         logo:'https://files.rajchandra.me/images/logos/cgpa-calculator.png',
+//         link:'',
+//         type:'download',
+//         cta_text:'Install Now'
+//     },
+//     {
+//         title:'Play Color Tile Game',
+//         desc:'Are you bored studying, check out easy to play color game, all you need is a correct guess!',
+//         logo:'https://files.rajchandra.me/images/logos/color-tile.png',
+//         link:'https://rajchandra.me/r/0biYgwkl4?s=jumbotron-ad&m=cgpa-calculator',
+//         type:'link',
+//         cta_text:'Play Now'
+//     },
+//     {
+//         title:'',
+//         desc:'',
+//         logo:'',
+//         link:'',
+//         type:'',
+//         cta_text:'Install Now'
+//     }
+// ]
 
-const jumboAd = jumboAvailableAds[0];
+// const jumboAd = jumboAvailableAds[0];
 
-document.querySelector('.ad-1-title').innerHTML=jumboAd.title;
-document.querySelector('.ad-1-description').innerHTML=jumboAd.desc; 
-document.querySelector('.ad-1-logo').innerHTML=`
-<a href="${jumboAd.link}" target="_blank">
-<img src="${jumboAd.logo}" height="100" class="rounded p-2">
-</a>
-`;
-document.querySelector('.ad-1-link').href = jumboAd.link;
-switch(jumboAd.cta_type){
-    case 'link':
-        document.querySelector('cta').innerHTML = `
-            <a href=${jumboAd.link} target="_blank" class="ad-1-link">
-                <div class="btn btn-success ad-1-cta">${jumboAd.cta_text}</div>
-            </a>
-        `;
-    break;
-    case 'download':
-        document.querySelector('cta').innerHTML = `
-            <div class="btn btn-success ad-1-cta ">${jumboAd.cta_text}</div>
-        `;
-    break;
+// document.querySelector('.ad-1-title').innerHTML=jumboAd.title;
+// document.querySelector('.ad-1-description').innerHTML=jumboAd.desc; 
+// document.querySelector('.ad-1-logo').innerHTML=`
+// <a href="${jumboAd.link}" target="_blank">
+// <img src="${jumboAd.logo}" height="100" class="rounded p-2">
+// </a>
+// `;
+// document.querySelector('.ad-1-link').href = jumboAd.link;
+// switch(jumboAd.cta_type){
+//     case 'link':
+//         document.querySelector('cta').innerHTML = `
+//             <a href=${jumboAd.link} target="_blank" class="ad-1-link">
+//                 <div class="btn btn-success ad-1-cta">${jumboAd.cta_text}</div>
+//             </a>
+//         `;
+//     break;
+//     case 'download':
+//         document.querySelector('cta').innerHTML = `
+//             <div class="btn btn-success ad-1-cta ">${jumboAd.cta_text}</div>
+//         `;
+//     break;
 
-}
-document.querySelector('.ad-1-cta').innerHTML = jumboAd.cta_text;
+// }
+// document.querySelector('.ad-1-cta').innerHTML = jumboAd.cta_text;
 
 let getAds = ()=>{ //typeOfAd
     let ads = [
