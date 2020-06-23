@@ -9,8 +9,8 @@
 
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://bit.ly/CRA-PWA
-const isLocalhost = window.location.href==='https://getcgpa.rajchandra.me'?false:true;
-  
+const isLocalhost = location.href==='https://getcgpa.rajchandra.me'?false:true;
+
 const PUBLIC_URL = isLocalhost?'http://localhost:5502':'https://getcgpa.rajchandra.me';
 
 function registerValidSW(swUrl, config) {
