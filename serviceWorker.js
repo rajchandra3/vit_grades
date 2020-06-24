@@ -17,7 +17,7 @@ self.addEventListener('install', e => {
         './src/js/requests.js',
         './src/js/ads.js',
         './src/css/style.css',
-        './src/js/animate.css'
+        './src/css/animate.css'
       ]);
     })
   );
