@@ -1,4 +1,5 @@
 const installBtn = document.querySelector('.install-app-button');
+console.log('object', installBtn);
 const hideContainer = () => {
     document
         .querySelector('.install-app-container')
