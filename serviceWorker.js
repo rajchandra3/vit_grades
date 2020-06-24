@@ -9,9 +9,18 @@
 
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://bit.ly/CRA-PWA
-const isLocalhost = location.href==='https://getcgpa.rajchandra.me'?false:true;
-  
-const PUBLIC_URL = isLocalhost?'http://localhost:5502':'https://getcgpa.rajchandra.me';
+
+const isLocalhost = Boolean(
+    this.location.hostname === 'localhost' ||
+    // [::1] is the IPv6 localhost address.
+    this.location.hostname === '[::1]' ||
+    // 127.0.0.0/8 are considered localhost for IPv4.
+    this.location.hostname.match(
+        /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+    )
+);
+
+const PUBLIC_URL = isLocalhost?'http://localhost:5502':'https://getcgpa.rajchandra.me'
 
 function registerValidSW(swUrl, config) {
     navigator.serviceWorker
@@ -28,9 +37,12 @@ function registerValidSW(swUrl, config) {
                             // At this point, the updated precached content has been fetched,
                             // but the previous service worker will still serve the older
                             // content until all client tabs are closed.
-                            console.log(`New App version available!`);
+                            alert(`📱App version ${version} is here 🎉
+                                    \n🌟We have updated the app in the background
+                                    \n✅Please close all the tabs for this page to view the updated version!
+                                    \n🤖Updating the app will prevent data loss and security risks`);
 
-                            mixpanel.track('App New Version Prompted');
+                            window.mixpanel.track('App New Version Prompted');
                             // Execute callback
                             if (config && config.onUpdate) {
                                 config.onUpdate(registration);
@@ -51,8 +63,8 @@ function registerValidSW(swUrl, config) {
             };
         })
         .catch((error) => {
-            mixpanel.track('Error during service worker registration');
-            console.error('Error during service worker registration:');
+            window.mixpanel.track('Error during service worker registration');
+            console.error('Error during service worker registration:', error);
         });
 }
 
@@ -72,7 +84,7 @@ function checkValidServiceWorker(swUrl, config) {
                 // No service worker found. Probably a different app. Reload the page.
                 navigator.serviceWorker.ready.then((registration) => {
                     registration.unregister().then(() => {
-                        location.reload();
+                        window.location.reload();
                     });
                 });
             } else {
@@ -87,18 +99,18 @@ function checkValidServiceWorker(swUrl, config) {
         });
 }
 
-function register(config) {
-    if (!isLocalhost && 'serviceWorker' in navigator) {
+export function register(config) {
+    if (NODE_ENV === 'production' && 'serviceWorker' in navigator) {
         // The URL constructor is available in all browsers that support SW.
-        const publicUrl = new URL(PUBLIC_URL, location.href);
-        if (publicUrl.origin !== location.origin) {
+        const publicUrl = new URL(PUBLIC_URL, window.location.href);
+        if (publicUrl.origin !== window.location.origin) {
             // Our service worker won't work if PUBLIC_URL is on a different origin
             // from what our page is served on. This might happen if a CDN is used to
             // serve assets; see https://github.com/facebook/create-react-app/issues/2374
             return;
         }
 
-        addEventListener('load', () => {
+        window.addEventListener('load', () => {
             const swUrl = `${PUBLIC_URL}/serviceWorker.js`;
 
             if (isLocalhost) {
@@ -120,43 +132,15 @@ function register(config) {
     }
 }
 
-function unregister() {
+export function unregister() {
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.ready
             .then((registration) => {
                 registration.unregister();
             })
             .catch((error) => {
-                mixpanel.track('Error in Service worker', {
-                    error
-                });
+                window.mixpanel.track('Error in Service worker');
                 console.error(error.message);
             });
     }
 }
-
-self.addEventListener('install', function(e) {
-  e.waitUntil(
-    caches.open('airhorner').then(function(cache) {
-      return cache.addAll([
-        './',
-        './index.html',
-        './src/js/',
-        './src/css/',
-        './src/images/'
-      ]);
-    })
-  );
- });
-
- self.addEventListener('fetch', function(event) {
-  console.log(event.request.url);
- 
-  event.respondWith(
-    caches.match(event.request).then(function(response) {
-      return response || fetch(event.request);
-    })
-  );
- });
-
-register();
