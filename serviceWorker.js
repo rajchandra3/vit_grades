@@ -10,7 +10,7 @@
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://bit.ly/CRA-PWA
 const isLocalhost = location.href==='https://getcgpa.rajchandra.me'?false:true;
-
+  
 const PUBLIC_URL = isLocalhost?'http://localhost:5502':'https://getcgpa.rajchandra.me';
 
 function registerValidSW(swUrl, config) {
@@ -33,7 +33,7 @@ function registerValidSW(swUrl, config) {
                                     \n✅Please close all the tabs for this page to view the updated version!
                                     \n🤖Updating the app will prevent data loss and security risks`);
 
-                            window.mixpanel.track('App New Version Prompted');
+                            mixpanel.track('App New Version Prompted');
                             // Execute callback
                             if (config && config.onUpdate) {
                                 config.onUpdate(registration);
@@ -54,7 +54,7 @@ function registerValidSW(swUrl, config) {
             };
         })
         .catch((error) => {
-            window.mixpanel.track('Error during service worker registration');
+            mixpanel.track('Error during service worker registration');
             console.error('Error during service worker registration:');
         });
 }
@@ -75,7 +75,7 @@ function checkValidServiceWorker(swUrl, config) {
                 // No service worker found. Probably a different app. Reload the page.
                 navigator.serviceWorker.ready.then((registration) => {
                     registration.unregister().then(() => {
-                        window.location.reload();
+                        location.reload();
                     });
                 });
             } else {
@@ -93,15 +93,15 @@ function checkValidServiceWorker(swUrl, config) {
 function register(config) {
     if (!isLocalhost && 'serviceWorker' in navigator) {
         // The URL constructor is available in all browsers that support SW.
-        const publicUrl = new URL(PUBLIC_URL, window.location.href);
-        if (publicUrl.origin !== window.location.origin) {
+        const publicUrl = new URL(PUBLIC_URL, location.href);
+        if (publicUrl.origin !== location.origin) {
             // Our service worker won't work if PUBLIC_URL is on a different origin
             // from what our page is served on. This might happen if a CDN is used to
             // serve assets; see https://github.com/facebook/create-react-app/issues/2374
             return;
         }
 
-        window.addEventListener('load', () => {
+        addEventListener('load', () => {
             const swUrl = `${PUBLIC_URL}/serviceWorker.js`;
 
             if (isLocalhost) {
@@ -130,7 +130,7 @@ function unregister() {
                 registration.unregister();
             })
             .catch((error) => {
-                window.mixpanel.track('Error in Service worker', {
+                mixpanel.track('Error in Service worker', {
                     error
                 });
                 console.error(error.message);
