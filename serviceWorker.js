@@ -28,10 +28,7 @@ function registerValidSW(swUrl, config) {
                             // At this point, the updated precached content has been fetched,
                             // but the previous service worker will still serve the older
                             // content until all client tabs are closed.
-                            alert(`📱App version is here 🎉
-                                    \n🌟We have updated the app in the background
-                                    \n✅Please close all the tabs for this page to view the updated version!
-                                    \n🤖Updating the app will prevent data loss and security risks`);
+                            console.log(`New App version available!`);
 
                             mixpanel.track('App New Version Prompted');
                             // Execute callback
@@ -142,11 +139,11 @@ self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open('airhorner').then(function(cache) {
       return cache.addAll([
-        '/',
-        '/index.html',
-        '/src/js/',
-        '/src/css/',
-        '/src/images/'
+        './',
+        './index.html',
+        './src/js/',
+        './src/css/',
+        './src/images/'
       ]);
     })
   );
