@@ -1,14 +1,18 @@
-const installBtn = document.querySelector('.install-app-button');
+const installBtns = document.querySelectorAll('.install-app-button');
 const hideContainer = () => {
-    document
-        .querySelector('.install-app-container')
-        .classList.toggle('hidden', true);
+    let btns = document
+        .querySelectorAll('.install-app-container');
+    for(let btn of btns){
+        btn.classList.toggle('hidden', true);
+    }
 };
 
 const showContainer = () => {
-    document
-        .querySelector('.install-app-container')
-        .classList.toggle('hidden', false);
+    let btns = document
+        .querySelectorAll('.install-app-container');
+        for(let btn of btns){
+            btn.classList.toggle('hidden', false);
+        }
 };
 
 window.addEventListener('beforeinstallprompt', (event) => {
@@ -55,32 +59,34 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-installBtn.addEventListener('click',(e) => {
-    mixpanel.track('Click: Install App button');
-    console.log('Clicked install app button');
-    const promptEvent = window.deferredPrompt;
-    if (!promptEvent) {
-        // The deferred prompt isn't available.
-        const reason = `The deferred prompt isn't available.`;
-        console.log(reason);
-        mixpanel.track('App Installation Failed', { reason });
-        hideContainer();
-        return;
-    }
-    // Show the install prompt.
-    promptEvent.prompt();
-    // Log the result
-    promptEvent.userChoice.then((result) => {
-        console.log('👍', 'userChoice', result);
-        if (result.outcome === 'accepted') {
-            console.log('User accepted the install prompt');
-            mixpanel.track('Accepted: App Install prompt');
-        } else {
-            console.log('User dismissed the install prompt');
-            mixpanel.track('Declined: App Install prompt');
+for(let installBtn of installBtns){
+    installBtn.addEventListener('click',(e) => {
+        mixpanel.track('Click: Install App button');
+        console.log('Clicked install app button');
+        const promptEvent = window.deferredPrompt;
+        if (!promptEvent) {
+            // The deferred prompt isn't available.
+            const reason = `The deferred prompt isn't available.`;
+            console.log(reason);
+            mixpanel.track('App Installation Failed', { reason });
+            hideContainer();
+            return;
         }
-        // Reset the deferred prompt variable, since
-        // prompt() can only be called once.
-        window.deferredPrompt = null;
+        // Show the install prompt.
+        promptEvent.prompt();
+        // Log the result
+        promptEvent.userChoice.then((result) => {
+            console.log('👍', 'userChoice', result);
+            if (result.outcome === 'accepted') {
+                console.log('User accepted the install prompt');
+                mixpanel.track('Accepted: App Install prompt');
+            } else {
+                console.log('User dismissed the install prompt');
+                mixpanel.track('Declined: App Install prompt');
+            }
+            // Reset the deferred prompt variable, since
+            // prompt() can only be called once.
+            window.deferredPrompt = null;
+        });
     });
-});
+}
