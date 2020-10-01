@@ -5,6 +5,10 @@
 .centered{
   margin: auto;
 }
+.active{
+  font-weight: 900;
+  color: cornflowerblue;
+}
 .sticky-content{
   /* position:'-webkit-sticky';
   position: 'sticky'; */
@@ -193,4 +197,5 @@ fieldset:disabled a.btn {
 }
 .h-150{
   height: 150px;
+  width: 100%;
 }

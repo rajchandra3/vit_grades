@@ -349,3 +349,7 @@ if ('serviceWorker' in navigator) {
         });
     });
 }
+
+if(document.querySelectorAll('centered').length<22){
+//   alert('Clear your cache!')  
+}
