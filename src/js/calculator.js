@@ -296,18 +296,6 @@ $('.form-control').on('keyup',function(){
     }
 });
 
-//Changing active link
-var changeActiveLink = function(x){
-    $('li').removeClass('active');
-    className = '.link'+x;
-    $(className).addClass('active');
-    $('.navbar-collapse').removeClass('show');
-    $('.navbar-toggler').attr('aria-expanded',false);
-}
-//closing navbar on click
-//HIDES ALL THE ALERT BOX
-$('.alert').hide();
-
 // $('#about-btn').on('click',function(){
 //     $('#about').fadeToggle('slow');
 // });
@@ -337,19 +325,3 @@ $('.alert').hide();
 //     });
 // });
 
-// register service worker
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', ()=> {
-        navigator.serviceWorker.register('/serviceWorker.js').then((registration)=> {
-            // Registration was successful
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, (err)=> {
-            // registration failed :(
-            console.log('ServiceWorker registration failed: ', err);
-        });
-    });
-}
-
-if(document.querySelectorAll('centered').length<22){
-//   alert('Clear your cache!')  
-}

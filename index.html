@@ -121,20 +121,20 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mt-2 mt-lg-0">
-                <li class="nav-item link1 active" onclick="changeActiveLink(1) || track('nav_click_gc')">
-                    <a class="nav-link" href="#gc">GPA CALCULATOR</a>
+                <li class="nav-item link-gc" onclick="changeActiveLink() || track('nav_click_gc')">
+                    <a class="nav-link" href="/?tab=gc">GPA CALCULATOR</a>
                 </li>
-                <li class="nav-item link2" onclick="changeActiveLink(2) || track('nav_click_qcc')">
-                    <a class="nav-link" href="#qcc">QUICK CGPA CALCULATOR</a>
+                <li class="nav-item link-qcc" onclick="changeActiveLink() || track('nav_click_qcc')">
+                    <a class="nav-link" href="/?tab=qcc">QUICK CGPA CALCULATOR</a>
                 </li>
-                <li class="nav-item link3" onclick="changeActiveLink(3) || track('nav_click_emc')">
-                    <a class="nav-link" href="#emc">EXPECTED MARKS CALCULATOR</a>
+                <li class="nav-item link-emc" onclick="changeActiveLink() || track('nav_click_emc')">
+                    <a class="nav-link" href="/?tab=emc">EXPECTED MARKS CALCULATOR</a>
                 </li>
-                <li class="nav-item link4" onclick="changeActiveLink(4) || track('nav_click_emc')">
-                    <a class="nav-link" href="#nfemc">EXPECTED MARKS CALCULATOR (NO FAT)</a>
+                <li class="nav-item link-nfemc" onclick="changeActiveLink() || track('nav_click_emc')">
+                    <a class="nav-link" href="/?tab=nfemc">EXPECTED MARKS CALCULATOR (NO FAT)</a>
                 </li>
-                <li class="nav-item link5" onclick="changeActiveLink(5) || track('nav_click_ascc')">
-                    <a class="nav-link" href="#ascc">ANY SEM CGPA CALCULATOR</a>
+                <li class="nav-item link-ascc" onclick="changeActiveLink() || track('nav_click_ascc')">
+                    <a class="nav-link" href="/?tab=ascc">ANY SEM CGPA CALCULATOR</a>
                 </li>
             </ul>
         </div>
@@ -161,7 +161,7 @@
             </script>
         </div>
         <!-- pwa download ads -->
-        <div class="jumbotron jumbotron-fluid col-lg-6 p-4 centered mb-4">
+        <!-- <div class="jumbotron jumbotron-fluid col-lg-6 p-4 centered mb-4">
             <div class="container ads-container">
                 <div class="text-right">
                     <span class="badge-pill badge-light">Info</span>
@@ -179,7 +179,7 @@
                     <button class="btn btn-primary install-app-button centered">Install <i class="fa fa-download"></i></button>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- color game ads -->
         <!-- <div class="jumbotron jumbotron-fluid col-lg-6 p-4 centered mb-4 hidden">
@@ -572,7 +572,7 @@
     </div>
 
     <!-- ads between sections -->
-    <div class="row col-xs-12 col-sm-12 d-md-none h-150">
+    <div class="row col-xs-12 col-sm-12 d-md-none h-150 centered" id="gc-ad">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Ads Between Section -->
         <ins class="adsbygoogle" 
@@ -696,9 +696,9 @@
             </script>
         </div>
     </div>
-    
+
     <!-- ads between sections -->
-    <div class="row col-xs-12 col-sm-12 d-md-none h-150">
+    <div class="row col-xs-12 col-sm-12 d-md-none h-150 centered" id="qcc-ad">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Ads Between Section -->
         <ins class="adsbygoogle" 
@@ -865,10 +865,10 @@
     </div>
 
     <!-- ads between sections -->
-    <div class="row col-xs-12 col-sm-12 d-md-none h-150">
+    <div class="row col-xs-12 col-sm-12 d-md-none h-150 centered" id="emc-ad">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Ads Between Section -->
-        <ins class="adsbygoogle"
+        <ins class="adsbygoogle" 
             style="display:inline-block;width:360px;height:120px"
             data-ad-client="ca-pub-8598751574376549"
             data-ad-slot="9224037763"></ins>
@@ -1033,6 +1033,19 @@
         </div>
     </div>
 
+    <!-- ads between sections -->
+    <div class="row col-xs-12 col-sm-12 d-md-none h-150 centered" id="nfemc-ad">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Ads Between Section -->
+        <ins class="adsbygoogle" 
+            style="display:inline-block;width:360px;height:120px"
+            data-ad-client="ca-pub-8598751574376549"
+            data-ad-slot="9224037763"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
     <!--All semester CGPA calculator-->
     <div class="row col-sm-12 col-md-12 col-lg-12 centered n-sem-cgpa-calculator no-padding" id="ascc">
         <!-- ads for large screens -->
@@ -1172,7 +1185,7 @@
     </div>
 
     <!-- ads between sections -->
-    <div class="row col-xs-12 col-sm-12 d-md-none h-150">
+    <div class="row col-xs-12 col-sm-12 d-md-none h-150 centered" id="ascc-ad">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Ads Between Section -->
         <ins class="adsbygoogle" 
@@ -1208,15 +1221,13 @@
     </div>
 
     <!-- ads between sections -->
-    <div class="row col-xs-12 col-sm-12 d-md-none h-150">
+    <div class="row col-xs-12 col-sm-12 d-md-none h-150 centered">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- horizontal-display-ad-unit -->
-        <ins class="adsbygoogle"
-            style="display:block"
+        <!-- Ads Between Section -->
+        <ins class="adsbygoogle" 
+            style="display:inline-block;width:360px;height:120px"
             data-ad-client="ca-pub-8598751574376549"
-            data-ad-slot="2465876152"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
+            data-ad-slot="9224037763"></ins>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
@@ -1300,19 +1311,18 @@
     </div>
 
     <!-- ads between sections -->
-    <div class="row col-xs-12 col-sm-12 d-md-none h-150">
+    <div class="row col-xs-12 col-sm-12 d-md-none h-150 centered">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- horizontal-display-ad-unit -->
-        <ins class="adsbygoogle"
-            style="display:block"
+        <!-- Ads Between Section -->
+        <ins class="adsbygoogle" 
+            style="display:inline-block;width:360px;height:120px"
             data-ad-client="ca-pub-8598751574376549"
-            data-ad-slot="2465876152"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
+            data-ad-slot="9224037763"></ins>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
+
     <!-- footer for VIT Cgpa Calculator -->
     <div class="col-lg-12 common-footer-container bg-dark">
         <footer class="p-4">
@@ -1329,6 +1339,7 @@
         document.getElementById('thisYear').innerHTML = d.getFullYear();
     </script>
     <!-- main script file  -->
+    <script src="./src/js/ui.js"></script>
     <script src="./src/js/installPWA.js"></script>
     <script language="javascript" type="text/javascript" src="./src/js/requests.js"></script>
     <script language="javascript" type="text/javascript" src="./src/js/calculator.js"></script>
