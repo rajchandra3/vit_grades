@@ -1,0 +1,16 @@
+.ad-container{
+    border-radius: 4px;
+    border: 2px solid darkgray;
+}
+.ad-head{
+    padding: 4px;
+    width: 100%;
+    background-color: darkgrey;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: x-small;
+    font-weight: 900;
+}
+.adsbygoogle{
+    margin: auto;
+}
