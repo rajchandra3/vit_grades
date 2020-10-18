@@ -6,8 +6,8 @@
     <meta name="author" content="Raj Chandra">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#1b567e"> <!--1b567e-->
-    <title>KTU CGPA Calculator | Best for Kerla Institute of technology</title>
-    <link rel="icon" type="image/png" href="./src/images/icons/favicon.png">
+    <title>KTU CGPA Calculator Best for Kerla Institute of technology, 100% accurate</title>
+    <link rel="icon" type="image/png" href="../src/images/icons/favicon.png">
 
     <!-- ios support -->
     <link rel="apple-touch-icon" href="/src/images/icons/icon-72x72.png" />
@@ -21,7 +21,7 @@
     <meta name="apple-mobile-web-app-status-bar" content="#302b63" />
 
     <!-- manifest file -->
-    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="../manifest/ktu.json" />
     <!-- Bootstrap -->
     <!--<link href="bootstrap/css/bootstrap.css" rel="stylesheet">-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -74,15 +74,16 @@
     {
       "@context": "http://www.schema.org",
       "@type": "website",
+      "@author": "Raj Chandra"
       "name": "CGPA Calculator | KTU",
       "alternateName": "KTU CGPA Calculator",
-      "url": "https://getcgpa.rajchandra.me"
+      "url": "https://getcgpa.rajchandra.me/ktu"
     }
      </script>
 
     <!--Custom CSS-->
-    <link rel="stylesheet" href="./src/css/style.css">
-    <link rel="stylesheet" href="./src/css/ad.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/ad.css">
     <link rel="stylesheet" href="https://files.rajchandra.me/css/common.css">
     
     <!-- start Mixpanel -->
@@ -92,12 +93,12 @@
         MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
         mixpanel.init("7ff5ca7b4aa0bef4db830b057c9076a2");</script>
     <!-- end Mixpanel -->
-    <script language="javascript" type="text/javascript" src="./src/js/mixpanel.js"></script>
+    <script language="javascript" type="text/javascript" src="../src/js/mixpanel.js"></script>
 
     <!-- load js files  -->
-    <script language="javascript" type="text/javascript" src="./src/js/ads.js"></script>
-    <script src="serviceWorker.js"></script>
-    <!-- <script src="./src/js/sw.js"></script> -->
+    <script language="javascript" type="text/javascript" src="../src/js/ads.js"></script>
+    <script src="../serviceWorker.js"></script>
+    <!-- <script src="../src/js/sw.js"></script> -->
 </head>
 <!-- <body onload="getFeebackQuestion()"> -->
 <body onload="track('page_views')">
@@ -114,7 +115,7 @@
     <!-- navbar -->
     <nav class="col-sm-12 navbar fixed-bottom navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
-            <img src="./src/images/icons/icon-512x512.png" width="40" height="40" class="d-inline-block align-top rounded refresh_stats" alt="lo">
+            <img src="../src/images/icons/icon-512x512.png" width="40" height="40" class="d-inline-block align-top rounded refresh_stats" alt="lo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -992,10 +993,10 @@
         document.getElementById('thisYear').innerHTML = d.getFullYear();
     </script>
     <!-- main script file  -->
-    <script src="./src/js/ui.js"></script>
-    <script src="./src/js/installPWA.js"></script>
-    <script language="javascript" type="text/javascript" src="./src/js/requests.js"></script>
-    <script language="javascript" type="text/javascript" src="./src/js/calculator.js"></script>
+    <script src="../src/js/ui.js"></script>
+    <script src="../src/js/installPWA.js"></script>
+    <script language="javascript" type="text/javascript" src="../src/js/requests.js"></script>
+    <script language="javascript" type="text/javascript" src="../src/js/calculator.js"></script>
     <script type="module" src="https://files.rajchandra.me/js/config.js"></script>
     <script type="text/javascript" src="https://files.rajchandra.me/js/footer.js"></script>
 
