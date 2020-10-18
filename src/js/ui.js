@@ -26,7 +26,7 @@ const availableTabs = ['gc','qcc','emc','nfemc','ascc'];
 for(let tab of availableTabs){
     if(tab!==queryParams){
         document.querySelector(`#${tab}`).style.display = 'none';
-        document.querySelector(`#${tab}-ad`).style.display = 'none';
+        // document.querySelector(`#${tab}-ad`).style.display = 'none';
     }
 }
 
