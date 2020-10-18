@@ -2,7 +2,7 @@
     "name": "KTU CGPA Calculator",
     "short_name": "KTU CGPA Calculator",
     "description": "A tool to compute their CGPA, GPA and more",
-    "start_url": "/ktu?utm_source=launch&utm_medium=pwa",
+    "start_url": "/college/ktu?utm_source=launch&utm_medium=pwa",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#ffffff",
