@@ -24,7 +24,7 @@ if(document.querySelectorAll('centered').length<22){
 
 const availableTabs = ['gc','qcc','emc','nfemc','ascc'];
 for(let tab of availableTabs){
-    if(tab!==queryParams){
+    if(tab!==queryParams && document.querySelector(`#${tab}`)){
         document.querySelector(`#${tab}`).style.display = 'none';
         // document.querySelector(`#${tab}-ad`).style.display = 'none';
     }

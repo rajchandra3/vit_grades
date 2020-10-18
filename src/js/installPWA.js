@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Track when the display mode changes
 window.addEventListener('DOMContentLoaded', () => {
-    window.matchMedia('(display-mode: standalone)').addListener((evt) => {
+    window.matchMedia('(display-mode: standalone)').addEventListener((evt) => {
         let displayMode = 'browser tab';
         if (evt.matches) {
             displayMode = 'standalone';

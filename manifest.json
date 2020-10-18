@@ -1,7 +1,7 @@
 {
-    "name": "VIT CGPA Calculator",
-    "short_name": "VIT CGPA Calculator",
-    "description": "A tool for VITians to compute their CGPA, GPA and more",
+    "name": "CGPA Calculator",
+    "short_name": "CGPA Calculator",
+    "description": "A tool to compute their CGPA, GPA and more",
     "start_url": "/?utm_source=launch&utm_medium=pwa",
     "display": "standalone",
     "background_color": "#ffffff",
