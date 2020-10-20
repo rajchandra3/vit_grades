@@ -1,8 +1,8 @@
 {
-    "name": "SRM CGPA Calculator",
-    "short_name": "SRM CGPA Calculator",
+    "name": "Anna University CGPA Calculator",
+    "short_name": "Anna University CGPA Calculator",
     "description": "A tool to compute their CGPA, GPA and more",
-    "start_url": "/college/srm?utm_source=launch&utm_medium=pwa",
+    "start_url": "/college/anna-university?utm_source=launch&utm_medium=pwa",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#ffffff",
@@ -12,14 +12,14 @@
             "name": "Compute GPA",
             "short_name": "GPA",
             "description": "Compute your GPA",
-            "url": "/college/srm?tab=gc&utm_source=homescreen",
+            "url": "/college/anna-university?tab=gc&utm_source=homescreen",
             "icons": [{ "src": "/src/images/shortcuts/gpa-96x96.png", "sizes": "96x96" }]
         },
         {
             "name": "Quick CGPA Calculator",
             "short_name": "Quick CGPA Calc",
             "description": "Compute your CGPA for next semester",
-            "url": "/college/srm?tab=qcc&utm_source=homescreen",
+            "url": "/college/anna-university?tab=qcc&utm_source=homescreen",
             "icons": [{ "src": "/src/images/shortcuts/qcc-96x96.png", "sizes": "96x96" }]
         }
     ],

@@ -7,6 +7,22 @@
     "background_color": "#ffffff",
     "theme_color": "#ffffff",
     "orientation": "portrait",
+    "shortcuts": [
+        {
+            "name": "Compute GPA",
+            "short_name": "GPA",
+            "description": "Compute your GPA",
+            "url": "/?tab=gc&utm_source=homescreen",
+            "icons": [{ "src": "/src/images/shortcuts/gpa-96x96.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "Quick CGPA Calculator",
+            "short_name": "Quick CGPA Calc",
+            "description": "Compute your CGPA for next semester",
+            "url": "/?tab=qcc&utm_source=homescreen",
+            "icons": [{ "src": "/src/images/shortcuts/qcc-96x96.png", "sizes": "96x96" }]
+        }
+    ],
     "icons": [
       {
         "src": "/src/images/icons/icon-72x72.png",
