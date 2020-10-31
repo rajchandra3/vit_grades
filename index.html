@@ -513,10 +513,14 @@
                         <option value="20">20</option>
                     </select>
                     <section>
-                </div><br><br>
+                </div><br>
                 <div class="alert alert-primary alert-grades text-center" role="alert">
                     <b><span id="grades" class="text-info"></span></b>
                 </div>
+                <div class="col-sm-12 ads adsGC"></div>
+                <button class="gbtn btn btn-block btn-lg btn-primary" id="gbtn" onclick="track('computed_gpa')">Submit</button>
+                </section>
+                <br><br>
                 <!-- Google Ads -->
                 <div class="google-ads">
                     <div class="ad-container">
@@ -533,11 +537,7 @@
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
                     </div>
-                </div><br>
-                <button class="gbtn btn btn-block btn-lg btn-primary" id="gbtn" onclick="track('computed_gpa')">Submit</button>
-                </section>
-                <br><br>
-                <div class="col-sm-12 ads adsGC"></div>
+                </div>
             </div>
         </div>
         <!-- ads for large screens -->
@@ -658,6 +658,10 @@
                     <div class="alert alert-primary text-center alert-cgpa-msg" role="alert">
                         <b><span class="cgpa-msg" id="cgpa-msg"></span></b>
                     </div>
+                    <div class="col-sm-12 ads adsQCC"></div>
+                    <button class="btn btn-block btn-lg btn-primary" id="submit" onclick="track('computed_qcc')">Submit</button>
+                    <br>
+
                     <!-- Google Ads -->
                     <div class="google-ads p-3">
                         <div class="ad-container">
@@ -675,9 +679,6 @@
                             </script>
                         </div>
                     </div>
-                    <button class="btn btn-block btn-lg btn-primary" id="submit" onclick="track('computed_qcc')">Submit</button>
-                    <br><br>
-                    <div class="col-sm-12 ads adsQCC"></div>
                 </div>
             </div>
         </div>
@@ -833,6 +834,14 @@
                     <div class="alert alert-primary text-center alert-marks" role="alert">
                         <b><span id="marks"></span></b>
                     </div>
+                    <div class="col-sm-12 ads adsEMC"></div>
+                    <div class="form-group row">
+                        <div class="col-sm-12 pt-2">
+                            <button type="button" onclick="getMarks() || track('computed_emc')" class="btn btn-primary btn-block">Submit</button>
+                            <br>
+                            <small id="projHelp" class="form-text text-danger">*If the course doesn't have J-Component/L-Component you can leave it empty.</small>
+                        </div>
+                    </div>
                     <!-- Google Ads -->
                     <div class="google-ads">
                         <div class="ad-container">
@@ -848,14 +857,6 @@
                             <script>
                                 (adsbygoogle = window.adsbygoogle || []).push({});
                             </script>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 ads adsEMC"></div>
-                    <div class="form-group row">
-                        <div class="col-sm-12 pt-2">
-                            <button type="button" onclick="getMarks() || track('computed_emc')" class="btn btn-primary btn-block">Submit</button>
-                            <br>
-                            <small id="projHelp" class="form-text text-danger">*If the course doesn't have J-Component/L-Component you can leave it empty.</small>
                         </div>
                     </div>
                 </form>
@@ -1030,7 +1031,14 @@
                     <div class="alert alert-primary text-center alert-nf-marks" role="alert">
                         <b><span id="nf-marks"></span></b>
                     </div>
-
+                    <div class="col-sm-12 ads adsNFEMC">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <button type="button" onclick="getMarksWithoutFat() || track('nf_computed_emc')" class="btn btn-lg btn-block btn-primary">Submit</button>
+                            <small id="projHelp" class="form-text text-danger">*If the course doesn't have J-Component/L-Component you can leave it empty.</small>
+                        </div>
+                    </div>
                     <!-- Google Ads -->
                     <div class="google-ads">
                         <div class="ad-container">
@@ -1047,16 +1055,8 @@
                                 (adsbygoogle = window.adsbygoogle || []).push({});
                             </script>
                         </div>
-                    </div><br>
-                    <div class="form-group row">
-                        <div class="col-sm-12">
-                            <button type="button" onclick="getMarksWithoutFat() || track('nf_computed_emc')" class="btn btn-lg btn-block btn-primary">Submit</button>
-                            <small id="projHelp" class="form-text text-danger">*If the course doesn't have J-Component/L-Component you can leave it empty.</small>
-
-                        </div>
                     </div>
                 </form>
-                <div class="col-sm-12 ads adsNFEMC"></div>
             </div>
         </div>
 
@@ -1217,7 +1217,9 @@
                 <div class="alert alert-primary text-center alert-fcgpa" role="alert">
                     <b><span class="text-info" id="fcgpa"></span></b>
                 </div>
-
+                <div class="col-sm-12 ads adsASCC"></div>
+                <button class="btn btn-block btn-lg btn-primary clearfix" id="sem-cgpa-btn" onclick="track('computed_ascc')">Submit</button>
+                <br>
                 <!-- Google Ads -->
                 <div class="google-ads p-3">
                     <div class="ad-container">
@@ -1235,9 +1237,6 @@
                         </script>
                     </div>
                 </div>
-                <button class="btn btn-block btn-lg btn-primary clearfix" id="sem-cgpa-btn" onclick="track('computed_ascc')">Submit</button>
-                <br><br>
-                <div class="col-sm-12 ads adsASCC"></div>
             </div>
         </div>
         <!-- ads for large screens -->

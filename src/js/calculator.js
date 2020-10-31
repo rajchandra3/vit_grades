@@ -44,6 +44,7 @@ var getMarksWithoutFat = function(){
         $('.alert-nf-marks').show();
         $('#nf-marks').html(`EXPECTED MARKS ${netMarks.toFixed(2)}`);
     }
+    console.log('getAds()', getAds())
     $('.adsNFEMC').html(getAds());
 }
 
