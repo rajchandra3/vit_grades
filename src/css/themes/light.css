@@ -1,0 +1,33 @@
+body{
+  background:#fff !important;
+  color: #000 !important;
+}
+
+.card-container{
+  background-color: #ffffff !important;
+}
+
+
+select{
+  color: #495057 !important;
+  background-color: #fff !important;
+}
+
+.form-control, .form-control:focus{
+  color: #495057 !important;
+  background-color: #fff !important;
+}
+
+.input-group-text{
+  color: #495057 !important;
+  background-color: #e9ecef !important;
+}
+
+.modal-content{
+  color: #080808 !important;
+  background-color: #fff !important;
+  border: 1px solid grey !important;
+}
+.close{
+  color: grey !important;
+}

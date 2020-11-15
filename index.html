@@ -28,6 +28,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
     <!-- font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
     <!-- Google fonts -->
@@ -143,8 +144,16 @@
     <!-- header -->
     <div class="col-sm-12 col-md-12 col-lg-12 text-center">
         <div class="header font-weight-bolder p-4">VIT CGPA CALCULATOR</div>
+        <div class="input-group col-sm-2 centered pb-2">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon">Theme </span>
+            </div>
+            <select class="form-control" name="theme-selector" id="theme-selector" >
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+        </div>
     </div>
-
     <!-- jumbo ads -->
     <div class="row col-sm-12 col-md-12 col-lg-12 install-app-container hidden no-padding no-margin">
         <!-- ads for large screens -->
@@ -1316,16 +1325,16 @@
     <div class="modal fade" id="modal-error" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal-title">Error</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body" id="modal-body"></div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-dismiss="modal">Got it</button>
-            </div>
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger id="modal-title">Error</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Got it</button>
+                </div>
             </div>
         </div>
     </div>
@@ -1376,7 +1385,7 @@
                         data-href="https://devil-coder.github.io/vit_grades/" 
                         data-width="100%" 
                         data-lazy="true"
-                        data-numposts="10"
+                        data-numposts="1"
                         data-order-by="reverse_time"
                         ></div>
                     </div>

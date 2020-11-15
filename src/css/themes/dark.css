@@ -1,0 +1,35 @@
+body{
+  background:#242424 !important;
+  color: azure !important;
+}
+.card-container{
+  background-color: #1c1c1c !important;
+}
+
+select{
+  background-color: #080808 !important;
+  border-color: grey !important;
+}
+
+.form-control, .form-control:focus{
+  color: aliceblue !important;
+  background-color: #080808 !important;
+  border-color: grey !important;
+}
+
+.input-group-text{
+  background-color: #636363 !important;
+  border-color:  1px solid grey !important;
+  color: aliceblue !important;
+}
+
+.modal-content{
+  color: #fff !important;
+  background-color: #080808 !important;
+  border: 1px solid grey !important;
+}
+.close{
+  color: grey !important;
+}
+
+
