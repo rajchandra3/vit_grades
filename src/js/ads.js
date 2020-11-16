@@ -90,7 +90,7 @@ const affliateLinks = [
 
 let getAds = ()=>{
     return `
-        <div class="google-ads">
+        <div class="google-ads pb-2">
             <div class="ad-container">
                 <div class="ad-head">Advertisement</div>
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
