@@ -110,3 +110,6 @@ body{
   height: 150px;
   width: 100%;
 }
+.common-footer-container > .text-center{
+  margin-bottom: 0 !important;
+}
