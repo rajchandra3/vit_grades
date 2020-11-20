@@ -89,7 +89,8 @@ const affliateLinks = [
 ]
 
 let getAds = ()=>{
-    return `
+    return '';
+    `
         <div class="google-ads pb-2">
             <div class="ad-container">
                 <div class="ad-head">Advertisement</div>

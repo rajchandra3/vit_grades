@@ -113,3 +113,7 @@ body{
 .common-footer-container > .text-center{
   margin-bottom: 0 !important;
 }
+.result-text{
+  font-size: 5rem;
+  font-weight: 900;
+}
