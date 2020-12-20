@@ -52,3 +52,36 @@ if ('serviceWorker' in navigator) {
         });
     });
 }
+
+//apply ui theme
+const appluTheme = (ui_theme)=>{
+    window.localStorage.setItem('ui_theme',ui_theme || 'dark');
+    document.querySelector('#theme-selector').value = ui_theme || 'dark';
+    if(ui_theme==='dark'){
+        document.querySelector('.fb-comments').setAttribute("data-colorscheme", "dark");
+        document.querySelector('head').innerHTML += `
+        <link rel="stylesheet" type="text/css" href="/src/css/themes/dark.css">
+        `;
+    }else if(ui_theme==='light'){
+        document.querySelector('.fb-comments').setAttribute("data-colorscheme", "light");
+        document.querySelector('head').innerHTML += `
+        <link rel="stylesheet" type="text/css" href="/src/css/themes/light.css">
+        `;
+
+    }else{
+        document.querySelector('.fb-comments').setAttribute("data-colorscheme", "dark");
+        document.querySelector('head').innerHTML += `
+        <link rel="stylesheet" type="text/css" href="/src/css/themes/dark.css">
+        `;
+    }
+}
+
+//onload
+let ui_theme = window.localStorage.getItem('ui_theme');
+appluTheme(ui_theme);
+
+//handle theme change
+document.querySelector('#theme-selector').addEventListener('change',(e)=>{
+    appluTheme(e.target.value);
+})
+

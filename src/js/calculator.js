@@ -42,7 +42,7 @@ var getMarksWithoutFat = function(){
     }
     else{
         $('.alert-nf-marks').show();
-        $('#nf-marks').html(`EXPECTED MARKS ${netMarks.toFixed(2)}`);
+        $('#nf-marks').html(`<h1 class="result-text">${netMarks.toFixed(2)}</h1>`);
     }
     console.log('getAds()', getAds())
     $('.adsNFEMC').html(getAds());
@@ -93,7 +93,7 @@ var getMarks = function(){
     }
     else{
         $('.alert-marks').show();
-        $('#marks').html(`EXPECTED MARKS ${netMarks.toFixed(2)}`);
+        $('#marks').html(`<h1 class="result-text">${netMarks.toFixed(2)}</h1>`);
     }
     $('.adsEMC').html(getAds());
 }
@@ -116,7 +116,7 @@ $('#submit').click(function(){
         f="Unavailable";
     }else{
         $('.alert-cgpa-msg').show();
-        document.getElementById('cgpa-msg').innerHTML="YOUR CGPA IS "+f.toFixed(2);
+        document.getElementById('cgpa-msg').innerHTML=`<h1 class="result-text">${f.toFixed(2)}</h1>`;
     }
     $('.adsQCC').html(getAds());
 });
@@ -183,7 +183,7 @@ $('#sem-cgpa-btn').on('click',function(){
     }
     else{
         $('.alert-fcgpa').show();
-        $('#fcgpa').html('YOUR CGPA WOULD BE '+fcgpa.toFixed(2));
+        $('#fcgpa').html(`<h1 class="result-text">${fcgpa.toFixed(2)}</h1>`);
     }
         $('.adsASCC').html(getAds());
 });
@@ -202,7 +202,7 @@ $('#gbtn').on('click',function(){
         gpa="Unavailable";
     }else{
         $('.alert-grades').show();
-        $('#grades').html(`Your GPA is ${gpa.toFixed(2)}`);
+        $('#grades').html(`<h1 class="result-text">${gpa.toFixed(2)}</h1>`);
         // document.getElementById('reset').classList.remove("hide");
     }
     $('.adsGC').html(getAds());

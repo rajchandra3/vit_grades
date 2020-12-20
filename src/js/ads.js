@@ -89,7 +89,24 @@ const affliateLinks = [
 ]
 
 let getAds = ()=>{
-    return `<div>${affliateLinks[Math.floor(Math.random()*(affliateLinks.length))]} ${affliateLinks[Math.floor(Math.random()*(affliateLinks.length))]}</div>`;
+    return '';
+    `
+        <div class="google-ads pb-2">
+            <div class="ad-container">
+                <div class="ad-head">Advertisement</div>
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- 360x90_horizontal_ads -->
+                    <ins class="adsbygoogle"
+                        style="display:inline-block;width:360px;height:90px"
+                        data-ad-client="ca-pub-8598751574376549"
+                        data-ad-slot="3230015020"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>`;
+    // return `<div>${affliateLinks[Math.floor(Math.random()*(affliateLinks.length))]} ${affliateLinks[Math.floor(Math.random()*(affliateLinks.length))]}</div>`;
 }
 
 let getAdsManual = ()=>{ //typeOfAd
