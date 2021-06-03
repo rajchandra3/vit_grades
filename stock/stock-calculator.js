@@ -19,20 +19,22 @@ const findAmountFromAvg = ()=>{
 }
 
 const getNewPortfolioOnBuy = ()=>{
+    const newPPS = Number(document.querySelector("#gnp-buy-current-mp").value);
     const currentPortfolio = {
         investment: Number(document.querySelector("#gnp-buy-amount-invested").value),
         pps: Number(document.querySelector("#gnp-buy-average-pps").value)
     }
     currentPortfolio["totalShares"] = currentPortfolio.investment / currentPortfolio.pps;
+    currentPortfolio["value"] = currentPortfolio.totalShares * newPPS;
+
     const newInvestment = Number(document.querySelector("#gnp-buy-new-investment").value);
-    const newPPS = Number(document.querySelector("#gnp-buy-current-mp").value);
     const numberOfSharesBought = Number(currentPortfolio.totalShares + (newInvestment / newPPS));
     const newPortfolio = {
         investment: currentPortfolio.investment + newInvestment,
         totalShares: numberOfSharesBought,
     }
     newPortfolio["pps"] = Number((newPortfolio.investment / newPortfolio.totalShares).toFixed(4))
-
+    newPortfolio["value"] = Number(newPortfolio.totalShares * newPPS)
     document.querySelector("#gnp-buy-result").innerHTML = `
     <table class="table table-bordered">
         <thead>
@@ -60,8 +62,8 @@ const getNewPortfolioOnBuy = ()=>{
             </tr>
             <tr>
             <th scope="row">Portfolio Value</th>
-            <td>${getLocalString(newPortfolio.totalShares * newPPS)}</td>
-            <td>${getLocalString(currentPortfolio.totalShares * newPPS)}</td>
+            <td>${getLocalString(newPortfolio.value)}</td>
+            <td>${getLocalString(currentPortfolio.value)}</td>
             </tr>
         </tbody>
         </table>
@@ -77,24 +79,22 @@ const getNewPortfolioOnSell = ()=>{
         pps: Number(document.querySelector("#gnp-sell-average-pps").value)
     }
     currentPortfolio["totalShares"] = currentPortfolio.investment / currentPortfolio.pps;
+    currentPortfolio["value"] = currentPortfolio.totalShares * newPPS;
     let newPortfolio = {};
     if(amountToSell){
         numberOfSharesToSell = currentPortfolio.totalShares - (amountToSell / newPPS);
-        newPortfolio = {
-            investment: currentPortfolio.investment - amountToSell,
-            totalShares: numberOfSharesToSell,
-        }
-        newPortfolio["pps"] = Number((newPortfolio.investment / newPortfolio.totalShares).toFixed(4))
     }else if(numberOfSharesToSell){
         amountToSell = numberOfSharesToSell * newPPS;
-        newPortfolio = {
-            investment: currentPortfolio.investment - amountToSell,
-            totalShares: numberOfSharesToSell,
-        }
-        newPortfolio["pps"] = Number((newPortfolio.investment / newPortfolio.totalShares).toFixed(4))
     }else{
         console.log("error");
     }
+    newPortfolio = {
+        investment: currentPortfolio.value - amountToSell,
+        totalShares: numberOfSharesToSell,
+    }
+    newPortfolio["pps"] = Number((newPortfolio.investment / newPortfolio.totalShares).toFixed(6));
+    newPortfolio["value"] = Number((newPortfolio.totalShares * newPortfolio.pps).toFixed(2))
+
     document.querySelector("#gnp-sell-result").innerHTML = `
     <table class="table table-bordered">
         <thead>
@@ -122,8 +122,8 @@ const getNewPortfolioOnSell = ()=>{
             </tr>
             <tr>
             <th scope="row">Portfolio Value</th>
-            <td>${getLocalString(newPortfolio.totalShares * newPPS)}</td>
-            <td>${getLocalString(currentPortfolio.totalShares * newPPS)}</td>
+            <td>${getLocalString(newPortfolio.value)}</td>
+            <td>${getLocalString(currentPortfolio.value)}</td>
             </tr>
         </tbody>
         </table>
