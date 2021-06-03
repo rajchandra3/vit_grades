@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Stock</title>
+    <title>Asset Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
     <!-- Bootstrap -->
-    <!--<link href="bootstrap/css/bootstrap.css" rel="stylesheet">-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
@@ -45,9 +45,11 @@
 
     <!--Custom CSS-->
     <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="../src/css/ad.css">
     <link rel="stylesheet" href="https://files.rajchandra.me/css/common.css">
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;600&display=swap" rel="stylesheet">
     <!-- start Mixpanel -->
     <script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
         0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
@@ -59,30 +61,107 @@
 
 </head>
 <!-- <body onload="getFeebackQuestion()"> -->
-<body onload="track('page_views_share_market')">
+<body onload="track('page_views_share_market')" style="font-family: 'Roboto Mono', monospace;">
+
+    <!-- get new portfolio on buy -->
     <div class="card-container col-lg-6 p-4 mb-5 centered has-box-shadow">
-        <!-- main content -->
         <div class="card-container col-lg-12 col-md-12 col-sm-12 centered no-margin no-padding cgpa-box" id="cgpa-box">
             <div class="col-lg-10 col-md-8 col-sm-12 centered">
-                <h1>Money to invest</h1>
-                <h5>Calculate the amount you need to invest to attain a average</h5>
+                <h1></h1>
+                <p>Get your new portfolio on BUY</p>
                 <hr>
                 <div class="input-group col-sm-12">
-                    <input type="number" id='amount-invested' class="form-control" maxlength="10" placeholder="Amount already invested (in Rs)" aria-label="Marks Input" aria-describedby="basic-addon">
+                    <input type="number" id='gnp-buy-amount-invested' class="form-control" maxlength="10" placeholder="Current Investment">
                 </div>
                 <br>
                 <div class="input-group col-sm-12">
-                    <input type="number" id='stocks-owned' class="form-control" maxlength="10" placeholder="Stocks you own " aria-label="Marks Input" aria-describedby="basic-addon">
+                    <input type="number" id='gnp-buy-average-pps' class="form-control" maxlength="10" placeholder="Average PPS (Price Per Share)">
                 </div>
                 <br>
                 <div class="input-group col-sm-12">
-                    <input type="number" id='expected-average' class="form-control cgpa-input" maxlength="10" placeholder="Average Price you want to achieve?" aria-label="Marks Input" aria-describedby="basic-addon">
+                    <input type="number" id='gnp-buy-new-investment' class="form-control" maxlength="10" placeholder="New Investment Amount">
                 </div>
                 <br>
                 <div class="input-group col-sm-12">
-                    <input type="number" id='amount-required' class="form-control cgpa-input" placeholder="Calculating..." aria-label="Marks Input" aria-describedby="basic-addon" disabled>
+                    <input type="number" id='gnp-buy-current-mp' class="form-control" maxlength="10" placeholder="Current PPS">
+                </div>
+                <br>
+                <div class="input-group col-sm-12">
+                    <span id="gnp-buy-result"></span>
                 </div><br>
-                <button class="btn btn-block btn-lg btn-primary" id="submit">Submit</button>
+                <button class="btn btn-block btn-lg btn-primary" id="submit" onclick="getNewPortfolioOnBuy()">Submit</button>
+                <br><br>
+            </div>
+        </div>
+    </div>
+
+    <!-- get new portfolio on sell -->
+    <div class="card-container col-lg-6 p-4 mb-5 centered has-box-shadow">
+        <div class="card-container col-lg-12 col-md-12 col-sm-12 centered no-margin no-padding cgpa-box" id="cgpa-box">
+            <div class="col-lg-10 col-md-8 col-sm-12 centered">
+                <h1></h1>
+                <p>Get your new portfolio on SELL</p>
+                <hr>
+                <div class="input-group col-sm-12">
+                    <input type="number" id='gnp-sell-amount-invested' class="form-control" maxlength="10" placeholder="Current Investment">
+                </div>
+                <br>
+                <div class="input-group col-sm-12">
+                    <input type="number" id='gnp-sell-average-pps' class="form-control" maxlength="10" placeholder="Average PPS (Price Per Share)">
+                </div>
+                <br>
+                <div class="bordered-container">
+                    <div class="input-group col-sm-12">
+                        <input type="number" id='gnp-sell-amount' class="form-control" maxlength="10" placeholder="Amount to Sell">
+                    </div>
+                    <div class="d-flex">
+                        <hr> or <hr>
+                    </div>
+                    <div class="input-group col-sm-12">
+                        <input type="number" id='gnp-sell-shares' class="form-control" maxlength="10" placeholder="Shares to Sell">
+                    </div>
+                </div>
+                <br>
+                <div class="input-group col-sm-12">
+                    <input type="number" id='gnp-sell-current-mp' class="form-control" maxlength="10" placeholder="Current PPS">
+                </div>
+                <br>
+                <div class="input-group col-sm-12">
+                    <span id="gnp-sell-result"></span>
+                </div><br>
+                <button class="btn btn-block btn-lg btn-primary" id="submit" onclick="getNewPortfolioOnSell()">Submit</button>
+                <br><br>
+            </div>
+        </div>
+    </div> 
+
+    <!-- find Investment from given average -->
+    <div class="card-container col-lg-6 p-4 mb-5 centered has-box-shadow">
+        <div class="card-container col-lg-12 col-md-12 col-sm-12 centered no-margin no-padding cgpa-box" id="cgpa-box">
+            <div class="col-lg-10 col-md-8 col-sm-12 centered">
+                <h1></h1>
+                <p>Get amount to invest to bring down your average</p>
+                <hr>
+                <div class="input-group col-sm-12">
+                    <input type="number" id='fafa-amount-invested' class="form-control" maxlength="10" placeholder="Current Investment">
+                </div>
+                <br>
+                <div class="input-group col-sm-12">
+                    <input type="number" id='fafa-stocks-owned' class="form-control" maxlength="10" placeholder="Quantity">
+                </div>
+                <br>
+                <div class="input-group col-sm-12">
+                    <input type="number" id='fafa-buy-price' class="form-control" maxlength="10" placeholder="New Buy Price">
+                </div>
+                <br>
+                <div class="input-group col-sm-12">
+                    <input type="number" id='fafa-expected-average' class="form-control" maxlength="10" placeholder="Expected Average">
+                </div>
+                <br>
+                <div class="input-group col-sm-12">
+                    <span id='fafa-result'>
+                </div><br>
+                <button class="btn btn-block btn-lg btn-primary" id="submit" onclick="findAmountFromAvg()">Submit</button>
                 <br><br>
             </div>
         </div>

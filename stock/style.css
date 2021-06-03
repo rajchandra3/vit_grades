@@ -1,0 +1,5 @@
+.bordered-container{
+    border: 2px dashed #ccc;
+    padding: 1rem 0;
+    border-radius: 8px;
+}

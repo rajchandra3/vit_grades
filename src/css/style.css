@@ -117,3 +117,16 @@ body{
   font-size: 5rem;
   font-weight: 900;
 }
+.discord-ad{
+  border: 1px solid #5865F2; 
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  max-height: 100px;
+}
+.discord-ad > .d-title {
+  font-size: 0.5rem;
+}
+.d-info-link {
+  color: #57F287 !important;
+}
