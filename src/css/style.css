@@ -88,18 +88,15 @@ body{
 }
 .float-container{
   position:fixed;
-  width:320px;
+  width:330px;
   height:40px;
-  bottom:80px;
-  right:18px;
-  /* background-color:#0C9; */
-  border-radius:50px;
+  bottom:0px;
+  right:30px;
   text-align:center;
   z-index: 2;
-}
-
-.my-float{
-  margin-top:13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .pointer{
   cursor: pointer;
