@@ -141,6 +141,6 @@ body{
   margin-bottom: 0.25rem !important;
 }
 .d-info-link {
-  text-decoration:none;
+  text-decoration: underline;
   font-weight: 900;
 }
