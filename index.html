@@ -74,6 +74,7 @@
 
     <!--Custom CSS-->
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/mobile.css">
     <link rel="stylesheet" href="./src/css/ad.css">
     <link rel="stylesheet" href="https://files.rajchandra.me/css/common.css">
     
@@ -146,24 +147,33 @@
         </div>
     </div>
     <!-- Discord Server ad -->
-    <!-- <div class="col-sm-12 col-md-6 d-flex justify-content-start align-items-center discord-ad" width="100%" onclick="track('discord_promo_click')">
-        <div class="col-sm-10 col-md-8">
-            <p class="d-title">Byte Avenue, a community for programmers!</p>
-            <a 
-                href="https://discord.gg/p8znsyjSf6"
-                target="_blank">
-                <small class="d-info-link">Join BA's discord server to contribute to the community</small>
-            </a>
+    <div class="col-sm-12 ad-wrapper">
+        <div class="discord-ad">
+            <div class="content">
+                <p class="d-title fs-1">Byte Avenue, a community for programmers!</p>
+                <div class="d-description">
+                    <!-- <small>Seeking a place to share your thoughts & creations?</small> <br> -->
+                    <small>Creative Thoughts is all about collaborating, sharing, conversation, and more!</small> <br>
+                    <a 
+                        href="https://discord.gg/p8znsyjSf6"
+                        target="_blank">
+                        <small 
+                            onclick="track('discord_promo_click')"
+                            class="d-info-link">
+                            Join us on Discord.
+                        </small>
+                    </a>
+                </div>
+            </div>
+            <div class="icon">
+                <img 
+                    class="rounded responsive" 
+                    width="100px"
+                    src="./src/images/discord-student.jpg" 
+                    alt="Join Discord">
+            </div>
         </div>
-        <div class="col-sm-2 col-md-4 no-margin no-padding text-right">
-            <img 
-                class="rounded responsive" 
-                width="100px"
-                src="./src/images/discord-student.jpg" 
-                alt="Join Discord">
-        </div>
-    </div> -->
-
+    </div>
     <!-- jumbo ads -->
     <div class="row col-sm-12 col-md-12 col-lg-12 install-app-container hidden no-padding no-margin">
         <!-- ads for large screens -->
@@ -1371,6 +1381,7 @@
 
         <div class="card-container col-lg-6 centered p-4 mb-5 has-box-shadow">
             <div class="card card-outline-primary mb-6 ">
+                <div class="common-share-btn-container text-center text-muted mt-3"><small>Did the app help you, consider sharing it with your friends.</small></div>
                 <div class="card-block card-block-outline-info" >
                     <div 
                         class="fb-comments" 
@@ -1426,6 +1437,7 @@
     <script language="javascript" type="text/javascript" src="./src/js/calculator.js"></script>
     <script type="module" src="https://files.rajchandra.me/js/config.js"></script>
     <script type="text/javascript" src="https://files.rajchandra.me/js/footer.js"></script>
+    <script type="text/javascript" src="https://files.rajchandra.me/js/share_btn.js"></script>
 
 </body>
 </html>

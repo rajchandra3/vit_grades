@@ -31,5 +31,13 @@ select{
 .close{
   color: grey !important;
 }
-
+.discord-ad{
+  color: #fff;
+  background: #97abff;
+  background: -webkit-linear-gradient(to right, #ee9ae5, #5961f9);
+  background: linear-gradient(to right, #ee9ae5, #5961f9);
+}
+.d-info-link{
+  color:#fff;
+}
 

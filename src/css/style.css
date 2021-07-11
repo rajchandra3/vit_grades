@@ -117,16 +117,30 @@ body{
   font-size: 5rem;
   font-weight: 900;
 }
-.discord-ad{
-  border: 1px solid #5865F2; 
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  max-height: 100px;
+.ad-wrapper {
+  width: 100%;
+  display: flex !important;
+  justify-content:center !important;
 }
-.discord-ad > .d-title {
-  font-size: 0.5rem;
+.discord-ad{
+  border-radius: 0.25rem;
+  padding: 0rem;
+  margin: 1rem;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.discord-ad > .content {
+  padding: 0.5rem 1.5rem;
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content:space-between;
+}
+.discord-ad > .content > .d-title {
+  font-weight:900;
+  margin-bottom: 0.25rem !important;
 }
 .d-info-link {
-  color: #57F287 !important;
+  text-decoration:none;
+  font-weight: 900;
 }

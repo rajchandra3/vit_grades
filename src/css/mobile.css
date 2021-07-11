@@ -1,0 +1,28 @@
+@media (max-width: 532px), screen and (orientation: portrait) {
+    .discord-ad{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 0.25rem;
+        padding: 0rem;
+        margin: 1rem;
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+    .discord-ad > .content {
+        padding: 0.5rem 0.8rem;
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content:space-between;
+    }
+    .discord-ad > .content > .d-title {
+        font-weight:900;
+        margin-bottom: 0.25rem !important;
+    }
+    .discord-ad > .icon {
+        display: none;
+        width: 0px;
+    }
+    .d-info-link {
+        text-decoration:none;
+    }
+}
