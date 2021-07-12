@@ -109,7 +109,7 @@ body{
   width: 100%;
 }
 .common-footer-container{
-  z-index: 4;
+  z-index: 1041;
 }
 .common-footer-container > .text-center{
   margin-bottom: 0 !important;
