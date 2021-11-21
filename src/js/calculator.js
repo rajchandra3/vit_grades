@@ -1,5 +1,5 @@
 //expected marks without fat
-var getMarksWithoutFat = function(){
+/**var getMarksWithoutFat = function(){
     var marksCat1 = parseFloat($('#nf-cat1').val());
     var marksCat2 = parseFloat($('#nf-cat2').val());
     var marksDa = parseFloat($('#nf-da').val());
@@ -47,6 +47,7 @@ var getMarksWithoutFat = function(){
     console.log('getAds()', getAds())
     $('.adsNFEMC').html(getAds());
 }
+**/
 
 /*
 * Expected Marks Calculator
@@ -71,7 +72,7 @@ var getMarks = function(){
     }else if(!marksProj && !marksLab){
         choice = 0; //subjects like ALA - MAT3004
     }
-    var internals = ((marksCat1 + marksCat2)*0.3 + marksDa + marksAl);
+    var internals = ((marksCat1 + marksCat2)*0.5 + marksDa + marksAl);
     var tot = (internals >60 ? 60 : internals)+ marksFat * 0.4 ;
     switch(choice){
         case 0:
