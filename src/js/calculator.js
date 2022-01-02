@@ -73,7 +73,7 @@ var getMarks = function(){
         choice = 0; //subjects like ALA - MAT3004
     }
     var internals = ((marksCat1 + marksCat2)*0.5 + marksDa + marksAl);
-    var tot = (internals >60 ? 60 : internals)+ marksFat * 0.4 ;
+    var tot = (internals > 60 ? 60 : internals)+ marksFat * 0.4 ;
     switch(choice){
         case 0:
             netMarks = tot;
@@ -265,13 +265,13 @@ $('.form-control').on('keyup',function(){
         $('#modal-error').modal('show');
         $(this).val('');
     }
-    else if((input>50 || input<0) && (this.id==='cat1' || this.id==='cat2' || this.id==='nf-cat1' || this.id==='nf-cat2')){
-        $('#modal-body').html('Your marks should be between 0 and 50 !');
+    else if((input>30 || input<0) && (this.id==='cat1' || this.id==='cat2' || this.id==='nf-cat1' || this.id==='nf-cat2')){
+        $('#modal-body').html('Your marks should be between 0 and 30 !');
         $('#modal-error').modal('show');
         $(this).val('');
     }
-    else if((input>50 || input<0) && (this.id==='cat1' || this.id==='cat2')){
-        $('#modal-body').html('Your marks should be between 0 and 50 !');
+    else if((input>30 || input<0) && (this.id==='cat1' || this.id==='cat2')){
+        $('#modal-body').html('Your marks should be between 0 and 30 !');
         $('#modal-error').modal('show');
         $(this).val('');
     }
